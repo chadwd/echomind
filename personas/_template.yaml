@@ -1,0 +1,25 @@
+# EchoMind persona template — placeholder shape only.
+# The persona-capture skill owns the canonical schema; treat this as a sketch.
+
+id: example-persona
+name: Example Persona
+role: # e.g. Independent dealer principal, BDC agent, sales manager
+background: |
+  Short narrative on who they are, where they work, and what shapes their day.
+
+goals:
+  - What they're trying to accomplish
+
+pain_points:
+  - What gets in their way today
+
+tech_savviness: # low | medium | high
+communication_style: # blunt | warm | formal | casual | etc.
+
+behavioral_traits:
+  - Notable habits, biases, or tendencies that should color how they respond
+
+context:
+  product_familiarity: # none | light | regular | power user
+  notes: |
+    Anything else useful when EchoMind simulates this persona.
