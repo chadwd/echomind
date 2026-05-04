@@ -12,9 +12,19 @@ Bare-bones scaffold. Structure and stack will grow as we go.
 
 ```
 echomind/
-├── personas/        # Persona definitions as YAML (schema driven by the persona-capture skill)
+├── personas/        # Persona definitions as YAML (schema shared with agent-personas)
+├── prompts/         # System prompt templates for persona embodiment
 └── README.md
 ```
+
+## Relationship to `agent-personas`
+
+EchoMind shares its persona schema and prompt design with [`agent-personas`](https://github.com/chadwd/agent-personas) — Chad's earlier UX-review tool for ACV. Same YAML contract, different surface:
+
+- **agent-personas** = async, single-shot UX reviews (screenshot in, good/bad/ugly report out)
+- **EchoMind** = interactive chat / scenario walkthrough with personas
+
+Both read the same `personas/*.yaml` shape. The persona-capture skill (in progress) writes that shape. No fork — just a shared contract.
 
 ## Collaborators
 

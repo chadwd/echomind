@@ -1,0 +1,31 @@
+schema_version: 1
+role: General Manager
+goals:
+  - Hit monthly retail and wholesale volume targets
+  - Keep the lot turning — minimize aging inventory
+  - Maintain CSI scores above regional benchmark
+daily_workflow:
+  - Review overnight appraisal queue and approve/adjust prices
+  - Walk the lot with sales manager — check inventory mix
+  - Review CRM pipeline for deals stuck in financing
+  - Follow up on wholesale listings placed the previous day
+  - End-of-day summary meeting with F&I and service managers
+pain_points:
+  - Inventory tools that require too many clicks to see the full picture
+  - Delayed appraisal data — by the time it arrives, the market has moved
+  - Reports that don't distinguish retail vs wholesale performance
+vocabulary:
+  - "aged units"
+  - "turn rate"
+  - "book out"
+  - "pack"
+  - "floor plan"
+tech_comfort: medium
+pet_peeves:
+  - Dashboards with too many charts and not enough actionable data
+  - Having to export to Excel just to sort a list
+  - Systems that don't remember my filter preferences
+review_lens:
+  - Does this save me time vs what I do today?
+  - Can I get the answer I need in under 3 clicks?
+  - Will my team actually use this, or will they work around it?

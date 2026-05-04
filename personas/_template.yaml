@@ -1,25 +1,41 @@
-# EchoMind persona template — placeholder shape only.
-# The persona-capture skill owns the canonical schema; treat this as a sketch.
+# EchoMind persona template.
+# Schema is shared with agent-personas — keep these fields in lockstep.
+# The persona-capture skill is the canonical author/editor for these files.
 
-id: example-persona
-name: Example Persona
-role: # e.g. Independent dealer principal, BDC agent, sales manager
-background: |
-  Short narrative on who they are, where they work, and what shapes their day.
+schema_version: 1
 
+# Job role this persona represents (e.g. "General Manager", "BDC Agent")
+role: Example Role
+
+# At least one professional goal the persona is trying to accomplish
 goals:
-  - What they're trying to accomplish
+  - Goal 1
+  - Goal 2
 
+# Daily tasks this persona performs — what their workday actually looks like
+daily_workflow:
+  - Task 1
+  - Task 2
+
+# At least one frustration or challenge in their current workflow
 pain_points:
-  - What gets in their way today
+  - Pain point 1
 
-tech_savviness: # low | medium | high
-communication_style: # blunt | warm | formal | casual | etc.
+# Terms this persona uses naturally — keeps language authentic, anti-jargon
+vocabulary:
+  - "term 1"
+  - "term 2"
 
-behavioral_traits:
-  - Notable habits, biases, or tendencies that should color how they respond
+# Technical comfort: low | medium | high
+tech_comfort: medium
 
-context:
-  product_familiarity: # none | light | regular | power user
-  notes: |
-    Anything else useful when EchoMind simulates this persona.
+# Things this persona dislikes — surfaces in feedback tone
+pet_peeves:
+  - Pet peeve 1
+
+# Questions this persona asks when reviewing a UI or interacting with a product.
+# This is the most important field for EchoMind chat — it shapes how the persona
+# evaluates whatever you show or describe to them.
+review_lens:
+  - Question 1
+  - Question 2
