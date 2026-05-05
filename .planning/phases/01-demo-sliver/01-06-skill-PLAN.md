@@ -23,6 +23,7 @@ must_haves:
     - "The --persona and --prd arguments are documented in SKILL.md (SKIL-02)"
     - "ECHOMIND_REPLAY=true skips the gateway and returns fixture output (demo-day safety)"
     - "The CLI output heading format matches UI-SPEC: '# Validation: General Manager → ACV MAX Auctions PRD'"
+    - "Per-finding persona-field provenance display is deferred to Phase 2 (VALD-03). Phase 1 satisfies the 4-section terminal rendering portion of SKIL-04; provenance markup is intentionally absent."
   artifacts:
     - path: ".claude/skills/echomind-validate/SKILL.md"
       provides: "Claude Code skill entry point — name, description, usage bash commands, output contract"

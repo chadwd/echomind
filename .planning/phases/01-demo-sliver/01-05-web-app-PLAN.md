@@ -25,6 +25,8 @@ must_haves:
     - "Each section card shows the section title and bullet list of findings from the ValidationResult"
     - "VITE_REPLAY_MODE=true makes the validation instant (no live gateway call)"
     - "Layout is two-column: 360px input pane left, flex results pane right"
+    - "Per-finding persona-field provenance UI is deferred to Phase 2 (VALD-03). Phase 1 satisfies the 4-section rendering portion of WEB-05; provenance rows in SectionCard are intentionally absent."
+    - "The inlined gmPersona object in useValidator.ts is verified field-for-field against personas/general-manager.yaml. Drift is a known Phase 1 tradeoff; Phase 2 should add build-time YAML-to-TS generation or runtime fetch + parse."
   artifacts:
     - path: "apps/web/src/components/InputPane.vue"
       provides: "VCard with VSelect (persona), VTextField (PRD), VBtn (Validate)"
@@ -187,9 +189,19 @@ const gmPersona: PersonaYaml = {
   ],
 };
 
-// Hardcoded demo PRD text for Phase 1 (D-14)
-// In Phase 3 this comes from user input / Confluence fetch
-const PRD_TEXT_PLACEHOLDER = `ACV MAX Auctions: Consignment Optimizer — loaded from fixtures/prds/acvmax-auctions.md`;
+// Load PRD text at build time via Vite ?raw import (no fetch, no fallback)
+// The ?raw suffix tells Vite to inline the file as a string literal in the bundle.
+// Requires assetsInclude: ['**/*.md'] in vite.config.ts (added in Plan 01).
+import prdText from '../../../fixtures/prds/acvmax-auctions.md?raw';
+
+// Fail fast if the import produced an empty or placeholder string (guard against bundler misconfiguration)
+if (!prdText || prdText.length < 500) {
+  throw new Error(
+    `[useValidator] prdText is too short (${prdText?.length ?? 0} chars). ` +
+    'Check that assetsInclude includes "**/*.md" in vite.config.ts and that ' +
+    'fixtures/prds/acvmax-auctions.md exists and is at least 500 chars.'
+  );
+}
 
 // Determine replay mode from Vite env (browser-safe, no secrets)
 const replayMode = import.meta.env['VITE_REPLAY_MODE'] === 'true';
@@ -213,7 +225,7 @@ export function useValidator() {
 
       // Step 3: gateway call (or fixture replay)
       step.value = 3;
-      const prdText = await fetchPrdText();
+      // prdText is pre-loaded via ?raw import above — no async fetch needed
       const result = await validate(gmPersona, prdText, { replay: replayMode });
 
       // Step 4: rendering
@@ -231,34 +243,16 @@ export function useValidator() {
   return { isValidating, step, results, runValidation };
 }
 
-async function fetchPrdText(): Promise<string> {
-  // Phase 1: fetch the hardcoded fixture PRD via Vite's dev server
-  // (the file is served as a static asset from /fixtures/)
-  // Phase 3: this becomes a Confluence/Notion fetch
-  try {
-    const resp = await fetch('/fixtures/prds/acvmax-auctions.md');
-    if (resp.ok) return resp.text();
-  } catch {
-    // fallback to placeholder if fetch fails
-  }
-  return PRD_TEXT_PLACEHOLDER;
-}
+// fetchPrdText removed in Plan 01 revision: PRD is loaded via ?raw import above.
+// Phase 3: replace the ?raw import with a Confluence/Notion fetch composable.
 ```
 
-Note: The `fetch('/fixtures/prds/acvmax-auctions.md')` requires Vite to serve the fixtures/ directory. Add to vite.config.ts:
-```typescript
-// In the vite config's server section, or use publicDir:
-publicDir: '../../', // serves repo root as public — or use specific asset copy
-```
-Simpler alternative for Phase 1: inline the PRD text directly in useValidator.ts as a multi-line string (avoids the fetch complexity). Import it as a raw string via Vite's `?raw` import:
-```typescript
-import prdText from '../../fixtures/prds/acvmax-auctions.md?raw';
-```
-This requires adding to vite.config.ts:
-```typescript
-assetsInclude: ['**/*.md'],
-```
-Use whichever approach works cleanly. The `?raw` import is simpler and avoids server configuration.
+Note: The PRD is loaded via `?raw` import (NOT via fetch). This is the required approach for Phase 1:
+- `assetsInclude: ['**/*.md']` is already in vite.config.ts (added in Plan 01)
+- The import path must be relative from `apps/web/src/composables/` to the repo root `fixtures/` dir
+- Relative path: `'../../../fixtures/prds/acvmax-auctions.md?raw'` (composables/ → src/ → web/ → echomind/)
+- Verify: `grep "?raw" apps/web/src/composables/useValidator.ts` must return a match
+- The `PRD_TEXT_PLACEHOLDER` fallback has been REMOVED — fail fast is better than silent garbage to gateway
 
 **apps/web/src/components/InputPane.vue:**
 
@@ -326,6 +320,10 @@ defineEmits<{
     - useValidator.ts imports `validate` from `@echomind/engine`
     - useValidator.ts contains `import.meta.env['VITE_REPLAY_MODE']` for replay toggle
     - useValidator.ts defines isValidating, step (0-4), results as Vue refs
+    - grep "?raw" apps/web/src/composables/useValidator.ts returns a match (PRD loaded via ?raw import)
+    - grep "PRD_TEXT_PLACEHOLDER" apps/web/src/composables/useValidator.ts returns NOTHING (fallback removed)
+    - useValidator.ts contains a runtime assertion that throws if prdText.length < 500
+    - Manual diff: every top-level key in personas/general-manager.yaml exists in the gmPersona object in useValidator.ts (verified during code review — drift is a known Phase 1 tradeoff)
     - apps/web/src/components/InputPane.vue contains VSelect with `items="['General Manager']"` and `disabled` prop
     - InputPane.vue contains VTextField with `model-value="ACV MAX Auctions Integration"` and `disabled`
     - InputPane.vue contains VBtn with `color="primary"`, `size="large"`, `block`, text "Validate"

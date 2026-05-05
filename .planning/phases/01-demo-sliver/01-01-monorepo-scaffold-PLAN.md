@@ -681,6 +681,7 @@ export default defineConfig(({ mode }) => {
       vue(),
       vuetify({ autoImport: true }),
     ],
+    assetsInclude: ['**/*.md'],
     server: {
       port: 5173,
       proxy: {
@@ -772,6 +773,8 @@ After creating files, run `pnpm install` at repo root (picks up new apps/web dep
   <acceptance_criteria>
     - apps/web/package.json contains `"name": "@echomind/web"` and `"@echomind/engine": "workspace:*"` in dependencies
     - apps/web/vite.config.ts contains `proxy` configuration for `/api/llm`
+    - apps/web/vite.config.ts contains `assetsInclude: ['**/*.md']` (required for ?raw markdown imports in Plan 05)
+    - grep "assetsInclude" apps/web/vite.config.ts returns a match
     - apps/web/vite.config.ts does NOT contain `VITE_` prefixed secrets (ECHOMIND_LLM_API_KEY is server-side only)
     - apps/web/src/main.ts contains `createVuetify()` with `primary: '#1565C0'` per UI-SPEC.md
     - apps/web/src/main.ts imports `vuetify/styles` and `@mdi/font/css/materialdesignicons.css`

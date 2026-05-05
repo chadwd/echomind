@@ -8,6 +8,7 @@ depends_on:
 files_modified:
   - fixtures/responses/gm-auctions-snapshot.json
   - packages/engine/src/llm.ts
+  - packages/engine/bin/echomind-validate.ts
 autonomous: false
 requirements_addressed:
   - DEMO-03
@@ -182,6 +183,7 @@ Should also return fixture output.
     - Running `node packages/engine/dist/bin/echomind-validate.js --persona ./personas/general-manager.yaml --prd ./fixtures/prds/acvmax-auctions.md --replay` exits 0 and prints all four ## sections
     - Running with `ECHOMIND_REPLAY=true` (no --replay flag) also returns fixture output
     - The fixture JSON can be parsed without errors by the node one-liner above
+    - grep "output-format" packages/engine/bin/echomind-validate.ts returns a match (--output-format json flag added)
   </acceptance_criteria>
 
   <done>Fixture snapshot committed. --replay and ECHOMIND_REPLAY=true both return deterministic output. Demo-day gateway dependency eliminated.</done>
