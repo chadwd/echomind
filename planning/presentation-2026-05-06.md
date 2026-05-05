@@ -78,6 +78,10 @@ Everything else — problem framing, whiteboarding, persona foundation, and this
 
 > "That just happened in 90 seconds. Without EchoMind, that assumption ships. With it, the team course-corrects before a single sprint starts."
 
+> "EchoMind isn't a static persona library. Every user interview makes any persona more accurate — more reflective of what real dealers actually experience. The more we learn, the smarter the validation gets."
+
+> "These aren't forgotten artifacts collecting dust in a Confluence page. They scale with our research, our product lines, and our dealers."
+
 ---
 
 ## Recording Notes
