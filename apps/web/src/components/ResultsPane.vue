@@ -9,7 +9,7 @@
       <img
         src="/logo-echomind.png"
         alt="EchoMind"
-        style="height: 72px; width: auto; object-fit: contain; opacity: 0.7; margin-bottom: 16px;"
+        style="height: 144px; width: auto; object-fit: contain; opacity: 0.7; margin-bottom: 16px;"
       />
       <div class="text-h6 font-weight-semibold mb-2">Ready for feedback</div>
       <div class="text-body-2 text-medium-emphasis">

@@ -35,7 +35,7 @@
         :loading="isValidating"
         @click="$emit('validate')"
       >
-        Get Feedback
+        Get Dealer Insights
       </v-btn>
     </div>
   </v-card>
