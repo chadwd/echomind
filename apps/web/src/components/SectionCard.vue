@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="elevated" elevation="1" rounded="lg" class="overflow-hidden" :style="sectionVars">
+  <v-card variant="flat" rounded="lg" class="overflow-hidden" style="background-color: rgb(var(--v-theme-surface-container-low)); border: 1px solid rgb(var(--v-theme-outline-variant));" :style="sectionVars">
     <!-- Section header -->
     <div class="section-header d-flex align-center ga-2 px-4 py-3">
       <v-icon :icon="icon" :color="color" size="18" />
