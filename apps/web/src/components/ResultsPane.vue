@@ -18,55 +18,63 @@
       </div>
     </div>
 
-    <!-- Loading state: custom animated step sequence -->
+    <!-- Loading state: modal card with horizontal steps -->
     <div
       v-else-if="isValidating"
-      class="d-flex flex-column align-center justify-center h-100"
+      class="d-flex align-center justify-center h-100"
       style="min-height: 300px"
     >
-      <!-- Breathing logo -->
-      <img
-        src="/logo-echomind.png"
-        alt="EchoMind"
-        class="loading-logo mb-10"
-        style="height: 72px; width: auto; object-fit: contain;"
-      />
+      <v-card elevation="6" rounded="xl" class="loading-card d-flex flex-column align-center pa-12" style="width: 100%; max-width: 680px; min-height: 400px; justify-content: center;">
 
-      <!-- Animated step list -->
-      <div class="step-list">
-        <div
-          v-for="(label, i) in loadingSteps"
-          :key="i"
-          class="step-row"
-          :class="{
-            'is-complete': step > i + 1,
-            'is-active':   step === i + 1,
-            'is-pending':  step < i + 1,
-          }"
-        >
-          <!-- Indicator -->
-          <div class="indicator-wrap">
-            <!-- Complete -->
-            <Transition name="check">
-              <div v-if="step > i + 1" class="indicator indicator--complete">
-                <v-icon icon="mdi-check" size="13" color="white" />
+        <!-- Breathing logo -->
+        <img
+          src="/logo-echomind.png"
+          alt="EchoMind"
+          class="loading-logo mb-6"
+          style="height: 88px; width: auto; object-fit: contain;"
+        />
+
+        <div class="text-h6 font-weight-semibold mb-1 text-center">Analyzing your PRD</div>
+        <div class="text-body-2 text-medium-emphasis mb-10 text-center">The GM is weighing in&hellip;</div>
+
+        <!-- Horizontal step sequence -->
+        <div class="steps-h">
+          <template v-for="(label, i) in loadingSteps" :key="i">
+
+            <!-- Step -->
+            <div
+              class="step-item"
+              :class="{
+                'is-complete': step > i + 1,
+                'is-active':   step === i + 1,
+                'is-pending':  step < i + 1,
+              }"
+            >
+              <!-- Indicator -->
+              <div class="indicator-wrap">
+                <Transition name="check">
+                  <div v-if="step > i + 1" class="indicator indicator--complete">
+                    <v-icon icon="mdi-check" size="14" color="white" />
+                  </div>
+                </Transition>
+                <div v-if="step === i + 1" class="indicator indicator--active">
+                  <div class="pulse-ring" />
+                  <div class="pulse-ring pulse-ring--late" />
+                </div>
+                <div v-if="step < i + 1" class="indicator indicator--pending" />
               </div>
-            </Transition>
 
-            <!-- Active -->
-            <div v-if="step === i + 1" class="indicator indicator--active">
-              <div class="pulse-ring" />
-              <div class="pulse-ring pulse-ring--late" />
+              <!-- Label -->
+              <div class="step-label text-caption text-center mt-3">{{ label }}</div>
             </div>
 
-            <!-- Pending -->
-            <div v-if="step < i + 1" class="indicator indicator--pending" />
-          </div>
+            <!-- Connector between steps -->
+            <div v-if="i < loadingSteps.length - 1" class="connector-h" :class="{ 'connector-h--done': step > i + 1 }" />
 
-          <!-- Label -->
-          <span class="step-label text-body-2">{{ label }}</span>
+          </template>
         </div>
-      </div>
+
+      </v-card>
     </div>
 
     <!-- Results: vertical report feed, sections stagger in -->
@@ -127,55 +135,50 @@ const sections: Array<{
 }
 
 @keyframes logo-breathe {
-  0%, 100% { transform: scale(1);    opacity: 0.72; }
+  0%, 100% { transform: scale(1);    opacity: 0.75; }
   50%       { transform: scale(1.05); opacity: 1;    }
 }
 
-/* ─── Step list ──────────────────────────────────── */
-.step-list {
-  position: relative;
+/* ─── Horizontal step track ──────────────────────── */
+.steps-h {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.step-item {
   display: flex;
   flex-direction: column;
-  gap: 0;
-  padding-left: 0;
-}
-
-/* vertical connector line */
-.step-list::before {
-  content: '';
-  position: absolute;
-  left: 11px;     /* center of 24px indicator */
-  top: 22px;
-  bottom: 22px;
-  width: 2px;
-  background: rgb(var(--v-theme-outline-variant));
-  border-radius: 1px;
-}
-
-.step-row {
-  display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 10px 0;
-  position: relative;
+  flex: 0 0 120px;
   transition: opacity 0.3s ease;
 }
 
-.is-pending {
-  opacity: 0.4;
+.step-item.is-pending {
+  opacity: 0.35;
+}
+
+.connector-h {
+  flex: 1;
+  height: 2px;
+  background: rgb(var(--v-theme-outline-variant));
+  margin-top: 13px; /* vertically aligns with center of 28px indicator */
+  border-radius: 1px;
+  transition: background 0.4s ease;
+}
+
+.connector-h--done {
+  background: rgb(var(--v-theme-success));
 }
 
 /* ─── Indicators ─────────────────────────────────── */
 .indicator-wrap {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
-  background: rgb(var(--v-theme-surface));
 }
 
 .indicator {
@@ -186,31 +189,29 @@ const sections: Array<{
 }
 
 .indicator--complete {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   background: rgb(var(--v-theme-success));
 }
 
 .indicator--active {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background: rgb(var(--v-theme-primary));
   position: relative;
-  margin: 6px;
 }
 
 .indicator--pending {
-  width: 8px;
-  height: 8px;
-  background: rgb(var(--v-theme-outline));
+  width: 10px;
+  height: 10px;
+  background: rgb(var(--v-theme-outline-variant));
   border-radius: 50%;
-  margin: 8px;
 }
 
 /* ─── Pulse rings ────────────────────────────────── */
 .pulse-ring {
   position: absolute;
-  inset: -5px;
+  inset: -6px;
   border-radius: 50%;
   border: 2px solid rgb(var(--v-theme-primary));
   animation: pulse-out 1.8s ease-out infinite;
@@ -221,8 +222,8 @@ const sections: Array<{
 }
 
 @keyframes pulse-out {
-  0%   { transform: scale(1);   opacity: 0.8; }
-  100% { transform: scale(3.2); opacity: 0;   }
+  0%   { transform: scale(1);   opacity: 0.75; }
+  100% { transform: scale(3.4); opacity: 0;    }
 }
 
 /* ─── Check pop-in ───────────────────────────────── */
@@ -235,15 +236,14 @@ const sections: Array<{
   to   { transform: scale(1) rotate(0deg);   opacity: 1; }
 }
 
-/* ─── Labels ─────────────────────────────────────── */
+/* ─── Step labels ────────────────────────────────── */
 .step-label {
   color: rgb(var(--v-theme-on-surface-variant));
-  transition: color 0.3s ease, font-weight 0.3s ease;
+  line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
-.is-complete .step-label {
-  color: rgb(var(--v-theme-success));
-}
+.is-complete .step-label { color: rgb(var(--v-theme-success)); }
 
 .is-active .step-label {
   color: rgb(var(--v-theme-on-surface));
