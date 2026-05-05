@@ -15,8 +15,7 @@
       <div
         v-for="(item, i) in items"
         :key="i"
-        class="finding-row d-flex ga-3 py-2"
-        :class="{ 'border-t-thin': i > 0 }"
+        class="finding-row d-flex ga-2 py-1"
       >
         <span class="finding-num text-caption font-weight-bold">{{ i + 1 }}</span>
         <p class="text-body-2 ma-0 finding-text">{{ item }}</p>
@@ -50,9 +49,6 @@ const sectionVars = computed(() => ({
   align-items: flex-start;
 }
 
-.border-t-thin {
-  border-top: 1px solid rgb(var(--v-theme-outline-variant));
-}
 
 .finding-num {
   flex-shrink: 0;
