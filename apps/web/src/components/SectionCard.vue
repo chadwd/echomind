@@ -18,7 +18,7 @@
         class="finding-row d-flex ga-2 py-1"
       >
         <span class="finding-num text-caption font-weight-bold">{{ i + 1 }}</span>
-        <p class="text-body-2 ma-0 finding-text">{{ item }}</p>
+        <p class="text-body-2 ma-0 finding-text" v-html="bold(item)" />
       </div>
     </div>
   </v-card>
@@ -37,6 +37,10 @@ const props = defineProps<{
 const sectionVars = computed(() => ({
   '--sc': `rgb(var(--v-theme-${props.color}))`,
 }));
+
+function bold(text: string): string {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
 </script>
 
 <style scoped>
