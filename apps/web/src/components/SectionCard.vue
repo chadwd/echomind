@@ -1,27 +1,69 @@
 <template>
-  <v-card variant="elevated" :elevation="2" rounded="lg" class="h-100">
-    <v-card-title class="text-h6 d-flex align-center ga-2 pt-4 px-4">
-      <v-icon :icon="icon" size="20" />
-      {{ title }}
-    </v-card-title>
-    <v-card-text class="pt-2">
-      <div
-        v-for="(item, i) in items"
-        :key="i"
-        class="text-body-2 py-3"
-        :class="{ 'border-t': i > 0 }"
-        style="border-color: rgba(0,0,0,0.06); white-space: normal; word-break: break-word;"
-      >
-        {{ item }}
+  <div class="section-group" :style="sectionVars">
+    <!-- Section header -->
+    <div class="section-header d-flex align-center ga-2 pb-3 mb-4">
+      <v-icon :icon="icon" :color="color" size="18" />
+      <span class="text-subtitle-2 font-weight-bold section-label">{{ title }}</span>
+      <v-spacer />
+      <span class="text-caption section-count font-weight-medium">{{ items.length }}</span>
+    </div>
+
+    <!-- Individual finding cards -->
+    <div class="d-flex flex-column ga-3">
+      <div v-for="(item, i) in items" :key="i" class="finding-card">
+        <span class="finding-num text-caption font-weight-bold">{{ i + 1 }}</span>
+        <p class="text-body-2 ma-0 finding-text">{{ item }}</p>
       </div>
-    </v-card-text>
-  </v-card>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue';
+
+const props = defineProps<{
   title: string;
   icon: string;
   items: string[];
+  color: string;
 }>();
+
+const sectionVars = computed(() => ({
+  '--sc':    `rgb(var(--v-theme-${props.color}))`,
+  '--sc-bg': `rgb(var(--v-theme-${props.color}) / 0.07)`,
+}));
 </script>
+
+<style scoped>
+.section-header {
+  border-bottom: 2px solid var(--sc);
+}
+
+.section-label,
+.section-count {
+  color: var(--sc);
+}
+
+.finding-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-left: 3px solid var(--sc);
+  border-radius: 0 8px 8px 0;
+  background: var(--sc-bg);
+}
+
+.finding-num {
+  flex-shrink: 0;
+  color: var(--sc);
+  width: 18px;
+  padding-top: 1px;
+  opacity: 0.85;
+}
+
+.finding-text {
+  line-height: 1.65;
+  color: rgb(var(--v-theme-on-surface));
+}
+</style>

@@ -55,27 +55,22 @@
       />
     </v-stepper>
 
-    <!-- Results: staggered card reveal (UI-SPEC: md+ = 2col, sm = 1col) -->
+    <!-- Results: vertical report feed, sections stagger in -->
     <TransitionGroup
       v-else-if="results"
       name="card"
       tag="div"
-      class="v-row ga-0"
+      class="d-flex flex-column ga-8"
     >
-      <v-col
+      <SectionCard
         v-for="(section, index) in sections"
         :key="section.key"
-        cols="12"
-        md="6"
-        class="pa-2"
-        :style="{ '--stagger': `${index * 80}ms` }"
-      >
-        <SectionCard
-          :title="section.title"
-          :icon="section.icon"
-          :items="results[section.key]"
-        />
-      </v-col>
+        :title="section.title"
+        :icon="section.icon"
+        :color="section.color"
+        :items="results[section.key]"
+        :style="{ '--stagger': `${index * 120}ms` }"
+      />
     </TransitionGroup>
   </div>
 </template>
@@ -94,18 +89,19 @@ const sections: Array<{
   key: keyof ValidationResult;
   title: string;
   icon: string;
+  color: string;
 }> = [
-  { key: 'fit',         title: 'Fit',         icon: 'mdi-check-bold' },
-  { key: 'friction',    title: 'Friction',    icon: 'mdi-alert' },
-  { key: 'questions',   title: 'Questions',   icon: 'mdi-comment-question' },
-  { key: 'refinements', title: 'Refinements', icon: 'mdi-pencil' },
+  { key: 'fit',         title: 'Fit',         icon: 'mdi-check-bold',       color: 'success' },
+  { key: 'friction',    title: 'Friction',    icon: 'mdi-alert',            color: 'error'   },
+  { key: 'questions',   title: 'Questions',   icon: 'mdi-comment-question', color: 'info'    },
+  { key: 'refinements', title: 'Refinements', icon: 'mdi-pencil',           color: 'primary' },
 ];
 </script>
 
 <style scoped>
-/* Staggered card reveal */
+/* Section group stagger-in */
 .card-enter-active {
-  animation: card-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: card-in 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
   animation-delay: var(--stagger, 0ms);
 }
 
