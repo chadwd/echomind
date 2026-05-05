@@ -57,9 +57,9 @@ source .env.local && pnpm --filter @echomind/web dev
 Browser already open at http://localhost:5173 before recording starts.
 
 **As the page loads, narrate:**
-> "This is the EchoMind web app. The persona is pre-loaded — our General Manager hero persona. The PRD is ACV MAX Auctions: Mobile Live Bid. We click Validate."
+> "This is the EchoMind web app. The persona is pre-loaded — our General Manager hero persona. The PRD is ACV MAX Auctions: Mobile Live Bid. We click Get Feedback."
 
-**Click Validate.** The stepper will progress through four steps. Narrate while it runs:
+**Click Get Feedback.** The stepper will progress through four steps. Narrate while it runs:
 > "You can see it working through the steps — loading persona, loading PRD, calling the validator, rendering output. This is hitting our live LLM gateway."
 
 *(If running replay mode, instead say: "This is running against a pre-captured fixture so the response is instant — same output you'd get from a live call.")*
@@ -154,7 +154,7 @@ cat fixtures/responses/gm-auctions-snapshot.json
 | Segment | Target | Notes |
 |---------|--------|-------|
 | Setup narrative | 30 sec | One paragraph, no clicking |
-| Web app demo | ~2 min | Validate click → 4 cards → punchline |
+| Web app demo | ~2 min | Get Feedback click → 4 cards → punchline |
 | CLI skill demo | ~2 min | Command → output → punchline |
 | Wrap / close | 30 sec | Closing line, no Q&A — this is recorded |
 | **Total** | **~5 min** | |
