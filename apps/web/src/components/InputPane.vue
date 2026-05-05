@@ -32,6 +32,7 @@
         size="large"
         block
         elevation="2"
+        class="cta-btn"
         :loading="isValidating"
         @click="$emit('validate')"
       >
@@ -50,3 +51,27 @@ defineEmits<{
   (e: 'validate'): void;
 }>();
 </script>
+
+<style scoped>
+.cta-btn {
+  transition: transform 0.15s ease, box-shadow 0.2s ease !important;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+.cta-btn:active {
+  transform: translateY(0) !important;
+  transition-duration: 0.08s !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta-btn,
+  .cta-btn:hover,
+  .cta-btn:active {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+</style>
