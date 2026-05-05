@@ -13,6 +13,7 @@ EchoMind ships in three coarse phases. Phase 1 is a 2-day sprint delivering an e
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Demo Sliver** - End-to-end demo on both surfaces against the hardcoded ACV MAX Auctions PRD + GM persona
+- [ ] **Phase 1.1: UI Polish** (INSERTED) - Material 3 brand theme, logo header, component styling for recording
 - [ ] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling
 - [ ] **Phase 3: Full v1 Surfaces** - Confluence/Notion link input, persona picker, copy/export, error states, skill file output
 
@@ -38,6 +39,18 @@ Plans:
 - [x] 01-05-web-app-PLAN.md — InputPane, ResultsPane, SectionCard components + useValidator composable wired to engine
 - [x] 01-06-skill-PLAN.md — .claude/skills/echomind-validate/SKILL.md + CLI output verified
 - [x] 01-07-demo-runbook-PLAN.md — DEMO.md + dress rehearsal checkpoint
+
+### Phase 1.1: UI Polish (INSERTED)
+**Goal**: Apply the Material 3 brand theme, refine the logo header treatment, and polish component styling so the app looks intentional and on-brand for the demo recording
+**Depends on**: Phase 1
+**Requirements**: (no new REQ-IDs — polish and presentation layer only)
+**Success Criteria** (what must be TRUE):
+  1. The app uses the EchoMind brand purple (`#7A4F81`) as primary color — not the placeholder blue (`#1565C0`)
+  2. The app bar logo renders cleanly on camera — icon readable, no white square artifact, no tagline text visible
+  3. Section cards, surfaces, and outlines use the M3 neutral palette (warm tints, not flat greys)
+  4. The overall visual reads as intentional/designed, not generic Vuetify default
+**Plans**: TBD
+**UI hint**: yes
 
 ### Phase 2: Engine Hardening
 **Goal**: The shared validator engine becomes provenance-traceable, the anti-gaming guardrail is enforced in the UI, and gateway errors surface as structured error states instead of crashes
