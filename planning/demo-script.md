@@ -144,7 +144,7 @@
 
 > *(beat)*
 
-> "Echo-Mike isn't frozen in time. Every user interview, every research session, every conversation with a real dealer makes him better. More accurate. More real. He grows with us."
+> "EchoMind isn't frozen in time. Every user interview, every research session, every conversation with a real dealer makes it better. More accurate. More real. It grows with us."
 
 > "These aren't forgotten personas collecting dust in a Confluence page. They scale with our research, our product lines, and our dealers."
 
