@@ -60,7 +60,7 @@
       v-else-if="results"
       name="card"
       tag="div"
-      class="d-flex flex-column ga-8"
+      class="d-flex flex-column ga-5"
     >
       <SectionCard
         v-for="(section, index) in sections"
