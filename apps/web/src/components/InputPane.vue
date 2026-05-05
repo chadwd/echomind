@@ -18,7 +18,7 @@
 
       <!-- PRD display (D-14: disabled text field showing demo PRD title) -->
       <v-text-field
-        model-value="ACV MAX Auctions Integration"
+        model-value="ACV MAX Auctions: Mobile Live Bid"
         label="PRD"
         prepend-inner-icon="mdi-file-document"
         disabled

@@ -4,15 +4,16 @@
       <v-icon :icon="icon" size="20" />
       {{ title }}
     </v-card-title>
-    <v-card-text>
-      <v-list density="compact" lines="two">
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :title="item"
-          class="text-body-2 px-0"
-        />
-      </v-list>
+    <v-card-text class="pt-2">
+      <div
+        v-for="(item, i) in items"
+        :key="i"
+        class="text-body-2 py-2"
+        :class="{ 'border-t': i > 0 }"
+        style="border-color: rgba(0,0,0,0.08); white-space: normal; word-break: break-word;"
+      >
+        {{ item }}
+      </div>
     </v-card-text>
   </v-card>
 </template>
