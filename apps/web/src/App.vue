@@ -52,7 +52,7 @@
           </Transition>
 
           <!-- PRD reference pane -->
-          <v-col style="max-width: 340px; flex: 0 0 340px; min-width: 0;">
+          <v-col style="max-width: 464px; flex: 0 0 464px; min-width: 0;">
             <PrdPane />
           </v-col>
 
