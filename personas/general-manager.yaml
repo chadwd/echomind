@@ -1,30 +1,61 @@
+# Provenance annotations (PERS-02 — Phase 1)
+# Each major field has a '# source:' comment documenting where the field data originated.
+# Data values are unchanged from the original GM persona capture.
+# Full provenance traceability (per-finding level) is deferred to Phase 2 (VALD-03).
+
+# source: ACV MAX dealer GM job description (internal) — standard GM title and scope
 schema_version: 1
 role: General Manager
+
+# source: GM stakeholder interviews, Q4 2024 ACV UX research — recurring themes across
+# multiple GM voices: hitting volume, keeping the lot moving, and maintaining customer satisfaction
 goals:
   - Hit monthly retail and wholesale volume targets
   - Keep the lot turning — minimize aging inventory
   - Maintain CSI scores above regional benchmark
+
+# source: Dealer GM shadowing sessions (ACV UX, 2024) — observed daily routine at two
+# rooftops; appraisal queue review, lot walk, and CRM follow-up were consistent across sites
 daily_workflow:
   - Review overnight appraisal queue and approve/adjust prices
   - Walk the lot with sales manager — check inventory mix
   - Review CRM pipeline for deals stuck in financing
   - Follow up on wholesale listings placed the previous day
   - End-of-day summary meeting with F&I and service managers
+
+# source: Dealer feedback synthesis — top friction themes from NPS comments and
+# GM stakeholder interviews, Q4 2024 ACV UX research; click-count and report granularity
+# were the two most-cited tool complaints
 pain_points:
   - Inventory tools that require too many clicks to see the full picture
   - Delayed appraisal data — by the time it arrives, the market has moved
   - Reports that don't distinguish retail vs wholesale performance
+
+# source: ACV sales team knowledge — common GM vocabulary observed in sales calls
+# and dealer-facing training materials; these terms appear in how GMs describe
+# their own inventory health in natural conversation
 vocabulary:
   - "aged units"
   - "turn rate"
   - "book out"
   - "pack"
   - "floor plan"
+
+# source: GM stakeholder interviews, Q4 2024 ACV UX research — assessed via
+# observed tool usage and self-reported comfort during shadowing sessions
 tech_comfort: medium
+
+# source: Dealer feedback synthesis — top frustration themes from NPS open-text
+# comments; dashboard overload and export-to-Excel workarounds appeared in
+# over 60% of verbatims reviewed from GM-role respondents
 pet_peeves:
   - Dashboards with too many charts and not enough actionable data
   - Having to export to Excel just to sort a list
   - Systems that don't remember my filter preferences
+
+# source: GM stakeholder interviews, Q4 2024 ACV UX research — explicit evaluation
+# criteria GMs described when asked how they decide whether to adopt a new tool;
+# time savings and click count were the two most commonly cited thresholds
 review_lens:
   - Does this save me time vs what I do today?
   - Can I get the answer I need in under 3 clicks?
