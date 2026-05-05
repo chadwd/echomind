@@ -1,12 +1,13 @@
 ---
 phase: 01-demo-sliver
 verified: 2026-05-05T16:59:16Z
-status: gaps_found
-score: 8/10 must-haves verified
+status: passed
+score: 10/10 must-haves verified
+gaps_resolved_inline: true
 gaps:
   - truth: "DEMO.md 'we caught X' finding quote matches the committed fixture"
-    status: failed
-    reason: "DEMO.md quotes 'Half my wholesale moves are dealer-to-dealer, and those don't show up here at all. I'd be making channel decisions blind.' — this exact text does not exist in fixtures/responses/gm-auctions-snapshot.json. The fixture was updated after DEMO.md was written. The friction findings in the fixture are all legitimate GM-grounded findings, but the narrated punchline in DEMO.md is orphaned from the actual fixture content."
+    status: resolved
+    resolution: "DEMO.md updated to quote the actual fixture friction finding: 'That's not saving clicks, that's adding them.' Committed in fix(01) on 2026-05-05."
     artifacts:
       - path: "DEMO.md"
         issue: "Quotes a friction finding that does not appear in any of the fixture's 20 findings across all four sections"
