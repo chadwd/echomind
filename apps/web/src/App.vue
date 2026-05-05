@@ -5,15 +5,23 @@
     </v-app-bar>
 
     <v-main style="background: rgb(var(--v-theme-surface))">
-      <v-container fluid class="pa-6" style="height: 100%">
+      <v-container fluid class="pa-6" style="height: calc(100vh - 64px)">
         <v-row style="height: 100%" no-gutters class="ga-8">
-          <!-- Input pane — 360px fixed, filled by Plan 05 -->
+          <!-- Input pane — 360px fixed width (UI-SPEC) -->
           <v-col style="max-width: 360px; flex: 0 0 360px;">
-            <div class="text-body-2 text-medium-emphasis">Input pane (Plan 05)</div>
+            <InputPane
+              :is-validating="isValidating"
+              @validate="runValidation"
+            />
           </v-col>
-          <!-- Results pane — fills remaining width, filled by Plan 05 -->
+
+          <!-- Results pane — flex-grow fills remaining width -->
           <v-col>
-            <div class="text-body-2 text-medium-emphasis">Results pane (Plan 05)</div>
+            <ResultsPane
+              :is-validating="isValidating"
+              :step="step"
+              :results="results"
+            />
           </v-col>
         </v-row>
       </v-container>
@@ -22,5 +30,9 @@
 </template>
 
 <script setup lang="ts">
-// Components wired in Plan 05
+import { useValidator } from './composables/useValidator';
+import InputPane from './components/InputPane.vue';
+import ResultsPane from './components/ResultsPane.vue';
+
+const { isValidating, step, results, runValidation } = useValidator();
 </script>

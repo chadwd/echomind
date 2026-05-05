@@ -1,4 +1,6 @@
 import { ref } from 'vue';
+// Import only types from @echomind/engine — types are erased at build time,
+// so this avoids bundling Node.js-only code (fs/promises, path) into the browser bundle.
 import type { ValidationResult, PersonaYaml } from '@echomind/engine';
 
 // GM persona hardcoded for Phase 1 (D-14)
@@ -38,6 +40,10 @@ const gmPersona: PersonaYaml = {
   ],
 };
 
+// Suppress unused variable warning — gmPersona is used in the live-mode comment
+// and represents the typed persona contract even if only replay is supported in browser.
+void gmPersona;
+
 // Load PRD text at build time via Vite ?raw import (no fetch, no fallback).
 // The ?raw suffix tells Vite to inline the file as a string literal in the bundle.
 // assetsInclude: ['**/*.md'] is already in vite.config.ts (added in Plan 01).
@@ -54,8 +60,9 @@ if (!prdText || prdText.length < 500) {
 }
 
 // Import fixture JSON for browser-safe replay mode.
-// The engine's FixtureClient uses Node.js readFile which is not available in the browser.
-// In VITE_REPLAY_MODE=true, we short-circuit to this import directly.
+// The engine package uses Node.js readFile/path which cannot run in the browser.
+// For Phase 1 demo: VITE_REPLAY_MODE=true is the primary demo path.
+// Phase 2: wire a server-side API endpoint that proxies to the engine.
 import fixtureData from '../../../../fixtures/responses/gm-auctions-snapshot.json';
 
 // Determine replay mode from Vite env (browser-safe, no secrets).
@@ -86,17 +93,19 @@ export function useValidator() {
       let result: ValidationResult;
 
       if (replayMode) {
-        // Browser-safe replay: import the fixture JSON directly.
+        // Browser-safe replay: load the fixture JSON directly.
         // Engine's FixtureClient uses Node.js readFile — not available in browser.
-        await new Promise(r => setTimeout(r, 400)); // simulate brief network delay
+        // VITE_REPLAY_MODE=true is the demo-day reliability path (D-08).
+        await new Promise(r => setTimeout(r, 400)); // simulate brief processing delay
         result = fixtureData as ValidationResult;
       } else {
-        // Live mode: validate() calls the Anthropic SDK via the Vite proxy.
-        // Note: this requires ECHOMIND_LLM_BASE_URL to be set and the proxy configured.
-        // prdText is pre-loaded via ?raw import — no async fetch needed.
-        // Lazy import to avoid bundling Node.js deps when not needed
-        const { validate } = await import('@echomind/engine');
-        result = await validate(gmPersona, prdText, { replay: false });
+        // Live mode: Phase 2 will wire a server-side API endpoint here.
+        // The engine package uses Node.js APIs and cannot run directly in the browser.
+        // For Phase 1, set VITE_REPLAY_MODE=true for the demo.
+        throw new Error(
+          'Live gateway mode is not yet supported in the browser. ' +
+          'Set VITE_REPLAY_MODE=true in .env.local to run the demo.'
+        );
       }
 
       // Step 4: rendering
@@ -117,4 +126,5 @@ export function useValidator() {
 }
 
 // fetchPrdText removed in Plan 01 revision: PRD is loaded via ?raw import above.
+// Phase 2: replace live-mode stub with a server-side API endpoint that calls the engine.
 // Phase 3: replace the ?raw import with a Confluence/Notion fetch composable.
