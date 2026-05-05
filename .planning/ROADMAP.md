@@ -49,8 +49,13 @@ Plans:
   2. The app bar logo renders cleanly on camera — icon readable, no white square artifact, no tagline text visible
   3. Section cards, surfaces, and outlines use the M3 neutral palette (warm tints, not flat greys)
   4. The overall visual reads as intentional/designed, not generic Vuetify default
-**Plans**: TBD
-**UI hint**: yes
+**Plans**: 4 plans across 3 waves
+
+Plans:
+- [ ] 01.1-01-PLAN.md — M3 light scheme applied to Vuetify theme in main.ts (primary, surface, secondary, error, all neutral roles)
+- [ ] 01.1-02-PLAN.md — App bar logo header polish in App.vue (icon-only crop, no white square, drop-in replaceable PNG)
+- [ ] 01.1-03-PLAN.md — Component polish: InputPane sidebar card, SectionCard finding spacing, empty state secondary icon
+- [ ] 01.1-04-PLAN.md — Human visual checkpoint: dev server + Chad sign-off before demo recording
 
 ### Phase 2: Engine Hardening
 **Goal**: The shared validator engine becomes provenance-traceable, the anti-gaming guardrail is enforced in the UI, and gateway errors surface as structured error states instead of crashes
@@ -79,10 +84,11 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3
+Phases execute in numeric order: 1 → 1.1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
+| 1.1. UI Polish | 0/4 | Not started | - |
 | 2. Engine Hardening | 0/? | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
