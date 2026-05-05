@@ -52,7 +52,7 @@ Plans:
 **Plans**: 4 plans across 3 waves
 
 Plans:
-- [ ] 01.1-01-PLAN.md — M3 light scheme applied to Vuetify theme in main.ts (primary, surface, secondary, error, all neutral roles)
+- [x] 01.1-01-PLAN.md — M3 light scheme applied to Vuetify theme in main.ts (primary, surface, secondary, error, all neutral roles)
 - [ ] 01.1-02-PLAN.md — App bar logo header polish in App.vue (icon-only crop, no white square, drop-in replaceable PNG)
 - [ ] 01.1-03-PLAN.md — Component polish: InputPane sidebar card, SectionCard finding spacing, empty state secondary icon
 - [ ] 01.1-04-PLAN.md — Human visual checkpoint: dev server + Chad sign-off before demo recording
@@ -89,6 +89,6 @@ Phases execute in numeric order: 1 → 1.1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
-| 1.1. UI Polish | 0/4 | Not started | - |
+| 1.1. UI Polish | 1/4 | In Progress|  |
 | 2. Engine Hardening | 0/? | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |

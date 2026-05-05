@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 01-07-demo-runbook-PLAN.md (Phase 1 complete)
-last_updated: "2026-05-05T17:04:30.653Z"
+stopped_at: Completed 01.1-01-PLAN.md (Phase 1.1 Plan 1 complete — M3 theme applied)
+last_updated: "2026-05-05T19:30:21.107Z"
 last_activity: 2026-05-05
 progress:
-  total_phases: 3
+  total_phases: 4
   completed_phases: 1
-  total_plans: 7
-  completed_plans: 7
+  total_plans: 11
+  completed_plans: 8
   percent: 33
 ---
 
@@ -57,6 +57,7 @@ Progress: [███░░░░░░░] 33%
 | Phase 01 P04 | 15 | 1 tasks | 2 files |
 | Phase 01 P05 | 20 | 2 tasks | 5 files |
 | Phase 01-demo-sliver P06 | 15min | 1 tasks | 3 files |
+| Phase 01.1-ui-polish P01 | 3 | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -80,6 +81,7 @@ Recent decisions affecting current work:
 - [Phase 01]: Replay mode loads fixture JSON via direct browser import; VITE_REPLAY_MODE=true is the demo-day reliability path (D-08)
 - [Phase 01-demo-sliver]: Use node CLI invocation in SKILL.md (pnpm --filter exec unavailable for own-package bins in pnpm workspaces)
 - [Phase 01-demo-sliver]: .gitignore: .claude/* glob with !.claude/skills exception tracks SKILL.md while preserving worktree/settings ignore
+- [Phase 01.1-ui-polish]: Vuetify theme: use hyphenated key names ('on-primary', 'surface-variant') and include all 26 M3 light scheme roles upfront in createVuetify()
 
 ### Pending Todos
 
@@ -91,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-05T17:30:00.000Z
-Stopped at: Completed 01-07-demo-runbook-PLAN.md (Phase 1 complete)
+Last session: 2026-05-05T19:30:13.585Z
+Stopped at: Completed 01.1-01-PLAN.md (Phase 1.1 Plan 1 complete — M3 theme applied)
 Resume file: None
