@@ -40,17 +40,17 @@
 
 > "Alex writes the requirements doc, slides it to the designer. Designer opens it — 'wait, who is this actually for?' Two days gone."
 
-> "Alex wants to talk to a dealer. But he's new. He doesn't have those connections yet. And nobody has time to set up a call before the sprint starts."
+> "It gets to the researcher. The researcher does their job — pushes back, asks the right questions, needs more clarity before they can test anything. Timeline slips. Nobody's fault. Just misalignment catching up."
 
-> "So the idea moves forward anyway. Engineer gets it. Same confusion. More time gone."
+> "Engineer gets it next. The build ships anyway."
 
 > "Six weeks later — it launches. Crickets. Alex is in a meeting. Big screen. Lots of faces."
 
 > *(beat)*
 
-> "What if that never happened? What if Alex had a dealer in the room from day one — before the designer, before the engineer, before the launch?"
+> "What if that never happened? What if Alex had a dealer in the room from day one — before the designer, before the researcher, before the engineer, before the launch?"
 
-> "The designer is clear. The engineer is locked in. The launch hits."
+> "The designer is clear. The researcher has exactly what they need. The engineer builds the right thing. The launch hits."
 
 > *(bigger beat)*
 
@@ -144,17 +144,17 @@
 
 > *(beat)*
 
-> "And here's the thing — Echo-Mike isn't frozen in time. Every user interview, every research session, every conversation with a real dealer makes him better. More accurate. More real. He grows with us."
+> "Echo-Mike isn't frozen in time. Every user interview, every research session, every conversation with a real dealer makes him better. More accurate. More real. He grows with us."
 
 > "These aren't forgotten personas collecting dust in a Confluence page. They scale with our research, our product lines, and our dealers."
 
-> *(energy building)*
+> *(beat — shift tone, confident)*
 
-> "Alex gets a bonus. The whole team gets a bonus. Alex gets promoted. Alex buys a boat. Alex's dog gets a dog. Alex is on the boat. In the Mediterranean. Sipping something expensive."
+> "We are EchoMind. We are asking ACV for a one million dollar investment for fifteen percent."
 
 > *(final beat — let it land)*
 
-> "All because a dealer was in the room from day one."
+> "A dealer is in the room. Let's build."
 
 ---
 
