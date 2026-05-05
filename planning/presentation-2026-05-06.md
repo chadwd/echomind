@@ -12,6 +12,20 @@ Everything else — problem framing, whiteboarding, persona foundation, and this
 
 ---
 
+## Format Decisions
+
+| Decision | Choice |
+|---|---|
+| Recording format | Screen share — recorded, not live |
+| Demo interface | Static web app UI mockup + terminal output from Chad's engine |
+| Claude Skill | Terminal output demonstrates EchoMind as a Claude Skill |
+| Narrator / PO | Jake — same voice throughout |
+| EchoMind voice | Chad if time allows; fallback = response generates on screen, Jake reads it |
+| Persona | Mike Lott — GM, small dealership |
+| PRD being validated | ACV MAX Mobile: Auction Bid Mode |
+
+---
+
 ## Presentation Structure
 
 ### [0:00 – 0:30] Hook
@@ -19,94 +33,95 @@ Everything else — problem framing, whiteboarding, persona foundation, and this
 
 ### [0:30 – 1:30] The Problem
 
-**Problem Statement:**
-ACV doesn't have a single trusted source of truth for the personas we design and build for, so designers, product owners, and researchers can't actually consult them when making strategic or design decisions. Without a way to virtually test ideas against those personas, teams either ship on misaligned opinions or wait on real user research that is often unscoped, slow, or unavailable.
-
-**People Problem:**
-As an ACV Product Owner, I don't have accurate, accessible personas to anchor product decisions, so I'm making bets based on personal assumptions rather than user truth.
-
-**Company Problem:**
-ACV is burning engineering, design, and GTM resources on product bets that lack validated user insight. Without a shared understanding of who we're building for, misaligned ideas move through the full delivery cycle before anyone can catch them.
+- ACV doesn't have a single trusted source of truth for the personas we design and build for
+- Designers, POs, and researchers can't consult them when making strategic decisions
+- Teams either ship on misaligned opinions or wait on research that is slow and unavailable
+- As a PO: I'm making bets based on personal assumptions rather than user truth
 
 ### [1:30 – 2:00] The Solution
 
-> "EchoMind gives ACV product owners and designers a single, trusted place to consult accurate personas — so they can validate ideas before development starts, replace assumption-based decisions with user-grounded insight, and ship products that actually resonate with dealers."
+> "EchoMind gives ACV product owners and designers a single, trusted place to consult accurate personas — so they can validate ideas before development starts and ship products that actually resonate with dealers."
 
 ### [2:00 – 4:15] The Demo
 
-*Jake plays an ACV Product Owner. Chad plays EchoMind responding as a dealer persona.*
-
-**Setup (on screen):** EchoMind loaded with the ACV MAX dealer persona.
-
----
-
-**Jake (as PO):**
-> "I want to add a real-time auction feed to the ACV MAX mobile app so dealers can browse and bid on vehicles while they're out on the lot managing inventory. The idea is to give them full auction visibility right from their phone."
-
-**EchoMind (as dealer persona):**
-> "I'm on the lot all day — I'm not watching a feed. I've got 40 cars to move and staff to manage. If you put a live auction in front of me I'm going to ignore it inside a week. What I actually need is: tell me when something I'd buy shows up. Set my criteria — make, mileage, price range — and ping me. I don't want to scroll through 200 cars I'd never touch."
-
-**Jake (as PO):**
-> "So the real-time feed isn't the value — the intelligent notification is?"
-
-**EchoMind (as dealer persona):**
-> "Exactly. And make it one tap to bid. If I have to log in, find the car, re-enter anything — I'm out. I missed it. The speed matters more than the feed."
+*On screen: Static EchoMind web app UI mockup, loaded with Mike Lott — GM persona.*
+*Jake narrates and plays the PO. Chad voices Mike Lott if available; otherwise response appears on screen.*
 
 ---
 
-*That's the money moment — the PO assumed dealers want visibility. The persona revealed they want intelligent filtering and one-tap action. That assumption would have shipped uncaught.*
+**Jake (as narrator/PO):**
+> "We have a new feature idea for ACV MAX Mobile — Bid Mode. When a vehicle is rolling in the lane, the dealer taps 'Going Live' and gets a Recommended Max Bid on screen — plus MMR, market range, estimated recon, and live simulcast data. All in one view. Before we take this to the sprint, let's run it through EchoMind."
 
-### [4:15 – 5:00] What Success Looks Like
+**Mike Lott (EchoMind):**
+> "I've got 60 seconds while that car is rolling. Give me the ceiling — one number — and tell me I can trust it. The rest of that? MMR, market range, recon tiles? That's noise while the auctioneer is calling. If I have to read four things to make a decision, I've already missed the car."
 
-**Headline metric:** Percentage of product decisions backed by validated user insight before development starts.
+**Jake (as PO):**
+> "So the synthesized ceiling is the feature — everything else is secondary?"
 
-**How we'd know EchoMind is working:**
-- POs and designers running ≥ 1 EchoMind validation per sprint
-- Reduction in late-stage design pivots caused by user misalignment
-- Faster time from idea to validated concept
+**Mike Lott (EchoMind):**
+> "The ceiling and one tap to lock it. I'll look at the why after the gavel drops. Not before."
 
-> "EchoMind doesn't replace user research. It makes sure you're asking the right questions before you spend the budget finding out."
+---
+
+*Money moment: The PRD proposed four data tiles. Mike just told us one number wins. That assumption would have shipped uncaught.*
+
+*On screen: Switch to terminal — EchoMind Claude Skill output.*
+
+### [4:15 – 5:00] The Close
+
+*On screen: Structured EchoMind output artifact — web app mockup and terminal side by side.*
+
+- **Fit:** Strong — Bid Mode solves a real lane-side pain
+- **Friction:** Information overload — four tiles compete with the ceiling
+- **Refinement:** Lead with one hero number; collapse everything else behind "Why?"
+- **Question:** Does the buyer trust the AI ceiling enough to act without checking comps first?
+
+> "That just happened in 90 seconds. Without EchoMind, that assumption ships. With it, the team course-corrects before a single sprint starts."
 
 ---
 
 ## Recording Notes
 
-- Record as screen share over the EchoMind interface (or planned UI mockup)
-- Jake runs the validation prompt live; Chad responds in character as the persona
-- Keep the pushback moment unhurried — that's the demo's strongest beat
-- End on the headline metric, not a feature list
+- Jake narrates throughout — no handoff needed
+- Chad voices Mike Lott live if time allows; otherwise let the response render on screen
+- Hold on the money moment — don't rush past it
+- Close with both surfaces on screen: mockup + terminal side by side
+- End on the closing line, not a feature list
 
 ---
 
 ## Pre-Recording Checklist
 
 ### 1. Demo Interface
-- [ ] Decide what's on screen during the demo (mockup, live UI, terminal, doc?)
-- [ ] Confirm Chad and Jake are both visible or just screen share
+- [x] Static web app UI mockup — primary surface
+- [x] Terminal output from Chad's engine — secondary surface (Claude Skill)
+- [x] Screen share only — no live audience
 - [ ] Test recording setup before the real take
 
 ### 2. Hero Persona YAML
-- [ ] Decide which dealer type we're simulating (GM, used car buyer, BDC agent?)
-- [ ] Write or confirm the YAML for that persona
-- [ ] Verify the persona system prompt renders correctly from the YAML
+- [x] GM — Mike Lott
+- [x] general-manager.yaml confirmed as source of truth
+- [ ] Verify persona system prompt renders correctly from the YAML
 
 ### 3. Jake's PO Pitch
-- [ ] Write the full product idea (ACV MAX mobile — Auctions integration) as a one-paragraph pitch
-- [ ] Make sure the pitch contains at least one assumption the persona can push back on
-- [ ] Rehearse the delivery — keep it under 30 seconds
+- [x] PRD: ACV MAX Mobile — Bid Mode (Confluence)
+- [x] Assumption to challenge: four data tiles in a 60-second window
+- [ ] Rehearse delivery — keep it under 30 seconds
 
 ### 4. Persona On Screen
-- [ ] Decide: do we name the persona (e.g. "Marcus, GM — 12 years in the business") or keep it role-generic?
-- [ ] If named, add name and backstory to the YAML
-- [ ] Confirm the name/framing shows on screen during the demo moment
+- [x] Named persona: Mike Lott, GM
+- [x] Name visible in web app mockup during demo
+- [ ] Confirm mockup shows Mike Lott's name and role clearly
 
 ### 5. Demo Script
-- [ ] Finalize Jake's opening line
-- [ ] Finalize Chad's persona pushback response
-- [ ] Finalize Jake's follow-up ("So the real-time feed isn't the value...")
-- [ ] Finalize the closing line before transitioning to success/close
+- [x] Jake's opening line — finalized
+- [x] Mike Lott's pushback — finalized
+- [x] Jake's follow-up — finalized
+- [x] Closing line — finalized
 
 ### 6. Close
-- [ ] Confirm we are using Option B + C (demo proves value + structured output artifact on screen)
-- [ ] Prepare the structured output artifact (fit / friction / questions / refinements)
+- [x] Option B + C confirmed — demo proves value + artifact on screen
+- [x] Structured output defined: fit / friction / refinement / question
+- [ ] Static mockup of output artifact needs to be designed
+- [ ] Terminal output from Chad's engine needs to be captured/ready
 - [ ] Write the closing line for the recording
