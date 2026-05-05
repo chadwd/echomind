@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 01.1-01-PLAN.md (Phase 1.1 Plan 1 complete — M3 theme applied)
-last_updated: "2026-05-05T19:30:21.107Z"
+stopped_at: Completed 01.1-02-PLAN.md
+last_updated: "2026-05-05T19:32:39.006Z"
 last_activity: 2026-05-05
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 11
-  completed_plans: 8
+  completed_plans: 9
   percent: 33
 ---
 
@@ -82,6 +82,8 @@ Recent decisions affecting current work:
 - [Phase 01-demo-sliver]: Use node CLI invocation in SKILL.md (pnpm --filter exec unavailable for own-package bins in pnpm workspaces)
 - [Phase 01-demo-sliver]: .gitignore: .claude/* glob with !.claude/skills exception tracks SKILL.md while preserving worktree/settings ignore
 - [Phase 01.1-ui-polish]: Vuetify theme: use hyphenated key names ('on-primary', 'surface-variant') and include all 26 M3 light scheme roles upfront in createVuetify()
+- [Phase 01.1-ui-polish]: object-position: left top chosen — icon mark is at top-left of PNG layout; eliminates white square artifact
+- [Phase 01.1-ui-polish]: elevation=0 + border=b preferred over elevation=1 for cleaner tool-like app bar appearance
 
 ### Pending Todos
 
@@ -93,6 +95,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-05T19:30:13.585Z
-Stopped at: Completed 01.1-01-PLAN.md (Phase 1.1 Plan 1 complete — M3 theme applied)
+Last session: 2026-05-05T19:32:33.575Z
+Stopped at: Completed 01.1-02-PLAN.md
 Resume file: None
