@@ -1,5 +1,5 @@
 <template>
-  <v-card variant="outlined" rounded="lg" class="pa-6 h-100">
+  <v-card variant="flat" rounded="lg" class="pa-6 h-100" style="background-color: rgb(var(--v-theme-surface-container-low)); border: 1px solid rgb(var(--v-theme-outline-variant));">
     <v-card-title class="text-h6 font-weight-semibold pa-0 mb-6">
       Configure
     </v-card-title>
@@ -31,6 +31,7 @@
         color="primary"
         size="large"
         block
+        elevation="2"
         :loading="isValidating"
         @click="$emit('validate')"
       >

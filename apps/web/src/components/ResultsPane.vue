@@ -6,7 +6,7 @@
       class="d-flex flex-column align-center justify-center h-100 text-center"
       style="min-height: 300px"
     >
-      <v-icon icon="mdi-lightning-bolt-outline" size="48" color="surface-variant" class="mb-4" />
+      <v-icon icon="mdi-lightning-bolt-outline" size="48" color="secondary" class="mb-4" />
       <div class="text-h6 font-weight-semibold mb-2">Ready for feedback</div>
       <div class="text-body-2 text-medium-emphasis">
         Select a persona and PRD above, then click Get Feedback to see the structured take-away.

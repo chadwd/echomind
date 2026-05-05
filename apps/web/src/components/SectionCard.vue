@@ -8,9 +8,9 @@
       <div
         v-for="(item, i) in items"
         :key="i"
-        class="text-body-2 py-2"
+        class="text-body-2 py-3"
         :class="{ 'border-t': i > 0 }"
-        style="border-color: rgba(0,0,0,0.08); white-space: normal; word-break: break-word;"
+        style="border-color: rgba(0,0,0,0.06); white-space: normal; word-break: break-word;"
       >
         {{ item }}
       </div>
