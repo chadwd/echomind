@@ -1,33 +1,41 @@
 # EchoMind Demo Script
 
-**Demo:** ACV MAX Auctions Integration PRD validated against the GM hero persona
+**Format:** Recorded video — submitted 2026-05-06, shown to team Thu/Fri
 **Surfaces:** Web app (Chad) + Claude Code skill (Jake)
 **Duration:** ~5 minutes end-to-end
-**Date ready:** 2026-05-06
+**Live gateway preferred during recording** — replay is the fallback
 
 ---
 
-## Pre-Demo Checklist (run morning of demo)
+## Pre-Recording Checklist
 
-- [ ] On correct branch: `git branch` — should show `persona-foundation` or `main` (wherever Plans 01-06 landed)
+- [ ] On correct branch: `git branch` — should show `persona-foundation` or `main`
 - [ ] Dependencies installed: `pnpm install`
 - [ ] Engine is built: `pnpm --filter @echomind/engine build`
-  - Expected: `dist/bin/echomind-validate.js` exists — verify with `ls packages/engine/dist/bin/`
-- [ ] Fixture replay verified (CLI):
+  - Verify: `ls packages/engine/dist/bin/echomind-validate.js`
+- [ ] `.env.local` configured with live gateway credentials (preferred for recording):
+  ```
+  ECHOMIND_LLM_BASE_URL=<ACV gateway URL>
+  ECHOMIND_LLM_API_KEY=<key>
+  ECHOMIND_MODEL=claude-sonnet-4-6
+  ```
+- [ ] Live gateway verified (CLI — do this before hitting record):
   ```bash
-  ECHOMIND_REPLAY=true node packages/engine/dist/bin/echomind-validate.js \
+  source .env.local && node packages/engine/dist/bin/echomind-validate.js \
     --persona ./personas/general-manager.yaml \
     --prd ./fixtures/prds/acvmax-auctions.md
   ```
-  - Expected: four sections (Fit / Friction / Questions / Refinements) print in under 2 seconds, no network call
-- [ ] Web app verified (replay mode):
+  - Expected: four sections print, GM friction finding visible, takes 5–15 sec
+- [ ] If gateway unavailable, fall back to replay (see Fallbacks below) — **do not block recording on this**
+- [ ] Web app running and tested before hitting record:
   ```bash
-  VITE_REPLAY_MODE=true pnpm --filter @echomind/web dev
+  source .env.local && pnpm --filter @echomind/web dev
   ```
-  - Expected: http://localhost:5173 loads, click Validate, stepper progresses through 4 steps, four section cards appear within 3 seconds
-- [ ] Browser tab open at http://localhost:5173 before presenting (do not leave audience watching the Vite startup)
-- [ ] Terminal window open at repo root for skill demo
-- [ ] Decide with Jake who runs which surface — Chad: web, Jake: CLI/skill
+  - Or replay mode: `VITE_REPLAY_MODE=true pnpm --filter @echomind/web dev`
+  - Browser tab at http://localhost:5173 already open — do not show Vite startup on camera
+- [ ] Terminal window open at repo root, history cleared (`clear`)
+- [ ] Screen recording software armed, mic levels checked
+- [ ] Chad: web surface. Jake: CLI/skill surface.
 
 ---
 
@@ -41,17 +49,20 @@
 
 ### Surface 1: Web App (Chad — ~2 min)
 
-**Start web app** (if not already running from pre-demo checklist):
+**Start web app** (if not already running from pre-recording checklist):
 ```bash
-VITE_REPLAY_MODE=true pnpm --filter @echomind/web dev
+source .env.local && pnpm --filter @echomind/web dev
+# Fallback: VITE_REPLAY_MODE=true pnpm --filter @echomind/web dev
 ```
-Open http://localhost:5173
+Browser already open at http://localhost:5173 before recording starts.
 
 **As the page loads, narrate:**
-> "This is the EchoMind web app. The persona is pre-loaded — our General Manager hero persona. The PRD is ACV MAX Auctions Integration. We click Validate."
+> "This is the EchoMind web app. The persona is pre-loaded — our General Manager hero persona. The PRD is ACV MAX Auctions: Mobile Live Bid. We click Validate."
 
 **Click Validate.** The stepper will progress through four steps. Narrate while it runs:
-> "You can see it working through the steps — loading persona, loading PRD, calling the validator, rendering output. In a live run this hits our LLM gateway. Today we're in replay mode so the demo is instant."
+> "You can see it working through the steps — loading persona, loading PRD, calling the validator, rendering output. This is hitting our live LLM gateway."
+
+*(If running replay mode, instead say: "This is running against a pre-captured fixture so the response is instant — same output you'd get from a live call.")*
 
 **When the four section cards appear, narrate:**
 > "Here's the structured take-away. Fit — what this PRD gets right for a GM. Friction — where they'd push back. Questions they'd want answered. And refinements — concrete changes to make it work for them."
@@ -66,16 +77,14 @@ Open http://localhost:5173
 
 ### Surface 2: CLI / Claude Code Skill (Jake — ~2 min)
 
-**In terminal at repo root:**
-
-**Demo-day fallback — replay, no gateway needed:**
+**In terminal at repo root. Live gateway preferred:**
 ```bash
-ECHOMIND_REPLAY=true node packages/engine/dist/bin/echomind-validate.js \
+source .env.local && node packages/engine/dist/bin/echomind-validate.js \
   --persona ./personas/general-manager.yaml \
   --prd ./fixtures/prds/acvmax-auctions.md
 ```
 
-**Or with --replay flag:**
+**Fallback — replay, no gateway:**
 ```bash
 node packages/engine/dist/bin/echomind-validate.js \
   --persona ./personas/general-manager.yaml \
@@ -83,15 +92,8 @@ node packages/engine/dist/bin/echomind-validate.js \
   --replay
 ```
 
-**Live gateway (if .env.local is set):**
-```bash
-source .env.local && node packages/engine/dist/bin/echomind-validate.js \
-  --persona ./personas/general-manager.yaml \
-  --prd ./fixtures/prds/acvmax-auctions.md
-```
-
 **As the output streams, narrate:**
-> "Same engine, same output, but in the terminal. Jake passes a persona YAML path and a PRD markdown path. The engine runs the same validator and prints four sections as markdown."
+> "Same engine, same output, but in the terminal. I pass a persona YAML path and a PRD markdown path. The engine calls the same validator and prints four sections as markdown — no web app needed."
 
 **Highlight the Friction section — same finding as web:**
 > "There it is. Same friction bullet. 'Half my wholesale moves are dealer-to-dealer, and those don't show up here at all.' Identical finding across both surfaces because they share the same engine — same prompt, same schema, same structured output. No drift."
@@ -115,37 +117,35 @@ The PRD proposed a single disposition score for inventory decisions, but the sco
 
 ---
 
-## Demo-Day Fallback Procedures
+## Recording Fallback Procedures
 
-### If live gateway is unreachable
+### If live gateway is unreachable during recording
 
-Both surfaces have replay modes that return the pre-vetted fixture in under 2 seconds. Output is identical to a live run. The audience will not notice.
+Both surfaces have replay modes that return the pre-vetted fixture in under 2 seconds. Output is identical to a live run — viewers watching the recording will not know the difference. Swap the narration line noted above and keep rolling.
 
-**Web fallback** (already the default for this demo):
+**Web fallback:**
 ```bash
 VITE_REPLAY_MODE=true pnpm --filter @echomind/web dev
 ```
 
 **CLI fallback:**
 ```bash
-ECHOMIND_REPLAY=true node packages/engine/dist/bin/echomind-validate.js \
+node packages/engine/dist/bin/echomind-validate.js \
   --persona ./personas/general-manager.yaml \
-  --prd ./fixtures/prds/acvmax-auctions.md
+  --prd ./fixtures/prds/acvmax-auctions.md \
+  --replay
 ```
 
-### If web app fails to start
+### If web app fails to start during recording
 
-Skip to the CLI demo. The terminal output is a complete demo — it shows all four sections, the "we caught X" finding, and proves the engine works end-to-end. You can show the web scaffold visually ("here's what the web surface renders") after running the CLI.
+Skip to the CLI demo. The terminal output is a complete demo — all four sections, the "we caught X" finding, proof the engine works. Record CLI only, mention web as "the browser surface we'll show in the full build."
 
 ### If both surfaces fail
 
-Show the fixture JSON directly and narrate:
+Stop recording, fix the issue, restart. Do not submit a broken take. The fixture is always available as a last resort:
 ```bash
 cat fixtures/responses/gm-auctions-snapshot.json
 ```
-> "This is the raw engine output — GM persona validated against the ACV MAX Auctions PRD. The web app and CLI both render this. Here's the friction finding that caught the channel gap..."
-
-The fixture is at `fixtures/responses/gm-auctions-snapshot.json` and contains 3 Fit bullets, 4 Friction bullets, 4 Questions, 4 Refinements.
 
 ---
 
@@ -156,7 +156,7 @@ The fixture is at `fixtures/responses/gm-auctions-snapshot.json` and contains 3 
 | Setup narrative | 30 sec | One paragraph, no clicking |
 | Web app demo | ~2 min | Validate click → 4 cards → punchline |
 | CLI skill demo | ~2 min | Command → output → punchline |
-| Questions / wrap | 30 sec | Leave time for audience reaction |
+| Wrap / close | 30 sec | Closing line, no Q&A — this is recorded |
 | **Total** | **~5 min** | |
 
 ---
