@@ -54,7 +54,7 @@ Plans:
 Plans:
 - [x] 01.1-01-PLAN.md — M3 light scheme applied to Vuetify theme in main.ts (primary, surface, secondary, error, all neutral roles)
 - [x] 01.1-02-PLAN.md — App bar logo header polish in App.vue (icon-only crop, no white square, drop-in replaceable PNG)
-- [ ] 01.1-03-PLAN.md — Component polish: InputPane sidebar card, SectionCard finding spacing, empty state secondary icon
+- [x] 01.1-03-PLAN.md — Component polish: InputPane sidebar card, SectionCard finding spacing, empty state secondary icon
 - [ ] 01.1-04-PLAN.md — Human visual checkpoint: dev server + Chad sign-off before demo recording
 
 ### Phase 2: Engine Hardening
