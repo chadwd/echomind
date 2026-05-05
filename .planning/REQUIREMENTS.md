@@ -49,7 +49,7 @@ PO's primary surface. Polished as a peer to the skill (deliberate scope expansio
 Claude Code skill — peer to web in v1. Calls the same validator engine.
 
 - [ ] **SKIL-01**: A `/echomind:validate` (or equivalent) Claude Code skill exists and is invocable from the terminal
-- [ ] **SKIL-02**: Skill takes `--persona <yaml-path>` and `--prd <link-or-file-path>` arguments
+- [x] **SKIL-02**: Skill takes `--persona <yaml-path>` and `--prd <link-or-file-path>` arguments
 - [ ] **SKIL-03**: Skill calls the same validator engine as the web app — identical output schema
 - [ ] **SKIL-04**: Skill renders the four output sections in the terminal with provenance visible
 - [ ] **SKIL-05**: Skill writes the structured output to a file the user can attach to a PRD (markdown)
@@ -131,7 +131,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WEB-06 | Phase 3 | Pending |
 | WEB-07 | Phase 3 | Pending |
 | SKIL-01 | Phase 1 | Pending |
-| SKIL-02 | Phase 1 | Pending |
+| SKIL-02 | Phase 1 | Complete |
 | SKIL-03 | Phase 1 | Pending |
 | SKIL-04 | Phase 1 | Pending |
 | SKIL-05 | Phase 3 | Pending |

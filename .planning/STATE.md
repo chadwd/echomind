@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-02-demo-fixtures-PLAN.md
-last_updated: "2026-05-05T14:58:19.526Z"
+stopped_at: Completed 01-03-engine-gateway-PLAN.md
+last_updated: "2026-05-05T15:15:03.035Z"
 last_activity: 2026-05-05
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 7
-  completed_plans: 2
+  completed_plans: 3
   percent: 0
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-05-04)
 ## Current Position
 
 Phase: 01 (demo-sliver) — EXECUTING
-Plan: 3 of 7
+Plan: 4 of 7
 Status: Ready to execute
 Last activity: 2026-05-05
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01 P01 | 3 | 2 tasks | 21 files |
+| Phase 01-demo-sliver P03 | 25min | 1 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Recent decisions affecting current work:
 - [Phase 01]: Vite config loads LLM secrets via loadEnv (no VITE_ prefix) — API key stays server-side, never in browser bundle
 - [Phase 01]: PRD title revised from 'Consignment Optimizer' to 'Mobile Live Bid' per Chad review at checkpoint
 - [Phase 01]: PERS-02 satisfied at field-level provenance for Phase 1; per-finding traceability deferred to Phase 2 (VALD-03)
+- [Phase 01-demo-sliver]: process.cwd() for template path in compiled ESM — import.meta.url resolves to packages/prompts/ in dist/, not repo root
+- [Phase 01-demo-sliver]: extractTemplateContent() strips markdown fences from persona-system-prompt.md before LLM submission — sends raw prompt text only
 
 ### Pending Todos
 
@@ -79,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-05T14:58:13.410Z
-Stopped at: Completed 01-02-demo-fixtures-PLAN.md
+Last session: 2026-05-05T15:15:03.032Z
+Stopped at: Completed 01-03-engine-gateway-PLAN.md
 Resume file: None
