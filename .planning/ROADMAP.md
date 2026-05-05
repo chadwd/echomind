@@ -28,8 +28,16 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. At least one finding in the output constitutes a non-obvious GM pushback on the Auctions PRD — the "we caught X" moment — vetted before demo day
   4. Chad and Jake can run the full demo on both surfaces end-to-end from a documented script without improvising
   5. All LLM calls route through ACV's gateway — no raw Anthropic API key is present in the repo
-**Plans**: TBD
-**UI hint**: yes
+**Plans**: 7 plans across 5 waves
+
+Plans:
+- [ ] 01-01-monorepo-scaffold-PLAN.md — pnpm monorepo root + engine package (types, loader, prompt, LLM adapter, CLI) + Vue 3/Vuetify web shell
+- [ ] 01-02-demo-fixtures-PLAN.md — ACV MAX Auctions PRD fixture (with designed flaws) + PRD content checkpoint
+- [ ] 01-03-engine-gateway-PLAN.md — Live gateway smoke-test, .env.local.example, engine proven end-to-end
+- [ ] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
+- [ ] 01-05-web-app-PLAN.md — InputPane, ResultsPane, SectionCard components + useValidator composable wired to engine
+- [ ] 01-06-skill-PLAN.md — .claude/skills/echomind-validate/SKILL.md + CLI output verified
+- [ ] 01-07-demo-runbook-PLAN.md — DEMO.md + dress rehearsal checkpoint
 
 ### Phase 2: Engine Hardening
 **Goal**: The shared validator engine becomes provenance-traceable, the anti-gaming guardrail is enforced in the UI, and gateway errors surface as structured error states instead of crashes
@@ -62,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Demo Sliver | 0/? | Not started | - |
+| 1. Demo Sliver | 0/7 | Ready to execute | - |
 | 2. Engine Hardening | 0/? | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
