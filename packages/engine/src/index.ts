@@ -1,4 +1,5 @@
 import { readFile } from 'fs/promises';
+import { join } from 'path';
 import { buildSystemPrompt, buildUserMessage } from './prompt.js';
 import { createLlmClient } from './llm.js';
 import type { PersonaYaml, ValidationResult, ValidateOptions } from './types.js';
@@ -15,7 +16,10 @@ export async function validate(
   const replay = opts?.replay ?? false;
   const client = createLlmClient(replay);
 
-  const templatePath = new URL('../../prompts/persona-system-prompt.md', import.meta.url).pathname;
+  // Use process.cwd() so the path resolves from the repo root regardless of
+  // where the compiled dist/ file lives. import.meta.url would resolve to
+  // packages/prompts/ which doesn't exist.
+  const templatePath = join(process.cwd(), 'prompts', 'persona-system-prompt.md');
   const template = await readFile(templatePath, 'utf-8');
   const systemPrompt = buildSystemPrompt(persona, template);
   const userMessage  = buildUserMessage(prd);
