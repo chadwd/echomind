@@ -68,10 +68,10 @@ Browser already open at http://localhost:5173 before recording starts.
 > "Here's the structured take-away. Fit — what this PRD gets right for a GM. Friction — where they'd push back. Questions they'd want answered. And refinements — concrete changes to make it work for them."
 
 **Scroll to or click the Friction section. Read the punchline finding:**
-> "Here's the one that caught us: 'The flow only covers auction consignment. Half my wholesale moves are dealer-to-dealer, and those don't show up here at all. I'd be making channel decisions blind.'"
+> "Here's the one that caught us: 'The flow sends me into a detail card to act on each unit individually. If I've got 12 aged units that all score 7+, I'm clicking into 12 cards and hitting Schedule for Consignment 12 times. That's not saving clicks, that's adding them.'"
 
 **Pause. Then narrate the punchline:**
-> "That's a non-obvious catch. The PRD talks about a disposition score — but the score only covers units going to auction lanes. A GM runs retail and wholesale simultaneously. Half of their wholesale channel is dealer-to-dealer, not auction. The PRD never addressed that. A PM reviewing this PRD might not catch it until they're in a GM review. EchoMind caught it in under two minutes."
+> "That's the catch. The PRD proposed a badge in the inventory list — but the actual action is buried one level deeper, inside each unit's detail card. A GM with 12 aged units has to open 12 cards to consign them. The persona surfaced that the feature solves the discovery problem but creates a new workflow problem. That's exactly the kind of thing that kills adoption after launch — and EchoMind surfaced it before the PRD ever hit stakeholder review."
 
 ---
 
@@ -96,7 +96,7 @@ node packages/engine/dist/bin/echomind-validate.js \
 > "Same engine, same output, but in the terminal. I pass a persona YAML path and a PRD markdown path. The engine calls the same validator and prints four sections as markdown — no web app needed."
 
 **Highlight the Friction section — same finding as web:**
-> "There it is. Same friction bullet. 'Half my wholesale moves are dealer-to-dealer, and those don't show up here at all.' Identical finding across both surfaces because they share the same engine — same prompt, same schema, same structured output. No drift."
+> "There it is. Same friction bullet. 'That's not saving clicks, that's adding them.' Identical finding across both surfaces because they share the same engine — same prompt, same schema, same structured output. No drift."
 
 **Close the demo:**
 > "Copy this output straight into a Confluence comment, a PRD doc, or a Slack thread. The PO walks away with a structured artifact they can defend — without scheduling a research session."
@@ -107,13 +107,13 @@ node packages/engine/dist/bin/echomind-validate.js \
 
 **Section:** Friction
 **Finding (exact quote from fixture):**
-> "The flow only covers auction consignment. Half my wholesale moves are dealer-to-dealer, and those don't show up here at all. I'd be making channel decisions blind."
+> "The flow sends me into a detail card to act on each unit individually. If I've got 12 aged units that all score 7+, I'm clicking into 12 cards and hitting 'Schedule for Consignment' 12 times. That's not saving clicks, that's adding them."
 
 **What it caught:**
-The PRD proposed a single disposition score for inventory decisions, but the score only surfaces auction consignment paths. A GM manages two wholesale channels: auction lanes and direct dealer-to-dealer. The PRD never addressed the dealer-to-dealer channel. The GM persona surfaced this blind spot — a channel coverage gap that would likely have reached stakeholder review unchallenged.
+The PRD surfaced an "Auction Ready" badge in the inventory list but buried the actual consignment action inside each unit's detail card. A GM with 12 aged units has to open 12 cards individually — no bulk action, no list-level sort by score. The feature solves discovery but creates a new workflow bottleneck. This is exactly the kind of adoption-killer that surfaces in a GM review but gets missed in PM-only reviews.
 
 **Narration beat:**
-> "The PRD proposed a 'disposition score' — but never broke out retail versus wholesale channels. For a GM running two P&Ls simultaneously, that's a blind spot. EchoMind surfaced it before the PRD ever hit stakeholder review."
+> "The PRD solved the discovery problem — GMs can see which units are auction-ready. But the action is buried one level deeper. For a GM with a dozen aged units, that's 12 clicks to do one batch job. EchoMind caught it before the PRD hit stakeholder review."
 
 ---
 

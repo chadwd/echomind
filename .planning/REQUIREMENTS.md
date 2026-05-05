@@ -12,7 +12,7 @@ Requirements for initial release. v1 = full peer-polished release; the 2-day dem
 Persona substrate — read from `personas/*.yaml`, no fork from the `agent-personas` schema.
 
 - [x] **PERS-01**: Persona library reads any `personas/*.yaml` file using the existing `agent-personas` schema (no schema fork)
-- [ ] **PERS-02**: Hero persona delivered as a refined `personas/general-manager.yaml` (target ACV MAX dealer GM) with documented provenance (where each field came from)
+- [x] **PERS-02**: Hero persona delivered as a refined `personas/general-manager.yaml` (target ACV MAX dealer GM) with documented provenance (where each field came from)
 - [x] **PERS-03**: Persona library exposes a programmatic loader (TypeScript/JavaScript) that both the web app and the Claude Code skill consume — single source of truth
 - [ ] **PERS-04**: Persona authoring is explicitly rejected in the UI — read-only listing only (anti-gaming guardrail; authoring lives in the `agent-personas` capture skill)
 
@@ -112,7 +112,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | PERS-01 | Phase 1 | Complete |
-| PERS-02 | Phase 1 | Pending |
+| PERS-02 | Phase 1 | Complete |
 | PERS-03 | Phase 1 | Complete |
 | PERS-04 | Phase 2 | Pending |
 | VALD-01 | Phase 1 | Complete |
