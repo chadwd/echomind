@@ -46,12 +46,12 @@ const sectionVars = computed(() => ({
 
 .finding-card {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: flex-start;
   padding: 9px 14px;
-  border-left: 3px solid var(--sc);
-  border-radius: 0 8px 8px 0;
-  background: var(--sc-bg);
+  border-radius: 8px;
+  border: 1px solid rgb(var(--v-theme-outline-variant));
+  background: rgb(var(--v-theme-surface));
 }
 
 .finding-num {
