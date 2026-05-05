@@ -34,7 +34,7 @@
         :loading="isValidating"
         @click="$emit('validate')"
       >
-        Validate
+        Get Feedback
       </v-btn>
     </div>
   </v-card>

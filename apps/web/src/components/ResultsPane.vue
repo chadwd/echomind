@@ -7,9 +7,9 @@
       style="min-height: 300px"
     >
       <v-icon icon="mdi-lightning-bolt-outline" size="48" color="surface-variant" class="mb-4" />
-      <div class="text-h6 font-weight-semibold mb-2">Ready to validate</div>
+      <div class="text-h6 font-weight-semibold mb-2">Ready for feedback</div>
       <div class="text-body-2 text-medium-emphasis">
-        Select a persona and PRD above, then click Validate to see the structured take-away.
+        Select a persona and PRD above, then click Get Feedback to see the structured take-away.
       </div>
     </div>
 
