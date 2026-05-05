@@ -1,7 +1,16 @@
 <template>
   <v-app>
     <v-app-bar elevation="1" color="surface">
-      <v-app-bar-title class="text-h5 font-weight-semibold">EchoMind</v-app-bar-title>
+      <template #prepend>
+        <img
+          src="/logo-echomind.png"
+          alt="EchoMind"
+          style="height: 40px; width: 40px; object-fit: cover; object-position: center top; margin-left: 12px; border-radius: 6px;"
+        />
+      </template>
+      <v-app-bar-title class="text-h6 font-weight-bold" style="letter-spacing: 0.5px;">
+        EchoMind
+      </v-app-bar-title>
     </v-app-bar>
 
     <v-main style="background: rgb(var(--v-theme-surface))">
