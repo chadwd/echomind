@@ -17,9 +17,17 @@
           "
         />
       </template>
-      <v-app-bar-title class="text-subtitle-1 font-weight-bold" style="letter-spacing: 1px; text-transform: uppercase; color: rgb(var(--v-theme-on-surface));">
+      <v-app-bar-title class="text-subtitle-1 font-weight-bold" style="letter-spacing: 0.5px; color: rgb(var(--v-theme-on-surface));">
         EchoMind
       </v-app-bar-title>
+      <template #append>
+        <v-btn
+          :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+          variant="text"
+          class="mr-2"
+          @click="toggleTheme"
+        />
+      </template>
     </v-app-bar>
 
     <v-main style="background: rgb(var(--v-theme-surface))">
@@ -48,9 +56,17 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useTheme } from 'vuetify';
 import { useValidator } from './composables/useValidator';
 import InputPane from './components/InputPane.vue';
 import ResultsPane from './components/ResultsPane.vue';
 
 const { isValidating, step, results, runValidation } = useValidator();
+
+const theme = useTheme();
+const isDark = computed(() => theme.global.name.value === 'dark');
+function toggleTheme() {
+  theme.global.name.value = isDark.value ? 'light' : 'dark';
+}
 </script>

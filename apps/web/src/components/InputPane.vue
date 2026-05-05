@@ -5,23 +5,23 @@
     </v-card-title>
 
     <div class="d-flex flex-column ga-4">
-      <!-- Persona selector (D-14: real VSelect, disabled, single GM item) -->
+      <!-- Persona selector (D-14: single GM item, readonly for demo) -->
       <v-select
         :model-value="'General Manager'"
         :items="['General Manager']"
         label="Persona"
         prepend-inner-icon="mdi-account"
-        disabled
+        readonly
         variant="outlined"
         density="comfortable"
       />
 
-      <!-- PRD display (D-14: disabled text field showing demo PRD title) -->
+      <!-- PRD display (D-14: readonly text field showing demo PRD title) -->
       <v-text-field
         model-value="ACV MAX Auctions: Mobile Live Bid"
         label="PRD"
         prepend-inner-icon="mdi-file-document"
-        disabled
+        readonly
         variant="outlined"
         density="comfortable"
       />
