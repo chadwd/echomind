@@ -1,7 +1,8 @@
 ---
 phase: 1
 slug: demo-sliver
-status: draft
+status: approved
+reviewed_at: 2026-05-04T00:00:00Z
 shadcn_initialized: false
 preset: none
 created: 2026-05-04
@@ -68,6 +69,8 @@ Skill surface has no component system; its contract is copywriting + heading hie
 - Input pane width: 360px fixed; results pane fills remaining width
 - Page background: `surface` color token (grey-lighten-5 equivalent)
 - Single page — no routing, no navigation drawer in Phase 1
+
+**Primary visual anchor:** the Validate VBtn — full-width (`block`), large size, accent fill — the sole active element in the input pane before validation. Persona VSelect and PRD VTextField are visible but disabled, deliberately recessed so the eye lands on Validate.
 
 ---
 
