@@ -39,8 +39,8 @@ PO's primary surface. Polished as a peer to the skill (deliberate scope expansio
 - [x] **WEB-01**: Single-page Vue 3 + Vuetify app, no auth (single-user mode)
 - [ ] **WEB-02**: PO can pick a persona from a list of available `personas/*.yaml` files
 - [ ] **WEB-03**: PO can paste a Confluence or Notion link to a PRD; backend fetches and parses the page text
-- [ ] **WEB-04**: PO sees a "running validation" state with persona name, PRD title, and live progress
-- [ ] **WEB-05**: PO sees the four output sections (fit, friction, questions, refinements) rendered cleanly with each finding's persona-field provenance visible
+- [x] **WEB-04**: PO sees a "running validation" state with persona name, PRD title, and live progress
+- [x] **WEB-05**: PO sees the four output sections (fit, friction, questions, refinements) rendered cleanly with each finding's persona-field provenance visible
 - [ ] **WEB-06**: PO can copy the structured output (markdown) to paste into a PRD or doc
 - [ ] **WEB-07**: Web app handles validator errors with a clear, non-blaming error state and a retry affordance
 
@@ -58,7 +58,7 @@ Claude Code skill — peer to web in v1. Calls the same validator engine.
 
 Subset that has to work end-to-end in 2 days. Demo plays through both surfaces against the same hardcoded PRD + GM persona.
 
-- [ ] **DEMO-01**: Web app loads the GM hero persona and a hardcoded ACV MAX Auctions integration PRD, runs the validator, and renders the four output sections
+- [x] **DEMO-01**: Web app loads the GM hero persona and a hardcoded ACV MAX Auctions integration PRD, runs the validator, and renders the four output sections
 - [ ] **DEMO-02**: Claude Code skill loads the same persona + same PRD via the same validator engine and renders the same four sections in the terminal
 - [x] **DEMO-03**: Both surfaces produce a "we caught X" pushback when run against the demo PRD (qualitative — we vet the actual output before demo day)
 - [x] **DEMO-04**: Demo script and click-through path documented — Chad/Jake can run it without improvisation
@@ -126,8 +126,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | WEB-01 | Phase 1 | Complete |
 | WEB-02 | Phase 3 | Pending |
 | WEB-03 | Phase 3 | Pending |
-| WEB-04 | Phase 1 | Pending |
-| WEB-05 | Phase 1 | Pending |
+| WEB-04 | Phase 1 | Complete |
+| WEB-05 | Phase 1 | Complete |
 | WEB-06 | Phase 3 | Pending |
 | WEB-07 | Phase 3 | Pending |
 | SKIL-01 | Phase 1 | Pending |
@@ -135,7 +135,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-03 | Phase 1 | Pending |
 | SKIL-04 | Phase 1 | Pending |
 | SKIL-05 | Phase 3 | Pending |
-| DEMO-01 | Phase 1 | Pending |
+| DEMO-01 | Phase 1 | Complete |
 | DEMO-02 | Phase 1 | Pending |
 | DEMO-03 | Phase 1 | Complete |
 | DEMO-04 | Phase 1 | Complete |

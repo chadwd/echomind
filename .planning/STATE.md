@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-04-fixture-snapshot-PLAN.md
-last_updated: "2026-05-05T15:41:11.438Z"
+stopped_at: Completed 01-05-web-app-PLAN.md
+last_updated: "2026-05-05T16:14:21.962Z"
 last_activity: 2026-05-05
 progress:
   total_phases: 3
   completed_phases: 0
   total_plans: 7
-  completed_plans: 4
+  completed_plans: 5
   percent: 0
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-05-04)
 ## Current Position
 
 Phase: 01 (demo-sliver) — EXECUTING
-Plan: 5 of 7
+Plan: 6 of 7
 Status: Ready to execute
 Last activity: 2026-05-05
 
@@ -55,6 +55,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01 P01 | 3 | 2 tasks | 21 files |
 | Phase 01-demo-sliver P03 | 25min | 1 tasks | 4 files |
 | Phase 01 P04 | 15 | 1 tasks | 2 files |
+| Phase 01 P05 | 20 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,8 @@ Recent decisions affecting current work:
 - [Phase 01-demo-sliver]: extractTemplateContent() strips markdown fences from persona-system-prompt.md before LLM submission — sends raw prompt text only
 - [Phase 01]: Skip live gateway capture — seeded fixture approved as demo-safe (Chad, 2026-05-05)
 - [Phase 01]: Demo punch line: GM friction on dealer-to-dealer wholesale gap ('Half my wholesale moves are dealer-to-dealer, and those don't show up here at all. I'd be making channel decisions blind.')
+- [Phase 01]: Engine imports are type-only in web bundle — Node.js APIs cannot run in browser; live mode deferred to Phase 2 server API endpoint
+- [Phase 01]: Replay mode loads fixture JSON via direct browser import; VITE_REPLAY_MODE=true is the demo-day reliability path (D-08)
 
 ### Pending Todos
 
@@ -85,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-05T15:41:11.435Z
-Stopped at: Completed 01-04-fixture-snapshot-PLAN.md
+Last session: 2026-05-05T16:14:21.959Z
+Stopped at: Completed 01-05-web-app-PLAN.md
 Resume file: None
