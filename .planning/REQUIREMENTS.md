@@ -60,8 +60,8 @@ Subset that has to work end-to-end in 2 days. Demo plays through both surfaces a
 
 - [ ] **DEMO-01**: Web app loads the GM hero persona and a hardcoded ACV MAX Auctions integration PRD, runs the validator, and renders the four output sections
 - [ ] **DEMO-02**: Claude Code skill loads the same persona + same PRD via the same validator engine and renders the same four sections in the terminal
-- [ ] **DEMO-03**: Both surfaces produce a "we caught X" pushback when run against the demo PRD (qualitative — we vet the actual output before demo day)
-- [ ] **DEMO-04**: Demo script and click-through path documented — Chad/Jake can run it without improvisation
+- [x] **DEMO-03**: Both surfaces produce a "we caught X" pushback when run against the demo PRD (qualitative — we vet the actual output before demo day)
+- [x] **DEMO-04**: Demo script and click-through path documented — Chad/Jake can run it without improvisation
 
 ## v2 Requirements
 
@@ -137,8 +137,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-05 | Phase 3 | Pending |
 | DEMO-01 | Phase 1 | Pending |
 | DEMO-02 | Phase 1 | Pending |
-| DEMO-03 | Phase 1 | Pending |
-| DEMO-04 | Phase 1 | Pending |
+| DEMO-03 | Phase 1 | Complete |
+| DEMO-04 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 28 total

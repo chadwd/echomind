@@ -34,7 +34,7 @@ Plans:
 - [x] 01-01-monorepo-scaffold-PLAN.md — pnpm monorepo root + engine package (types, loader, prompt, LLM adapter, CLI) + Vue 3/Vuetify web shell
 - [x] 01-02-demo-fixtures-PLAN.md — ACV MAX Auctions PRD fixture (with designed flaws) + PRD content checkpoint
 - [x] 01-03-engine-gateway-PLAN.md — Live gateway smoke-test, .env.local.example, engine proven end-to-end
-- [ ] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
+- [x] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
 - [ ] 01-05-web-app-PLAN.md — InputPane, ResultsPane, SectionCard components + useValidator composable wired to engine
 - [ ] 01-06-skill-PLAN.md — .claude/skills/echomind-validate/SKILL.md + CLI output verified
 - [ ] 01-07-demo-runbook-PLAN.md — DEMO.md + dress rehearsal checkpoint
@@ -70,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Demo Sliver | 3/7 | In Progress|  |
+| 1. Demo Sliver | 4/7 | In Progress|  |
 | 2. Engine Hardening | 0/? | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
