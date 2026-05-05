@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: planning
-stopped_at: Phase 1 UI-SPEC approved
-last_updated: "2026-05-05T02:30:12.586Z"
-last_activity: 2026-05-04 — Roadmap created; 3 coarse phases derived from 28 v1 requirements
+status: executing
+stopped_at: Completed 01-01-monorepo-scaffold-PLAN.md
+last_updated: "2026-05-05T14:48:29.958Z"
+last_activity: 2026-05-05
 progress:
   total_phases: 3
   completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
+  total_plans: 7
+  completed_plans: 1
   percent: 0
 ---
 
@@ -21,14 +21,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-05-04)
 
 **Core value:** A Product Owner can validate a PRD against a trusted, governed ACV persona in under a few minutes and walk away with a structured artifact they can defend, without scheduling research.
-**Current focus:** Phase 1 — Demo Sliver
+**Current focus:** Phase 01 — demo-sliver
 
 ## Current Position
 
-Phase: 1 of 3 (Demo Sliver)
-Plan: 0 of ? in current phase
-Status: Ready to plan
-Last activity: 2026-05-04 — Roadmap created; 3 coarse phases derived from 28 v1 requirements
+Phase: 01 (demo-sliver) — EXECUTING
+Plan: 2 of 7
+Status: Ready to execute
+Last activity: 2026-05-05
 
 Progress: [░░░░░░░░░░] 0%
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 - Trend: —
 
 *Updated after each plan completion*
+| Phase 01 P01 | 3 | 2 tasks | 21 files |
 
 ## Accumulated Context
 
@@ -62,6 +63,9 @@ Recent decisions affecting current work:
 
 - [Init]: Phase 1 = demo sliver only (hardcoded PRD + GM persona); Confluence/Notion link deferred to Phase 3
 - [Init]: Both web and skill are first-class surfaces in v1 — dual-surface scope risk flagged in PROJECT.md, revisit if demo slips
+- [Phase 01]: GatewayClient uses ECHOMIND_LLM_BASE_URL with Anthropic SDK — no direct anthropic.com dependency, all LLM calls routable via ACV gateway
+- [Phase 01]: FixtureClient defaults to fixtures/responses/gm-auctions-snapshot.json enabling demo-day replay without live LLM calls
+- [Phase 01]: Vite config loads LLM secrets via loadEnv (no VITE_ prefix) — API key stays server-side, never in browser bundle
 
 ### Pending Todos
 
@@ -73,6 +77,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-05T02:30:12.582Z
-Stopped at: Phase 1 UI-SPEC approved
-Resume file: .planning/phases/01-demo-sliver/01-UI-SPEC.md
+Last session: 2026-05-05T14:48:29.955Z
+Stopped at: Completed 01-01-monorepo-scaffold-PLAN.md
+Resume file: None

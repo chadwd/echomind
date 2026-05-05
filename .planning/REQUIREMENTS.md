@@ -11,32 +11,32 @@ Requirements for initial release. v1 = full peer-polished release; the 2-day dem
 
 Persona substrate — read from `personas/*.yaml`, no fork from the `agent-personas` schema.
 
-- [ ] **PERS-01**: Persona library reads any `personas/*.yaml` file using the existing `agent-personas` schema (no schema fork)
+- [x] **PERS-01**: Persona library reads any `personas/*.yaml` file using the existing `agent-personas` schema (no schema fork)
 - [ ] **PERS-02**: Hero persona delivered as a refined `personas/general-manager.yaml` (target ACV MAX dealer GM) with documented provenance (where each field came from)
-- [ ] **PERS-03**: Persona library exposes a programmatic loader (TypeScript/JavaScript) that both the web app and the Claude Code skill consume — single source of truth
+- [x] **PERS-03**: Persona library exposes a programmatic loader (TypeScript/JavaScript) that both the web app and the Claude Code skill consume — single source of truth
 - [ ] **PERS-04**: Persona authoring is explicitly rejected in the UI — read-only listing only (anti-gaming guardrail; authoring lives in the `agent-personas` capture skill)
 
 ### Validator Engine
 
 The shared engine both surfaces call. Input = (persona YAML, PRD text). Output = the four structured sections.
 
-- [ ] **VALD-01**: Validator engine accepts (persona YAML object, PRD text) and returns a structured object with `fit`, `friction`, `questions`, and `refinements` sections
-- [ ] **VALD-02**: Validator renders the persona system prompt from `prompts/persona-system-prompt.md` using the persona's fields (no hardcoded persona content in the engine)
+- [x] **VALD-01**: Validator engine accepts (persona YAML object, PRD text) and returns a structured object with `fit`, `friction`, `questions`, and `refinements` sections
+- [x] **VALD-02**: Validator renders the persona system prompt from `prompts/persona-system-prompt.md` using the persona's fields (no hardcoded persona content in the engine)
 - [ ] **VALD-03**: Each finding in the output references the persona field(s) that drove it (provenance — supports the traceability and anti-gaming guardrails)
 - [ ] **VALD-04**: Validator output schema is identical between the web app and the Claude Code skill (single contract)
 - [ ] **VALD-05**: Validator never logs raw persona-context-plus-PRD payloads outside the ACV gateway (no-leak guardrail)
 
 ### LLM Integration
 
-- [ ] **LLM-01**: All LLM calls route through ACV's existing LLM gateway/proxy — no raw Anthropic API keys in this repo
-- [ ] **LLM-02**: Default model is Claude Sonnet 4.6; model is configurable via env/config so Opus 4.7 can be swapped in for harder runs
+- [x] **LLM-01**: All LLM calls route through ACV's existing LLM gateway/proxy — no raw Anthropic API keys in this repo
+- [x] **LLM-02**: Default model is Claude Sonnet 4.6; model is configurable via env/config so Opus 4.7 can be swapped in for harder runs
 - [ ] **LLM-03**: Validator handles gateway errors (timeout, auth, rate limit) without crashing the surfaces — surfaces show a structured error state
 
 ### Web Surface
 
 PO's primary surface. Polished as a peer to the skill (deliberate scope expansion vs. kickoff; see PROJECT.md Key Decisions).
 
-- [ ] **WEB-01**: Single-page Vue 3 + Vuetify app, no auth (single-user mode)
+- [x] **WEB-01**: Single-page Vue 3 + Vuetify app, no auth (single-user mode)
 - [ ] **WEB-02**: PO can pick a persona from a list of available `personas/*.yaml` files
 - [ ] **WEB-03**: PO can paste a Confluence or Notion link to a PRD; backend fetches and parses the page text
 - [ ] **WEB-04**: PO sees a "running validation" state with persona name, PRD title, and live progress
@@ -111,19 +111,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PERS-01 | Phase 1 | Pending |
+| PERS-01 | Phase 1 | Complete |
 | PERS-02 | Phase 1 | Pending |
-| PERS-03 | Phase 1 | Pending |
+| PERS-03 | Phase 1 | Complete |
 | PERS-04 | Phase 2 | Pending |
-| VALD-01 | Phase 1 | Pending |
-| VALD-02 | Phase 1 | Pending |
+| VALD-01 | Phase 1 | Complete |
+| VALD-02 | Phase 1 | Complete |
 | VALD-03 | Phase 2 | Pending |
 | VALD-04 | Phase 2 | Pending |
 | VALD-05 | Phase 2 | Pending |
-| LLM-01 | Phase 1 | Pending |
-| LLM-02 | Phase 1 | Pending |
+| LLM-01 | Phase 1 | Complete |
+| LLM-02 | Phase 1 | Complete |
 | LLM-03 | Phase 2 | Pending |
-| WEB-01 | Phase 1 | Pending |
+| WEB-01 | Phase 1 | Complete |
 | WEB-02 | Phase 3 | Pending |
 | WEB-03 | Phase 3 | Pending |
 | WEB-04 | Phase 1 | Pending |

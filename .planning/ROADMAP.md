@@ -31,7 +31,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 7 plans across 5 waves
 
 Plans:
-- [ ] 01-01-monorepo-scaffold-PLAN.md — pnpm monorepo root + engine package (types, loader, prompt, LLM adapter, CLI) + Vue 3/Vuetify web shell
+- [x] 01-01-monorepo-scaffold-PLAN.md — pnpm monorepo root + engine package (types, loader, prompt, LLM adapter, CLI) + Vue 3/Vuetify web shell
 - [ ] 01-02-demo-fixtures-PLAN.md — ACV MAX Auctions PRD fixture (with designed flaws) + PRD content checkpoint
 - [ ] 01-03-engine-gateway-PLAN.md — Live gateway smoke-test, .env.local.example, engine proven end-to-end
 - [ ] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
@@ -70,6 +70,6 @@ Phases execute in numeric order: 1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Demo Sliver | 0/7 | Ready to execute | - |
+| 1. Demo Sliver | 1/7 | In Progress|  |
 | 2. Engine Hardening | 0/? | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
