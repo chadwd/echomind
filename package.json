@@ -1,0 +1,12 @@
+{
+  "name": "echomind-workspace",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter @echomind/engine build",
+    "dev:web": "pnpm --filter @echomind/web dev",
+    "test": "pnpm --filter @echomind/engine test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
