@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-02-PLAN.md — Provenance instruction in buildUserMessage
-last_updated: "2026-05-06T16:30:01.649Z"
+stopped_at: Completed 02-03-PLAN.md — Gateway error classification + VALD-05
+last_updated: "2026-05-06T16:30:57.990Z"
 last_activity: 2026-05-06
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 18
-  completed_plans: 13
+  completed_plans: 15
   percent: 33
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-05-04)
 ## Current Position
 
 Phase: 02 (engine-hardening) — EXECUTING
-Plan: 3 of 7
+Plan: 5 of 7
 Status: Ready to execute
 Last activity: 2026-05-06
 
@@ -61,6 +61,8 @@ Progress: [███░░░░░░░] 33%
 | Phase 01.1-ui-polish P03 | 8min | 3 tasks | 3 files |
 | Phase 02 P01 | 8 | 2 tasks | 2 files |
 | Phase 02-engine-hardening P02 | 1 | 1 tasks | 1 files |
+| Phase 02 P03 | 2min | 1 tasks | 1 files |
+| Phase 02 P04 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -91,6 +93,9 @@ Recent decisions affecting current work:
 - [Phase 02]: sources: [] is valid (D-03) — no minimum length enforced; finding accepted without traced source
 - [Phase 02]: findingItemSchema constant defined once in tool.ts, reused for all four submit_validation tool schema sections
 - [Phase 02]: Provenance instruction in buildUserMessage: appended after PRD fence, names all 7 field names verbatim, permits sources:[] per D-03
+- [Phase 02]: GatewayError re-throw guard: catch block checks instanceof GatewayError first to avoid double-wrapping already-classified errors
+- [Phase 02]: VALD-05 compliance via comment-only invariant — llm.ts had zero logging; comment documents the no-log contract for future contributors
+- [Phase 02]: sources: [] on all 20 migrated fixture entries — correct per D-03; no synthetic provenance added to old fixture
 
 ### Pending Todos
 
@@ -102,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-06T16:30:01.645Z
-Stopped at: Completed 02-02-PLAN.md — Provenance instruction in buildUserMessage
+Last session: 2026-05-06T16:30:57.986Z
+Stopped at: Completed 02-03-PLAN.md — Gateway error classification + VALD-05
 Resume file: None
