@@ -78,7 +78,7 @@
 
 *(points to input pane)*
 
-"This is Echo-Mike. GM. Small dealership. Buyer, closer, lot manager — probably also the one fixing the coffee machine. He's physically in the auction lane every week making split-second decisions."
+"This is Echo-Mike. GM. Small dealership. Buyer, closer, lot manager. He's physically in the auction lane every week making split-second decisions."
 
 "Mike the dealer can't always be in the room. But Echo-Mike is."
 
