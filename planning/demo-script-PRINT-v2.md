@@ -134,8 +134,12 @@
 
 "We are EchoMind. We are asking ACV for a one million dollar investment for fifteen percent."
 
-*(final beat — let it land)*
+*(beat)*
 
-"A dealer is in the room. Let's build."
+"Here's a sneak peek at the roadmap."
+
+*(show roadmap)*
+
+"Here at ACV, we obsess about the customer. EchoMind makes sure we never stop. Let's build."
 
 ---
