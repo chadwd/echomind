@@ -4,8 +4,8 @@
       <template #prepend>
         <v-btn
           :icon="showConfig ? 'mdi-arrow-collapse-left' : 'mdi-arrow-expand-right'"
+          :aria-label="showConfig ? 'Collapse sidebar' : 'Expand sidebar'"
           variant="text"
-          size="small"
           class="ml-2"
           @click="showConfig = !showConfig"
         />
@@ -30,6 +30,7 @@
       <template #append>
         <v-btn
           :icon="isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'"
+          :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           variant="text"
           class="mr-2"
           @click="toggleTheme"
