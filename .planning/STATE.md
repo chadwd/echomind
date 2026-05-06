@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md — Finding interface + tool schema
-last_updated: "2026-05-06T16:27:29.155Z"
+stopped_at: Completed 02-02-PLAN.md — Provenance instruction in buildUserMessage
+last_updated: "2026-05-06T16:30:01.649Z"
 last_activity: 2026-05-06
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 18
-  completed_plans: 12
+  completed_plans: 13
   percent: 33
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-05-04)
 ## Current Position
 
 Phase: 02 (engine-hardening) — EXECUTING
-Plan: 2 of 7
+Plan: 3 of 7
 Status: Ready to execute
 Last activity: 2026-05-06
 
@@ -60,6 +60,7 @@ Progress: [███░░░░░░░] 33%
 | Phase 01.1-ui-polish P01 | 3 | 2 tasks | 1 files |
 | Phase 01.1-ui-polish P03 | 8min | 3 tasks | 3 files |
 | Phase 02 P01 | 8 | 2 tasks | 2 files |
+| Phase 02-engine-hardening P02 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -89,6 +90,7 @@ Recent decisions affecting current work:
 - [Phase 02]: Finding (not ValidationFinding) chosen as TypeScript name — short, unambiguous, per plan spec
 - [Phase 02]: sources: [] is valid (D-03) — no minimum length enforced; finding accepted without traced source
 - [Phase 02]: findingItemSchema constant defined once in tool.ts, reused for all four submit_validation tool schema sections
+- [Phase 02]: Provenance instruction in buildUserMessage: appended after PRD fence, names all 7 field names verbatim, permits sources:[] per D-03
 
 ### Pending Todos
 
@@ -100,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-06T16:27:29.151Z
-Stopped at: Completed 02-01-PLAN.md — Finding interface + tool schema
+Last session: 2026-05-06T16:30:01.645Z
+Stopped at: Completed 02-02-PLAN.md — Provenance instruction in buildUserMessage
 Resume file: None
