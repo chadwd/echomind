@@ -91,11 +91,11 @@
 **JAKE:**
 "Echo-Mike reviewed the idea. Here's what he had to say."
 
-**ECHO-MIKE (CHAD — reads Fit):**
-"Look — the recommended max bid? That's the number I'm already trying to calculate in my head while the auctioneer is calling. Pre-fetched comps before I walk in? One tap to lock my ceiling? That's exactly right."
+**ECHO-MIKE (CHAD — reads Fit, excited, exaggerated):**
+"YES. Finally. The recommended max bid — right there, on my phone, while the car is rolling? That is EXACTLY what I've been waiting for. One tap. One number. I don't have to do the math in my head anymore while the auctioneer is breathing down my neck. This is it. This is the one."
 
 **ECHO-MIKE (CHAD — reads Friction, stressed, angry, a little unhinged):**
-"Four tiles. FOUR. I've got the auctioneer in my ear, my sales manager blowing up my phone, and a flat tire on a unit we're retailing tomorrow — and you want me to READ? Give me ONE number. The ceiling. Everything else is noise and I've ALREADY missed the car. I need to go."
+"And another thing — nightly refresh? I'm standing on the lot at 2pm. A demand spike hit this morning. You're telling me I'm making a six-figure decision on data that's already half a day old? That's the same problem I have TODAY. I need live data. In the lane. In real time."
 
 ---
 
