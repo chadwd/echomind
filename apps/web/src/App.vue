@@ -90,7 +90,7 @@ const showConfig = ref(true);
 const theme = useTheme();
 const isDark = computed(() => theme.global.name.value === 'dark');
 function toggleTheme() {
-  theme.global.name.value = isDark.value ? 'light' : 'dark';
+  theme.change(isDark.value ? 'light' : 'dark');
 }
 </script>
 
