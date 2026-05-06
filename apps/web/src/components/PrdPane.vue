@@ -17,7 +17,7 @@
         </div>
         <v-divider v-else-if="block.type === 'hr'" class="my-3" />
         <div v-else-if="block.type === 'meta'" class="text-caption text-disabled mb-1">{{ block.text }}</div>
-        <p v-else class="text-body-2 mb-2 prd-para">{{ block.text }}</p>
+        <p v-else class="text-body-2 mb-2 prd-para" v-html="bold(block.text)" />
       </template>
     </div>
   </div>
@@ -28,6 +28,10 @@ import { computed } from 'vue';
 import raw from '../../../../fixtures/prds/acvmax-auctions.md?raw';
 
 type Block = { type: 'h2' | 'hr' | 'meta' | 'p'; text: string };
+
+function bold(text: string): string {
+  return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+}
 
 const blocks = computed<Block[]>(() =>
   raw.split('\n').reduce<Block[]>((acc, line) => {
