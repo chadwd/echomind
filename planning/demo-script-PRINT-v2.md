@@ -27,7 +27,7 @@
 ## STEP 1 — HOOK `[0:15 – 0:45]`
 
 **JAKE:**
-"What if every time a product owner at ACV had a new idea, they could have a dealer sitting right next to them — giving real feedback before we invest a single resource? EchoMind makes that possible."
+"What if anyone at ACV with a new product idea could have a dealer sitting right next to them — giving real feedback before we invest a single resource? A product owner. A designer. A researcher. An engineer. Anyone with an idea. EchoMind makes that possible."
 
 ---
 
