@@ -68,13 +68,17 @@
 ## STEP 4 — THE DEMO SETUP `[2:15 – 2:45]`
 
 **JAKE:**
-"Alex has an idea — Bid Mode for ACV MAX Mobile. Dealers get a recommended max bid right on their phone while they're in the lane."
+"Alex has an idea."
 
-"Before the sprint, before the designer, before a single resource — Alex asks a dealer."
+"ACV MAX Mobile is already the best data app at the auction — but when a vehicle is rolling and the auctioneer is calling bids at a live physical auction, the current screen wasn't built for that moment. Alex wants to change that."
+
+"Bid Mode. One tap. One number — the max bid ceiling — in under 5 seconds. Right when the dealer needs it most."
+
+"Alex asks a dealer."
 
 *(points to input pane)*
 
-"This is Echo-Mike. GM. Small dealership. Buyer, closer, lot manager — probably also the one fixing the coffee machine. He's in the lane two to four times a month making split-second decisions."
+"This is Echo-Mike. GM. Small dealership. Buyer, closer, lot manager — probably also the one fixing the coffee machine. He's physically in the auction lane every week making split-second decisions."
 
 "Mike the dealer can't always be in the room. But Echo-Mike is."
 
