@@ -18,7 +18,25 @@
         class="finding-row d-flex ga-2 py-1"
       >
         <span class="finding-num text-caption font-weight-bold">{{ i + 1 }}</span>
-        <p class="text-body-2 ma-0 finding-text" v-html="bold(item)" />
+        <div class="finding-content">
+          <p class="text-body-2 ma-0 finding-text" v-html="bold(item.text)" />
+          <div
+            v-if="item.sources && item.sources.length > 0"
+            class="d-flex flex-wrap ga-1 mt-1"
+            :aria-label="`Sourced from: ${item.sources.join(', ')}`"
+          >
+            <v-chip
+              v-for="src in item.sources"
+              :key="src"
+              :color="chipColor(src)"
+              size="x-small"
+              variant="tonal"
+              :ripple="false"
+            >
+              {{ src }}
+            </v-chip>
+          </div>
+        </div>
       </div>
     </div>
   </v-card>
@@ -26,11 +44,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import type { Finding } from '@echomind/engine';
+import { chipColor } from '../utils/provenance';
 
 const props = defineProps<{
   title: string;
   icon: string;
-  items: string[];
+  items: Finding[];
   color: string;
 }>();
 
