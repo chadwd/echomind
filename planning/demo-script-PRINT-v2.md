@@ -57,11 +57,11 @@
 ## STEP 3 — THE SOLUTION `[1:45 – 2:15]`
 
 **JAKE:**
-"This is EchoMind. A trusted library of ACV dealer personas — available to any product owner, designer, or researcher, the moment they need one."
+"This is EchoMind. A trusted library of ACV dealer personas — available to anyone at ACV, the moment they need one."
 
 "You don't need to schedule a call. You don't need connections. You don't even need to have been here longer than a week."
 
-"You just validate."
+"You just turn a rough idea into a goldmine."
 
 ---
 
