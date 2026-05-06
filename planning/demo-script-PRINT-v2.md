@@ -102,13 +102,13 @@
 ## STEP 6 — THE MONEY MOMENT `[3:45 – 4:15]`
 
 **JAKE:**
-"The requirements doc had four data tiles. Echo-Mike just told us one number wins."
+"Echo-Mike just told us something critical — the data needs to be live. In real time. In the lane."
 
-"That assumption would have shipped. The designer would have built it. The engineer would have built it. And six weeks later — Alex would have been in that meeting. Big screen. Lots of faces."
+"That assumption would have shipped. The engineer would have built it. And six weeks later — dealers would have had a tool that gave them yesterday's data for today's decisions."
 
 *(beat)*
 
-"Instead — Alex caught it before a single resource was touched. Alex is already looking up boats."
+"Instead — Alex caught it before a single resource was touched."
 
 ---
 
