@@ -5,7 +5,7 @@
     { "text": "**One-tap ceiling lock** is exactly right — I set my number and stop second-guessing.", "sources": [] }
   ],
   "friction": [
-    { "text": "**Four data tiles competing for attention in a 60-second window is too much.** I can't read MMR, market range, recon, AND make a bid decision while the auctioneer is calling. The ceiling is the feature — everything else is **noise in the lane**.", "sources": [] },
+    { "text": "**Nightly refresh isn't enough.** I'm standing on the lot at 2pm — a demand spike hit this morning and you're telling me I'm making a **six-figure decision on data that's half a day old**? That's the same problem I have today. I need **live data. In the lane. In real time.**", "sources": [] },
     { "text": "The **'Going Live' button** adds a tap I have to remember under pressure. If I forget to tap it before the car comes up, I've **lost time**.", "sources": [] },
     { "text": "No mention of whether the Recommended Max Bid is **net of my pack and recon**. I need to know if the number is already my cost or if I'm doing that math myself.", "sources": [] }
   ],
@@ -15,7 +15,7 @@
     { "text": "Can I see a **history of what I bid versus the ceiling**? I want to know if I'm learning to trust the number over time.", "sources": [] }
   ],
   "refinements": [
-    { "text": "Lead with **one hero number** — the ceiling — and collapse MMR, market range, and recon behind a **'Why?' tap**. Don't make me read four tiles to make a 60-second decision.", "sources": [] },
+    { "text": "Lead with **one hero number** — the ceiling — and collapse MMR, market range, and recon behind a **'Why?' tap**. The number is the decision; the data is the explanation.", "sources": [] },
     { "text": "Show the **confidence band** prominently — that's what determines whether I act or pass, not the supporting data.", "sources": [] },
     { "text": "Consider **auto-activating Bid Mode** when I navigate to a vehicle already on the run list — so I don't have to remember to tap 'Going Live.'", "sources": [] }
   ]
