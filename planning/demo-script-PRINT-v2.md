@@ -7,13 +7,13 @@
 ## INTRO
 
 **CHAD:**
-"Hi, I'm Chad Dunbar, Senior UX Designer at ACV Auctions."
+"Hi, I'm Chad Dunbar, Product Designer at ACV Auctions."
 
 **JAKE:**
 "And I'm Jake Maisel, Product Designer at ACV Auctions."
 
 **CHAD:**
-"Together we built EchoMind — and this is our submission for the 2026 ACV Hackathon."
+"Two product designers, a few too many ideas, and one hackathon. This is EchoMind."
 
 ---
 
