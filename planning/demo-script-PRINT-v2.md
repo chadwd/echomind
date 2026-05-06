@@ -115,7 +115,7 @@
 ## STEP 7 — CLAUDE SKILL `[4:15 – 4:30]`
 
 **JAKE:**
-"And for the engineers and builders in the room — EchoMind is also a Claude Skill. You don't have to change how you work. Echo-Mike comes to you. Right where you are. Right when you need it."
+"EchoMind is also a Claude Skill. You don't have to change how you work. EchoMind comes to you. Right where you are. Right when you need it."
 
 ---
 
