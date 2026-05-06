@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-03-PLAN.md — Gateway error classification + VALD-05
-last_updated: "2026-05-06T16:30:57.990Z"
+stopped_at: Completed 02-06-PLAN.md — CLI Finding renderer update
+last_updated: "2026-05-06T16:34:12.135Z"
 last_activity: 2026-05-06
 progress:
   total_phases: 4
   completed_phases: 2
   total_plans: 18
-  completed_plans: 15
+  completed_plans: 16
   percent: 33
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-05-04)
 ## Current Position
 
 Phase: 02 (engine-hardening) — EXECUTING
-Plan: 5 of 7
+Plan: 6 of 7
 Status: Ready to execute
 Last activity: 2026-05-06
 
@@ -63,6 +63,7 @@ Progress: [███░░░░░░░] 33%
 | Phase 02-engine-hardening P02 | 1 | 1 tasks | 1 files |
 | Phase 02 P03 | 2min | 1 tasks | 1 files |
 | Phase 02 P04 | 1 | 1 tasks | 1 files |
+| Phase 02-engine-hardening P06 | 5min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,7 @@ Recent decisions affecting current work:
 - [Phase 02]: GatewayError re-throw guard: catch block checks instanceof GatewayError first to avoid double-wrapping already-classified errors
 - [Phase 02]: VALD-05 compliance via comment-only invariant — llm.ts had zero logging; comment documents the no-log contract for future contributors
 - [Phase 02]: sources: [] on all 20 migrated fixture entries — correct per D-03; no synthetic provenance added to old fixture
+- [Phase 02]: Empty sources[] renders no annotation in CLI (D-08): clean bullet line; annotation is opt-in by presence of traced sources
 
 ### Pending Todos
 
@@ -107,6 +109,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-06T16:30:57.986Z
-Stopped at: Completed 02-03-PLAN.md — Gateway error classification + VALD-05
+Last session: 2026-05-06T16:34:12.131Z
+Stopped at: Completed 02-06-PLAN.md — CLI Finding renderer update
 Resume file: None

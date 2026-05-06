@@ -74,7 +74,7 @@ Plans:
 - [x] 02-03-PLAN.md — Gateway error handling + VALD-05 audit: GatewayError class, classification, no-log invariant
 - [x] 02-04-PLAN.md — Fixture migration: gm-auctions-snapshot.json wrapped to Finding[] format
 - [ ] 02-05-PLAN.md — Web app: provenance chips (SectionCard), error state (ResultsPane), structured error (useValidator), App.vue wiring, PERS-04 confirm
-- [ ] 02-06-PLAN.md — CLI annotation: echomind-validate.ts italic inline sources annotation per D-08
+- [x] 02-06-PLAN.md — CLI annotation: echomind-validate.ts italic inline sources annotation per D-08
 - [ ] 02-07-PLAN.md — Integration gate: TypeScript build verify, CLI smoke-test, VALD-05/PERS-04 audit, human checkpoint
 
 ### Phase 3: Full v1 Surfaces
@@ -99,5 +99,5 @@ Phases execute in numeric order: 1 → 1.1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
 | 1.1. UI Polish | 1/4 | In Progress|  |
-| 2. Engine Hardening | 4/7 | In Progress|  |
+| 2. Engine Hardening | 5/7 | In Progress|  |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
