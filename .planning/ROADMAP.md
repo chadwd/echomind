@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Demo Sliver** - End-to-end demo on both surfaces against the hardcoded ACV MAX Auctions PRD + GM persona
 - [ ] **Phase 1.1: UI Polish** (INSERTED) - Material 3 brand theme, logo header, component styling for recording
-- [ ] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling
+- [x] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling (completed 2026-05-06)
 - [ ] **Phase 3: Full v1 Surfaces** - Confluence/Notion link input, persona picker, copy/export, error states, skill file output
 
 ## Phase Details
@@ -75,7 +75,7 @@ Plans:
 - [x] 02-04-PLAN.md — Fixture migration: gm-auctions-snapshot.json wrapped to Finding[] format
 - [x] 02-05-PLAN.md — Web app: provenance chips (SectionCard), error state (ResultsPane), structured error (useValidator), App.vue wiring, PERS-04 confirm
 - [x] 02-06-PLAN.md — CLI annotation: echomind-validate.ts italic inline sources annotation per D-08
-- [ ] 02-07-PLAN.md — Integration gate: TypeScript build verify, CLI smoke-test, VALD-05/PERS-04 audit, human checkpoint
+- [x] 02-07-PLAN.md — Integration gate: TypeScript build verify, CLI smoke-test, VALD-05/PERS-04 audit, human checkpoint
 
 ### Phase 3: Full v1 Surfaces
 **Goal**: The web app accepts a real Confluence or Notion link as PRD input and exposes the full PO workflow (persona picker, running state, four sections, copy/export, error recovery); the skill writes its output to a file
@@ -99,5 +99,5 @@ Phases execute in numeric order: 1 → 1.1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
 | 1.1. UI Polish | 1/4 | In Progress|  |
-| 2. Engine Hardening | 6/7 | In Progress|  |
+| 2. Engine Hardening | 7/7 | Complete   | 2026-05-06 |
 | 3. Full v1 Surfaces | 0/? | Not started | - |

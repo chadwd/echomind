@@ -14,7 +14,7 @@ Persona substrate — read from `personas/*.yaml`, no fork from the `agent-perso
 - [x] **PERS-01**: Persona library reads any `personas/*.yaml` file using the existing `agent-personas` schema (no schema fork)
 - [x] **PERS-02**: Hero persona delivered as a refined `personas/general-manager.yaml` (target ACV MAX dealer GM) with documented provenance (where each field came from)
 - [x] **PERS-03**: Persona library exposes a programmatic loader (TypeScript/JavaScript) that both the web app and the Claude Code skill consume — single source of truth
-- [ ] **PERS-04**: Persona authoring is explicitly rejected in the UI — read-only listing only (anti-gaming guardrail; authoring lives in the `agent-personas` capture skill)
+- [x] **PERS-04**: Persona authoring is explicitly rejected in the UI — read-only listing only (anti-gaming guardrail; authoring lives in the `agent-personas` capture skill)
 
 ### Validator Engine
 
@@ -114,7 +114,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERS-01 | Phase 1 | Complete |
 | PERS-02 | Phase 1 | Complete |
 | PERS-03 | Phase 1 | Complete |
-| PERS-04 | Phase 2 | Pending |
+| PERS-04 | Phase 2 | Complete |
 | VALD-01 | Phase 1 | Complete |
 | VALD-02 | Phase 1 | Complete |
 | VALD-03 | Phase 2 | Complete |
