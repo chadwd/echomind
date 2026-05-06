@@ -22,8 +22,8 @@ The shared engine both surfaces call. Input = (persona YAML, PRD text). Output =
 
 - [x] **VALD-01**: Validator engine accepts (persona YAML object, PRD text) and returns a structured object with `fit`, `friction`, `questions`, and `refinements` sections
 - [x] **VALD-02**: Validator renders the persona system prompt from `prompts/persona-system-prompt.md` using the persona's fields (no hardcoded persona content in the engine)
-- [ ] **VALD-03**: Each finding in the output references the persona field(s) that drove it (provenance — supports the traceability and anti-gaming guardrails)
-- [ ] **VALD-04**: Validator output schema is identical between the web app and the Claude Code skill (single contract)
+- [x] **VALD-03**: Each finding in the output references the persona field(s) that drove it (provenance — supports the traceability and anti-gaming guardrails)
+- [x] **VALD-04**: Validator output schema is identical between the web app and the Claude Code skill (single contract)
 - [ ] **VALD-05**: Validator never logs raw persona-context-plus-PRD payloads outside the ACV gateway (no-leak guardrail)
 
 ### LLM Integration
@@ -117,8 +117,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERS-04 | Phase 2 | Pending |
 | VALD-01 | Phase 1 | Complete |
 | VALD-02 | Phase 1 | Complete |
-| VALD-03 | Phase 2 | Pending |
-| VALD-04 | Phase 2 | Pending |
+| VALD-03 | Phase 2 | Complete |
+| VALD-04 | Phase 2 | Complete |
 | VALD-05 | Phase 2 | Pending |
 | LLM-01 | Phase 1 | Complete |
 | LLM-02 | Phase 1 | Complete |
