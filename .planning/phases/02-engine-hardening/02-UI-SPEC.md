@@ -59,9 +59,11 @@ Inherited from Phase 1.1 M3 theme (Roboto via Vuetify). No new type sizes in Pha
 | Role | Size | Weight | Line Height | Vuetify Class |
 |------|------|--------|-------------|---------------|
 | Body (finding text) | 14px | 400 (regular) | 1.65 | `text-body-2` |
-| Label (chip text) | 11px | 500 (medium) | 1.0 | `text-caption` (Vuetify chip default) |
+| Label (chip text) | 11px | 400 (regular) | 1.0 | `text-caption` (Vuetify chip default) |
 | Heading (section title) | 14px | 700 (bold) | 1.2 | `text-subtitle-2 font-weight-bold` |
-| Error heading | 16px | 600 (semibold) | 1.3 | `text-subtitle-1 font-weight-semibold` |
+| Error heading | 16px | 700 (bold) | 1.3 | `text-subtitle-1 font-weight-bold` |
+
+Declared weights: **400 (regular)** for body text and chip labels; **700 (bold)** for all headings including the error heading.
 
 Source: pre-populated from existing SectionCard.vue and ResultsPane.vue patterns.
 
@@ -117,7 +119,7 @@ Implementation note: `warning` and `success` tonal containers are derived by Vue
 - `size="x-small"`
 - `variant="tonal"`
 - `:color="fieldColor"` (from the map above)
-- `class="font-weight-medium"` (weight 500)
+- No additional weight class — chip label inherits weight 400 (regular) via `text-caption`
 - No click handler, no ripple (`ripple="false"`)
 
 **Label:** The field name as-is from `sources[]` — e.g., `pain_points`, `review_lens`. No transformation to title case. Rationale: matches the YAML field names exactly; keeps the provenance link transparent and copy-pasteable.
