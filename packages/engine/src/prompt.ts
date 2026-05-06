@@ -44,5 +44,11 @@ Return a structured validation using the submit_validation tool. For each sectio
 PRD:
 ===
 ${prd}
-===`;
+===
+
+For each finding, populate the \`sources\` array with the persona field names
+(one or more of: goals, daily_workflow, pain_points, vocabulary, tech_comfort,
+pet_peeves, review_lens) that most directly informed that finding.
+If a finding draws from multiple fields, include all relevant ones.
+If you cannot trace a finding to a specific field, leave sources as an empty array.`;
 }
