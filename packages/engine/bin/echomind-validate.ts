@@ -27,16 +27,32 @@ async function main() {
     return;
   }
 
-  // Render as markdown per UI-SPEC.md §Skill Surface
+  // Render as markdown per D-08 — italic inline annotation for provenance
   console.log(`# Validation: ${persona.role} → ACV MAX Auctions PRD\n`);
+
   console.log('## Fit\n');
-  result.fit.forEach(f => console.log(`- ${f}`));
+  result.fit.forEach(f => {
+    const ann = f.sources.length ? ` *(${f.sources.join(', ')})*` : '';
+    console.log(`- ${f.text}${ann}`);
+  });
+
   console.log('\n## Friction\n');
-  result.friction.forEach(f => console.log(`- ${f}`));
+  result.friction.forEach(f => {
+    const ann = f.sources.length ? ` *(${f.sources.join(', ')})*` : '';
+    console.log(`- ${f.text}${ann}`);
+  });
+
   console.log('\n## Questions\n');
-  result.questions.forEach(f => console.log(`- ${f}`));
+  result.questions.forEach(f => {
+    const ann = f.sources.length ? ` *(${f.sources.join(', ')})*` : '';
+    console.log(`- ${f.text}${ann}`);
+  });
+
   console.log('\n## Refinements\n');
-  result.refinements.forEach(f => console.log(`- ${f}`));
+  result.refinements.forEach(f => {
+    const ann = f.sources.length ? ` *(${f.sources.join(', ')})*` : '';
+    console.log(`- ${f.text}${ann}`);
+  });
 }
 
 main().catch(err => {
