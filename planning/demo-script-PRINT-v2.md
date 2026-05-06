@@ -92,10 +92,10 @@
 "Echo-Mike reviewed the idea. Here's what he had to say."
 
 **ECHO-MIKE (CHAD — reads Fit, excited, exaggerated):**
-"YES. Finally. The recommended max bid — right there, on my phone, while the car is rolling? That is EXACTLY what I've been waiting for. One tap. One number. I don't have to do the math in my head anymore while the auctioneer is breathing down my neck. This is it. This is the one."
+"YES. Finally. One tap. One number. Right there on my phone while the car is rolling. I've been waiting for this. This is the one."
 
 **ECHO-MIKE (CHAD — reads Friction, stressed, angry, a little unhinged):**
-"And another thing — nightly refresh? I'm standing on the lot at 2pm. A demand spike hit this morning. You're telling me I'm making a six-figure decision on data that's already half a day old? That's the same problem I have TODAY. I need live data. In the lane. In real time."
+"Nightly refresh? I'm making a six-figure decision on data that's half a day old. I need live data. In the lane. In real time."
 
 ---
 
