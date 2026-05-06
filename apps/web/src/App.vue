@@ -47,6 +47,7 @@
             <v-col v-if="showConfig" class="pane-config">
               <InputPane
                 :is-validating="isValidating"
+                v-model:persona="selectedPersona"
                 @validate="runValidation"
               />
             </v-col>
@@ -65,6 +66,7 @@
               :results="results"
               :error="error"
               :error-kind="errorKind"
+              :persona-name="selectedPersona"
               @retry="runValidation"
             />
           </v-col>
@@ -79,6 +81,7 @@
 import { ref, computed } from 'vue';
 import { useTheme } from 'vuetify';
 import { useValidator } from './composables/useValidator';
+import { defaultPersona } from './composables/usePersonas';
 import InputPane from './components/InputPane.vue';
 import PrdPane from './components/PrdPane.vue';
 import ResultsPane from './components/ResultsPane.vue';
@@ -86,6 +89,7 @@ import ResultsPane from './components/ResultsPane.vue';
 const { isValidating, step, results, error, errorKind, runValidation } = useValidator();
 
 const showConfig = ref(true);
+const selectedPersona = ref(defaultPersona);
 
 const theme = useTheme();
 const isDark = computed(() => theme.global.name.value === 'dark');

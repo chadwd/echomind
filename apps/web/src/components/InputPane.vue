@@ -5,15 +5,15 @@
     </v-card-title>
 
     <div class="d-flex flex-column ga-4">
-      <!-- Persona selector (D-14: single GM item, readonly for demo) -->
+      <!-- Persona selector: all personas from personas/*.yaml, GM default -->
       <v-select
-        :model-value="'General Manager'"
-        :items="['General Manager']"
+        :model-value="persona"
+        :items="personas"
         label="Persona"
         prepend-inner-icon="mdi-account"
-        readonly
         variant="outlined"
         density="comfortable"
+        @update:model-value="$emit('update:persona', $event)"
       />
 
       <!-- PRD display (D-14: readonly text field showing demo PRD title) -->
@@ -43,12 +43,16 @@
 </template>
 
 <script setup lang="ts">
+import { personas } from '../composables/usePersonas';
+
 defineProps<{
   isValidating: boolean;
+  persona: string;
 }>();
 
 defineEmits<{
   (e: 'validate'): void;
+  (e: 'update:persona', value: string): void;
 }>();
 </script>
 
