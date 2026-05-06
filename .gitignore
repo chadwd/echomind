@@ -33,6 +33,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local Claude state (keep CLAUDE.md, ignore the rest)
-.claude/
+# Local Claude state (keep CLAUDE.md and skills/, ignore the rest)
+.claude/*
 !CLAUDE.md
+!.claude/skills
+.gstack/

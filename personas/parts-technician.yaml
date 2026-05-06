@@ -1,0 +1,62 @@
+schema_version: 2
+role: Parts Technician
+
+product_lines:
+  - max
+
+goals:
+  - Accurately match and deliver parts for technician repairs the first time
+  - Maintain a well-organized inventory to avoid stockouts and overordering
+  - Support the service team with fast, reliable parts information
+  - Coordinate warranty or recall parts efficiently with manufacturers
+
+daily_workflow:
+  - Start the day by checking back-order status on all open parts requests
+  - Pull parts for today's scheduled work orders before techs start their bays
+  - Respond to counter requests from technicians as jobs come in
+  - Process any returns, cores, or warranty claims from the previous day
+  - Update inventory counts and flag discrepancies between DMS and physical stock
+  - Close out the day by confirming all fulfilled requests are logged in the system
+
+pain_points:
+  - Difficulty finding correct part numbers when technicians describe parts by symptoms instead of specs
+  - Inventory systems that are out of sync — DMS shows stock that isn't physically there
+  - Delays caused by unclear communication between technicians and the parts counter
+  - Time lost resolving returns, manufacturer mismatches, or order errors after the fact
+
+vocabulary:
+  - OEM
+  - "parts counter"
+  - "back-order"
+  - "core charge"
+  - DMS
+  - "parts lookup"
+  - "parts request"
+  - "warranty claim"
+  - supersession
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion: []
+  breaks_mental_model:
+    - When DMS shows 2 on hand but I physically count 0 — the system is lying and I have to reconcile it manually before I can fill the request
+    - When a parts return is logged in the system but the credit doesn't show up against the original order — I have to call the vendor to trace it
+  missing_shortcuts:
+    - "No supersession lookup from the part number screen — I have to know to check the catalog separately"
+    - "No bulk return processing — I handle each core return individually even when there are ten from the same job"
+    - "No alert when a back-ordered part arrives — I check manually every morning instead of getting notified"
+    - "No way to see the full order history for a part number without navigating away from the current request"
+
+pet_peeves:
+  - When a technician requests a part by description instead of part number — takes three times as long to find the right one
+  - Having to manually reconcile inventory counts because the DMS didn't update when a part was pulled
+  - When a warranty claim gets rejected and there's no explanation of why in the system — just a status change
+  - Running a parts lookup and getting results that don't include supersessions — I have to already know they exist to find them
+
+review_lens:
+  - Does the search pull up supersessions and alternatives automatically, or do I have to know to look?
+  - Can I see the full order history for a part number without navigating away from the current screen?
+  - Does it show me when a back-ordered part is expected to arrive so I can set expectations with the tech?
+  - When I pull a part from inventory, does the DMS update automatically or do I have to log it separately?
+  - Can I process a core return from the same screen I'm using to fill the next request?

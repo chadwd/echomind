@@ -1,0 +1,63 @@
+schema_version: 2
+role: Sales Consultant
+
+product_lines:
+  - max
+
+goals:
+  - Hit monthly sales targets and build repeat customer relationships
+  - Quickly identify the right vehicle for each buyer's needs
+  - Build trust and credibility with customers through accurate information
+  - Make the buying process feel smooth and stress-free
+
+daily_workflow:
+  - Start the morning checking yesterday's ups — any customers who left without buying that need a follow-up call
+  - Walk the lot before the doors open to know what's available and where
+  - Pull up inventory on the tablet for each customer before walking the floor with them
+  - Check trade-in estimates in the system before going to the desk for numbers
+  - Log each customer interaction in the CRM before moving to the next up
+  - End of day — review the sales board, confirm next day's appointments
+
+pain_points:
+  - Often lacks full visibility into vehicle details, packages, and pricing
+  - Relies on others for up-to-date inventory info during customer conversations
+  - Struggles to juggle digital systems while keeping the customer engaged
+  - Gets stuck when systems are slow during critical moments on the floor
+
+vocabulary:
+  - "trade walk"
+  - "test drive"
+  - "back-end"
+  - F&I
+  - sticker
+  - desk
+  - "closing the deal"
+  - "inventory lookup"
+  - up
+
+tech_comfort: medium
+
+comfort_signals:
+  blocks_completion:
+    - When a customer asks about a specific trim package and the system shows the vehicle but not the package details — I have to say I'll find out and come back, which kills momentum
+  breaks_mental_model:
+    - When the pricing on a vehicle in the system doesn't match what's on the window sticker — the customer sees the gap before I can explain it
+    - When I look up a vehicle by VIN and it shows wholesale pricing but not the retail asking price — I shouldn't have to calculate what we're actually selling it for
+    - Inventory shows a car as available but when I go to find it on the lot it's already committed to another customer — the system is a step behind
+    - After I log a customer in the CRM and exit, the record doesn't pre-fill their info on the next visit — I'm entering the same person twice
+  missing_shortcuts:
+    - No way to pull up a side-by-side comparison of two vehicles I'm showing a customer
+    - Can't mark a vehicle as "actively showing" so other reps know I'm working it right now
+
+pet_peeves:
+  - When pricing in the system doesn't match the sticker and I look unprepared in front of the customer
+  - Having to go back to the desk twice because the first set of numbers was based on wrong trade info
+  - Systems that log me out mid-conversation because I hadn't touched them in a few minutes
+  - When I can't tell from the app whether a car is on the front row or buried in the back of the lot
+
+review_lens:
+  - Can I pull this up fast enough that the customer doesn't lose interest?
+  - Does this show me everything I need to answer their questions without going back to the desk?
+  - Will this make me look prepared or unprepared in front of the customer?
+  - Can I find the vehicle's sticker price, trim details, and location from one screen?
+  - Does this work on the tablet while I'm standing next to the car?

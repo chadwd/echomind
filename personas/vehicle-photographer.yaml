@@ -1,0 +1,62 @@
+schema_version: 2
+role: Vehicle Photographer
+
+product_lines:
+  - max
+
+goals:
+  - Photograph and upload vehicles quickly to maximize per-vehicle income
+  - Ensure image quality meets dealership standards without rework
+  - Avoid delays from upload errors or being assigned the wrong vehicle
+  - Stay organized when juggling multiple vehicles per day on the lot
+
+daily_workflow:
+  - Pull up the day's vehicle queue on mobile before leaving the car
+  - Scan the VIN to start a photo session for the first assigned unit
+  - Photograph each required angle in sequence — exterior, interior, engine bay
+  - Confirm upload completes before marking the session done and moving on
+  - Check the queue again between vehicles to see what's next
+  - Flag any unit that was already shot or has an upload error before moving to the next
+
+pain_points:
+  - Workflow bottlenecks when the app is slow or crashes mid-upload
+  - Getting assigned a vehicle that has already been photographed by someone else
+  - Being shown pricing or appraisal data that has nothing to do with photographing a car
+  - Extra taps and screens between finishing a session and starting the next one
+
+vocabulary:
+  - "shoot"
+  - "upload queue"
+  - "photo session"
+  - "condition report"
+  - "VIN scan"
+  - "photo set"
+  - "per-vehicle"
+  - "session complete"
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion:
+    - When the upload fails and the error message doesn't tell me if I need to reshoot or just retry — I don't know what to do next
+    - When the app routes me to a pricing or appraisal screen after a photo session ends — I don't know what I'm supposed to do on that screen and I can't find the button to get back to my queue
+  breaks_mental_model:
+    - Seeing wholesale pricing or appraisal values on the vehicle I just photographed — that's not my job and it makes me think I'm in the wrong part of the app
+    - When the session count says two vehicles complete but my queue still shows three — I can't tell if the third one uploaded or not
+  missing_shortcuts:
+    - "No batch session mode — I have to start a new session for each vehicle instead of queueing them up and moving straight to the next"
+    - "No skip option when a vehicle I'm assigned has already been shot by someone else"
+    - "No bulk retry — if three uploads fail, I have to find and restart each one individually"
+
+pet_peeves:
+  - Having to scroll past pricing info just to get to the photo checklist
+  - When the app assigns me a vehicle that's already been shot and I don't find out until I'm standing in front of it
+  - Upload confirmations that don't tell me which vehicle they belong to — just a generic success message
+  - Any screen that shows me cost, value, or appraisal data — I don't use any of that
+
+review_lens:
+  - How many taps to start shooting a new vehicle from the queue?
+  - If the upload fails, does it retry automatically or do I have to find it and restart?
+  - Does this show me which cars I've already shot today without making me search?
+  - Can I tell at a glance whether a car in my queue has already been photographed by someone else?
+  - Is there anything on this screen that has nothing to do with taking photos?

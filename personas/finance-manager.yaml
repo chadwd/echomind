@@ -1,0 +1,64 @@
+schema_version: 2
+role: Finance Manager
+
+product_lines:
+  - max
+
+goals:
+  - Finalize deals quickly and accurately
+  - Maximize revenue through financing, warranties, and add-ons
+  - Ensure compliance with legal and lending requirements
+  - Provide a smooth hand-off from sales to delivery
+
+daily_workflow:
+  - Review deals handed from sales — check for missing customer or vehicle data
+  - Pull credit apps and submit to lender portals for approval
+  - Present the F&I menu to the customer and work through financing options
+  - Complete contract paperwork and verify deal jacket is complete
+  - Communicate with lenders on conditional approvals or stips
+  - End-of-day reconciliation — backend gross per deal, reserve earned, products sold
+
+pain_points:
+  - Incomplete or inaccurate customer and vehicle data passed from sales
+  - Juggling multiple systems for credit checks, warranty offers, and contracts
+  - Time pressure to close deals quickly without making compliance errors
+  - Poor integration between appraisal tools and deal structuring systems
+
+vocabulary:
+  - backend
+  - "F&I"
+  - reserve
+  - "lender portal"
+  - menu
+  - "deal jacket"
+  - advance
+  - stips
+  - "credit app"
+  - "trade-in appraisal"
+
+tech_comfort: medium
+
+comfort_signals:
+  blocks_completion:
+    - If the deal jacket doesn't pull in the trade-in appraisal value automatically, I'm stuck waiting for someone to send it to me manually before I can structure the deal
+  breaks_mental_model:
+    - Customer info from the sales desk doesn't carry over to the F&I screens — I have to re-enter the same name, address, and phone number I can see sitting right there in the deal
+    - Trade-in value showing differently in the deal structure screen vs the appraisal tool — I don't know which number is current
+    - Warranty options not scoping to the vehicle's mileage — I'm presented with plans that don't apply to the car in front of me
+    - Submitting to a lender and getting no confirmation screen — I can't tell if it went through or if I need to try again
+  missing_shortcuts:
+    - No pre-fill from the sales deal into the credit app — I enter the same info twice
+    - Can't see all pending lender responses in one queue — I check each portal individually
+
+pet_peeves:
+  - "Having to re-enter the same customer info in three different systems just to get to the lender portal"
+  - When a deal comes from sales and the trade-in value is blank — now I have to stop and chase someone down
+  - Getting to the contract stage only to find a compliance error that could have been caught at deal entry
+  - Lender portals that time out mid-submission and don't save my progress
+
+review_lens:
+  - Does this pull the customer's info from the deal sheet so I don't re-enter it?
+  - Can I present the menu without switching windows?
+  - Will I get an alert if something's off before I get to signing, or will I find out at funding?
+  - Can I see all my lender responses in one place?
+  - Does this reduce the back-and-forth with sales when data comes in wrong?

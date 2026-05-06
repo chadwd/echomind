@@ -12,8 +12,9 @@ EchoMind ships in three coarse phases. Phase 1 is a 2-day sprint delivering an e
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Demo Sliver** - End-to-end demo on both surfaces against the hardcoded ACV MAX Auctions PRD + GM persona
-- [ ] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling
+- [x] **Phase 1: Demo Sliver** - End-to-end demo on both surfaces against the hardcoded ACV MAX Auctions PRD + GM persona
+- [x] **Phase 1.1: UI Polish** (INSERTED) - Material 3 brand theme, logo header, component styling for recording (completed 2026-05-05)
+- [x] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling (completed 2026-05-06)
 - [ ] **Phase 3: Full v1 Surfaces** - Confluence/Notion link input, persona picker, copy/export, error states, skill file output
 
 ## Phase Details
@@ -33,11 +34,28 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-monorepo-scaffold-PLAN.md — pnpm monorepo root + engine package (types, loader, prompt, LLM adapter, CLI) + Vue 3/Vuetify web shell
 - [x] 01-02-demo-fixtures-PLAN.md — ACV MAX Auctions PRD fixture (with designed flaws) + PRD content checkpoint
-- [ ] 01-03-engine-gateway-PLAN.md — Live gateway smoke-test, .env.local.example, engine proven end-to-end
-- [ ] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
-- [ ] 01-05-web-app-PLAN.md — InputPane, ResultsPane, SectionCard components + useValidator composable wired to engine
-- [ ] 01-06-skill-PLAN.md — .claude/skills/echomind-validate/SKILL.md + CLI output verified
-- [ ] 01-07-demo-runbook-PLAN.md — DEMO.md + dress rehearsal checkpoint
+- [x] 01-03-engine-gateway-PLAN.md — Live gateway smoke-test, .env.local.example, engine proven end-to-end
+- [x] 01-04-fixture-snapshot-PLAN.md — Capture best live response as JSON fixture, verify --replay, "we caught X" checkpoint
+- [x] 01-05-web-app-PLAN.md — InputPane, ResultsPane, SectionCard components + useValidator composable wired to engine
+- [x] 01-06-skill-PLAN.md — .claude/skills/echomind-validate/SKILL.md + CLI output verified
+- [x] 01-07-demo-runbook-PLAN.md — DEMO.md + dress rehearsal checkpoint
+
+### Phase 1.1: UI Polish (INSERTED)
+**Goal**: Apply the Material 3 brand theme, refine the logo header treatment, and polish component styling so the app looks intentional and on-brand for the demo recording
+**Depends on**: Phase 1
+**Requirements**: (no new REQ-IDs — polish and presentation layer only)
+**Success Criteria** (what must be TRUE):
+  1. The app uses the EchoMind brand purple (`#7A4F81`) as primary color — not the placeholder blue (`#1565C0`)
+  2. The app bar logo renders cleanly on camera — icon readable, no white square artifact, no tagline text visible
+  3. Section cards, surfaces, and outlines use the M3 neutral palette (warm tints, not flat greys)
+  4. The overall visual reads as intentional/designed, not generic Vuetify default
+**Plans**: 4 plans across 3 waves
+
+Plans:
+- [x] 01.1-01-PLAN.md — M3 light scheme applied to Vuetify theme in main.ts (primary, surface, secondary, error, all neutral roles)
+- [x] 01.1-02-PLAN.md — App bar logo header polish in App.vue (icon-only crop, no white square, drop-in replaceable PNG)
+- [x] 01.1-03-PLAN.md — Component polish: InputPane sidebar card, SectionCard finding spacing, empty state secondary icon
+- [ ] 01.1-04-PLAN.md — Human visual checkpoint: dev server + Chad sign-off before demo recording
 
 ### Phase 2: Engine Hardening
 **Goal**: The shared validator engine becomes provenance-traceable, the anti-gaming guardrail is enforced in the UI, and gateway errors surface as structured error states instead of crashes
@@ -48,7 +66,16 @@ Plans:
   2. The web app shows a read-only persona list with no edit affordance (no path to ad-hoc persona tweaking)
   3. A gateway timeout, auth failure, or rate-limit error produces a clear structured error state on both surfaces rather than a crash or blank screen
   4. The validator output schema is identical between the web surface and the skill — verified by shared type/contract
-**Plans**: TBD
+**Plans**: 7 plans across 4 waves
+
+Plans:
+- [x] 02-01-PLAN.md — Engine types + tool schema: Finding interface, ValidationResult Breaking change, parseToolResult update
+- [x] 02-02-PLAN.md — Prompt provenance instruction: buildUserMessage appends field-tracing instruction for LLM
+- [x] 02-03-PLAN.md — Gateway error handling + VALD-05 audit: GatewayError class, classification, no-log invariant
+- [x] 02-04-PLAN.md — Fixture migration: gm-auctions-snapshot.json wrapped to Finding[] format
+- [x] 02-05-PLAN.md — Web app: provenance chips (SectionCard), error state (ResultsPane), structured error (useValidator), App.vue wiring, PERS-04 confirm
+- [x] 02-06-PLAN.md — CLI annotation: echomind-validate.ts italic inline sources annotation per D-08
+- [x] 02-07-PLAN.md — Integration gate: TypeScript build verify, CLI smoke-test, VALD-05/PERS-04 audit, human checkpoint
 
 ### Phase 3: Full v1 Surfaces
 **Goal**: The web app accepts a real Confluence or Notion link as PRD input and exposes the full PO workflow (persona picker, running state, four sections, copy/export, error recovery); the skill writes its output to a file
@@ -66,10 +93,11 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3
+Phases execute in numeric order: 1 → 1.1 → 2 → 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Demo Sliver | 2/7 | In Progress|  |
-| 2. Engine Hardening | 0/? | Not started | - |
+| 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
+| 1.1. UI Polish | 4/4 | Complete   | 2026-05-05 |
+| 2. Engine Hardening | 7/7 | Complete   | 2026-05-06 |
 | 3. Full v1 Surfaces | 0/? | Not started | - |

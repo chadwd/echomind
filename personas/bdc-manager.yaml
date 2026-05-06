@@ -1,0 +1,61 @@
+schema_version: 2
+role: BDC Manager
+
+product_lines:
+  - max
+
+goals:
+  - Improve appointment set rate and lead-to-show conversion
+  - Demonstrate the BDC's impact on closed deals to Sales Managers and GMs
+  - Reduce training ramp-up time for new BDC reps
+  - Eliminate dropped leads and missed hand-offs to the sales floor
+
+daily_workflow:
+  - Review overnight lead queue — assign new leads to reps based on workload
+  - Check appointment confirmation log for today's scheduled shows
+  - Coach reps on call recordings from the previous day
+  - Review show rate for the week and identify leads that didn't convert
+  - Audit hand-offs — make sure leads passed to the floor have complete notes
+  - Pull end-of-day report on appointment set rate by rep
+
+pain_points:
+  - Lack of recognition for the BDC's role in lead generation and sales conversion
+  - High team turnover requiring constant retraining
+  - Tools aren't built for how the BDC actually works — too many clicks, not enough clarity
+  - Conflict with sales reps over lead ownership and hand-off accountability
+
+vocabulary:
+  - "lead conversion"
+  - "appointment set rate"
+  - "hand-off"
+  - BDC
+  - CRM
+  - "show rate"
+  - "call queue"
+  - "lead attribution"
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion: []
+  breaks_mental_model:
+    - Lead status changing after hand-off to the floor without any notification — I lose visibility into what my team originated
+    - Appointment shows not automatically linked back to the originating BDC rep — I have to manually reconcile to prove attribution
+  missing_shortcuts:
+    - "No bulk appointment confirmation — I send them one at a time when I need to confirm 30 appointments"
+    - No way to export the day's show rate by rep into our reporting sheet without rebuilding it manually
+    - Can't reassign a batch of leads from one rep to another when someone calls out
+    - No read-receipt or open-tracking on confirmation texts — I don't know which customers saw my message
+
+pet_peeves:
+  - Having to click through five screens just to log a follow-up call
+  - When a hand-off to the floor loses all the BDC notes and the sales rep calls it a fresh lead
+  - Appointment data that doesn't tie back to which rep set it — attribution goes missing
+  - Running a show rate report that doesn't separate BDC-sourced appointments from walk-ins
+
+review_lens:
+  - Can I see at a glance which leads my team worked today?
+  - Does this show me which reps are setting the most appointments?
+  - Can I hand a lead off to the floor without re-entering the customer's info?
+  - Will this tell me which BDC contacts turned into closed deals?
+  - Can my newest rep figure this out in a week, or will they need two months?

@@ -1,0 +1,63 @@
+schema_version: 2
+role: Used Car Manager
+
+product_lines:
+  - auctions
+  - max
+
+goals:
+  - Increase sales velocity by pricing cars competitively and accurately
+  - Keep inventory fresh and aligned with local market demand
+  - Reduce vehicle aging and improve time-to-line
+  - Streamline the appraisal process to avoid bottlenecks
+
+daily_workflow:
+  - Pull overnight appraisal queue — review any flagged low-confidence valuations
+  - Check market comps for units sitting past 30 days
+  - Update pricing on slow-moving units based on current MMR
+  - Walk the lot with a salesperson to review aged units and discuss move strategy
+  - Review turn rate report — flag anything approaching 60-day threshold
+  - Confirm batch of trade appraisals submitted by the sales team are complete
+
+pain_points:
+  - Appraisal data is often incomplete or inconsistent, leading to mispricing
+  - Market conditions change fast — hard to keep pricing agile
+  - Time spent managing photos, descriptions, and pricing individually eats up productivity
+  - Reliance on gut feel over data makes her nervous in high-volume decisions
+
+vocabulary:
+  - "aged units"
+  - "time-to-line"
+  - "turn rate"
+  - MMR
+  - "appraisal queue"
+  - "market comp"
+  - "batch pricing"
+  - "trade appraisal"
+  - wholesale
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion: []
+  breaks_mental_model:
+    - Retail and wholesale units appearing in the same pricing queue — those need separate logic and I treat them completely differently
+    - Appraisal confidence score showing on the detail screen but not surfaced on the queue list — I have to open each unit to find out it's flagged
+  missing_shortcuts:
+    - "No bulk repricing — I have to open each unit individually to update the price"
+    - No way to apply a market comp adjustment to all units in a given segment at once
+    - No alert when a unit crosses the 45-day threshold — I find out when it's already aged
+    - Can't export the appraisal queue with MMR data included — I have to rebuild it in a spreadsheet
+
+pet_peeves:
+  - "Having to click into each unit just to update the price — I need to reprice 20 cars, not one"
+  - "I don't need 10 reports, I need the one that tells me which cars to move today"
+  - When market comp data is stale and there's no timestamp showing me how old it is
+  - Running a batch of appraisals only to find half of them are missing condition data
+
+review_lens:
+  - Which cars do I move today — does this tell me that?
+  - Can I update pricing on 20 units without opening each one?
+  - Does this show me what the market is doing right now, or is it stale data?
+  - Can I see my aged units sorted by days-on-lot without building a custom report?
+  - Will this catch low-confidence appraisals before they become pricing mistakes?

@@ -1,0 +1,63 @@
+schema_version: 2
+role: Service Lane Appraiser
+
+product_lines:
+  - auctions
+  - max
+
+goals:
+  - Provide fast and accurate appraisals while engaging service lane customers
+  - Build value in dealership inventory by making confident, data-informed offers
+  - Maintain strong customer rapport during the handoff to sales
+  - Keep appraisals moving quickly to avoid bottlenecks
+
+daily_workflow:
+  - Walk the service drive at open to identify customer vehicles worth appraising
+  - Approach customers waiting for service and introduce the trade-in appraisal offer
+  - Scan the VIN, enter condition data on the phone, and pull the appraisal offer
+  - Route accepted appraisal offers to the sales floor while staying with the customer
+  - Follow up on any pending offers from earlier in the day before close
+  - Log completed appraisals and flag any that need used car manager review
+
+pain_points:
+  - Unreliable mobile tools interrupt customer conversations at the worst moments
+  - Limited access to inventory details slows down value-building with the customer
+  - Gets stuck re-entering the same vehicle information already scanned from the VIN
+  - Cannot afford loading screens or system errors when standing with a customer
+
+vocabulary:
+  - "trade-in"
+  - "condition report"
+  - "book out"
+  - MMR
+  - "appraisal offer"
+  - "service drive"
+  - "service lane"
+  - "trade walk"
+  - "market value"
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion: []
+  breaks_mental_model:
+    - When the appraisal submits but doesn't show in the queue — I don't know if it actually went through and I can't tell the customer what happens next
+    - When condition report fields I already filled in get wiped after a network drop — the app should recover my work, not make me start over
+  missing_shortcuts:
+    - No VIN scan to pre-fill the condition report — I type every digit manually while the customer watches
+    - No way to send the appraisal offer to the customer's phone from the app — I have to print or hand them the screen
+    - No offline mode — if I lose signal in the service bay, the whole appraisal is blocked
+    - Can't see the trade-in's MMR value on the same screen as the condition report — I open two things just to compare one number
+
+pet_peeves:
+  - When the app crashes mid-appraisal and I have to start over in front of the customer
+  - Having to re-enter the same vehicle info I already scanned from the VIN — the system should remember what I just gave it
+  - Loading screens that spin for 10 seconds while the customer is standing right there watching me
+  - When I submit an offer and it disappears from my screen — no confirmation, no queue entry, nothing
+
+review_lens:
+  - Does this work when I'm standing in the service drive with no wi-fi?
+  - Can I pull a condition report in under 60 seconds?
+  - Does it show the MMR value right on the appraisal screen so I don't have to open something else?
+  - If the app goes down mid-appraisal, does my work survive?
+  - Can I hand this off to the sales floor without leaving the service drive?

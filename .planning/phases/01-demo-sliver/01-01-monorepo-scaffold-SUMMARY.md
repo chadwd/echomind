@@ -145,6 +145,18 @@ None — no external service configuration required for this scaffold plan. Gate
 - Web shell ready for Plan 05 (UI wiring) to fill InputPane and ResultsPane
 - No blockers — all success criteria met
 
+## Self-Check: PASSED
+
+- FOUND: packages/engine/src/types.ts
+- FOUND: packages/engine/src/index.ts
+- FOUND: packages/engine/src/llm.ts
+- FOUND: apps/web/src/App.vue
+- FOUND: apps/web/vite.config.ts
+- FOUND: pnpm-workspace.yaml
+- FOUND commit da77beb: feat(01-01): pnpm monorepo root + engine package scaffold
+- FOUND commit c567401: feat(01-01): Vue 3 + Vuetify web app shell
+- FOUND commit 086e65c: docs(01-01): complete monorepo-scaffold plan
+
 ---
 *Phase: 01-demo-sliver*
 *Completed: 2026-05-05*

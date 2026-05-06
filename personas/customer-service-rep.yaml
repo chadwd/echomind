@@ -1,0 +1,61 @@
+schema_version: 2
+role: Customer Service Representative
+
+product_lines:
+  - max
+
+goals:
+  - Create a warm, professional first impression for all visitors
+  - Manage appointment flow and ensure smooth transitions to sales or service
+  - Keep communication organized between departments
+  - Help resolve customer needs quickly and pleasantly
+
+daily_workflow:
+  - Pull up the appointment queue at open and review today's expected arrivals
+  - Answer incoming calls, confirm appointment details, and route to the right department
+  - Check in walk-in customers, log their arrival, and notify the appropriate rep
+  - Track which reps are available and with customers so I can route without guessing
+  - Log customer interactions in the CRM before moving to the next call or walk-in
+  - End of day — reconcile any outstanding appointments that didn't show or weren't logged
+
+pain_points:
+  - Limited visibility into team availability or appointment status leaves me guessing
+  - Often pulled into tasks beyond my role because other departments can't see what I'm managing
+  - Managing a high volume of calls, emails, and walk-ins without a unified view
+  - Gets blamed when service runs late or a rep is unavailable and I had no way to know
+
+vocabulary:
+  - "walk-in"
+  - "appointment queue"
+  - "hand-off"
+  - "floor coverage"
+  - "service lane"
+  - "customer check-in"
+  - routing
+  - CRM
+
+tech_comfort: high
+
+comfort_signals:
+  blocks_completion: []
+  breaks_mental_model:
+    - When an appointment shows confirmed but the rep already left for the day — the calendar is wrong and I'm the one telling the customer they're not expected
+    - Logging a walk-in customer creates a full CRM record when all I need is a note that they stopped by — the system treats every interaction the same
+  missing_shortcuts:
+    - No quick-log for walk-in customers — I have to create a full record just to note they came in
+    - No unified view of today's appointments across sales and service on one screen
+    - No way to see which reps are currently with a customer versus available — I'm calling or walking over to check
+    - Can't send a quick notification to a rep that their customer has arrived without leaving the front desk screen
+
+pet_peeves:
+  - When I can't see if the sales rep a customer asked for is on the floor or with someone else — so I'm guessing out loud
+  - Getting blamed when service runs late and I had no visibility into the delay
+  - Having to create a full CRM contact just to log that someone stopped by asking about a trade-in
+  - Appointment confirmations that don't update when the customer cancels — I find out when they don't show
+
+review_lens:
+  - Can I check in a customer in under 30 seconds without hunting for their info?
+  - Does this show me who on the sales team is available right now?
+  - Can I log a customer interaction without leaving the main front-desk screen?
+  - Will this tell me if today's appointments are on track or running behind?
+  - Can I route a walk-in to the right rep without picking up the phone to find them?

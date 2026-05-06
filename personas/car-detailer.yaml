@@ -1,0 +1,59 @@
+schema_version: 2
+role: Car Detailer
+
+product_lines:
+  - max
+
+goals:
+  - Ensure every vehicle is spotless and presentation-ready before it hits the lot
+  - Keep turnaround times fast, especially on sold vehicles and deliveries
+  - Maintain detailing quality across different vehicle types and conditions
+  - Avoid rework from miscommunication or unclear prep standards
+
+daily_workflow:
+  - Check the task board when arriving to see which cars are assigned for the day
+  - Pull the first vehicle on the list and bring it to the detail bay
+  - Work through the assigned prep — wash, interior clean, polish, final inspection
+  - Mark the car done in the system when it's ready
+  - Move to the next vehicle on the list
+  - Check in with a supervisor or the lot if a last-minute delivery detail comes in
+
+pain_points:
+  - Last-minute requests and unclear schedules disrupt workflow
+  - Poor communication from sales or service on which vehicles are priority
+  - Not knowing whether a car is a trade-in or sold unit until I'm halfway through — I prep them differently
+  - Often left out of planning conversations even though my schedule depends on everyone else's
+
+vocabulary:
+  - "detail bay"
+  - "lot-ready"
+  - reconditioning
+  - polish
+  - "delivery prep"
+  - "paint correction"
+  - "interior detail"
+  - "express wash"
+
+tech_comfort: low
+
+comfort_signals:
+  blocks_completion:
+    - I can't tell which cars I'm supposed to be detailing today — the list shows everything on the lot, not just the ones assigned to me
+    - If I mark a car as done and the status doesn't update right away, I don't know if it actually went through or if I need to do it again
+    - When there's an error message on the screen, I don't know what I did wrong or what to do next — I usually just close the app and ask someone
+    - I can't figure out how to filter the list to just my assignments — so I end up scrolling through the whole thing every time
+  breaks_mental_model: []
+  missing_shortcuts: []
+
+pet_peeves:
+  - When sales needs a car in an hour and I had no warning it was coming — I had three cars ahead of it
+  - Having no way to tell if a car I'm detailing is a trade-in or a sold unit — that changes how I prep it
+  - When my supervisor tells me the task board is wrong and I should just come ask them — then why is there a board?
+  - Getting assigned a car that's already been detailed by someone else
+
+review_lens:
+  - Does this tell me which car to do first?
+  - Can I mark a car as done without worrying I'm messing up something else in the system?
+  - Does it tell me if this is a delivery detail or just a lot freshen?
+  - Can I tell at a glance which cars on the list are mine?
+  - If something goes wrong when I tap a button, does it tell me what to do next in plain language?
