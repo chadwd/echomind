@@ -66,7 +66,16 @@ Plans:
   2. The web app shows a read-only persona list with no edit affordance (no path to ad-hoc persona tweaking)
   3. A gateway timeout, auth failure, or rate-limit error produces a clear structured error state on both surfaces rather than a crash or blank screen
   4. The validator output schema is identical between the web surface and the skill — verified by shared type/contract
-**Plans**: TBD
+**Plans**: 7 plans across 4 waves
+
+Plans:
+- [ ] 02-01-PLAN.md — Engine types + tool schema: Finding interface, ValidationResult Breaking change, parseToolResult update
+- [ ] 02-02-PLAN.md — Prompt provenance instruction: buildUserMessage appends field-tracing instruction for LLM
+- [ ] 02-03-PLAN.md — Gateway error handling + VALD-05 audit: GatewayError class, classification, no-log invariant
+- [ ] 02-04-PLAN.md — Fixture migration: gm-auctions-snapshot.json wrapped to Finding[] format
+- [ ] 02-05-PLAN.md — Web app: provenance chips (SectionCard), error state (ResultsPane), structured error (useValidator), App.vue wiring, PERS-04 confirm
+- [ ] 02-06-PLAN.md — CLI annotation: echomind-validate.ts italic inline sources annotation per D-08
+- [ ] 02-07-PLAN.md — Integration gate: TypeScript build verify, CLI smoke-test, VALD-05/PERS-04 audit, human checkpoint
 
 ### Phase 3: Full v1 Surfaces
 **Goal**: The web app accepts a real Confluence or Notion link as PRD input and exposes the full PO workflow (persona picker, running state, four sections, copy/export, error recovery); the skill writes its output to a file
@@ -90,5 +99,5 @@ Phases execute in numeric order: 1 → 1.1 → 2 → 3
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
 | 1.1. UI Polish | 1/4 | In Progress|  |
-| 2. Engine Hardening | 0/? | Not started | - |
+| 2. Engine Hardening | 0/7 | Not started | - |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
