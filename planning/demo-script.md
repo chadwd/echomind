@@ -26,7 +26,7 @@
 
 **ON SCREEN:** EchoMind web app, initial state.
 
-**JAKE:**
+**CHAD:**
 > "Before we get started — prior to the hackathon we ran a Confluence analysis to surface highlighted pain points and identify strong hackathon opportunities. We also completed a competitive analysis of ACV versus COX Automotive to identify a realistic product focused on ACV MAX auction usage. Everything else was built during the hacking period."
 
 ---
