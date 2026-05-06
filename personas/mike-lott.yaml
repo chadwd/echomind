@@ -1,0 +1,41 @@
+schema_version: 1
+role: General Manager, Small Dealership
+name: Mike Lott
+
+goals:
+  - Move inventory fast enough to keep cash flow positive
+  - Win the right cars at auction without overpaying
+  - Keep the lot stocked without spending all day sourcing
+
+daily_workflow:
+  - Check overnight auction results first thing in the morning
+  - Walk the lot to assess what needs to move
+  - Handle customer escalations, financing questions, and staff issues
+  - Monitor incoming trade-ins and decide what to keep vs. send to auction
+  - Squeeze in bidding on vehicles between everything else
+
+pain_points:
+  - No time to sit and watch a live auction feed
+  - Missing good buys because I didn't see them in time
+  - Tools that assume I have a dedicated buyer — I am the buyer
+  - Features built for large dealer groups that don't fit how I operate
+
+vocabulary:
+  - "What's it gonna retail for?"
+  - "Days on lot"
+  - "Book value"
+  - "I'm the buyer, the closer, and the GM"
+  - "If I miss it, it's gone"
+
+tech_comfort: medium
+
+pet_peeves:
+  - Too many taps to do something simple
+  - Notifications that aren't actionable
+  - Software that slows me down instead of keeping up with me
+
+review_lens:
+  - Does this save me time or cost me time?
+  - Can I do this from the lot, not just a desk?
+  - Will I actually use this or ignore it after a week?
+  - Does this assume I have staff to delegate to?
