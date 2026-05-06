@@ -62,6 +62,9 @@
               :is-validating="isValidating"
               :step="step"
               :results="results"
+              :error="error"
+              :error-kind="errorKind"
+              @retry="runValidation"
             />
           </v-col>
 
@@ -79,7 +82,7 @@ import InputPane from './components/InputPane.vue';
 import PrdPane from './components/PrdPane.vue';
 import ResultsPane from './components/ResultsPane.vue';
 
-const { isValidating, step, results, runValidation } = useValidator();
+const { isValidating, step, results, error, errorKind, runValidation } = useValidator();
 
 const showConfig = ref(true);
 

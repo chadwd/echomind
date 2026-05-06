@@ -2,9 +2,10 @@ import { readFile } from 'fs/promises';
 import { join } from 'path';
 import { buildSystemPrompt, buildUserMessage } from './prompt.js';
 import { createLlmClient } from './llm.js';
-import type { PersonaYaml, ValidationResult, ValidateOptions } from './types.js';
+import type { PersonaYaml, Finding, ValidationResult, ValidateOptions } from './types.js';
 
-export type { PersonaYaml, ValidationResult, ValidateOptions };
+export type { PersonaYaml, Finding, ValidationResult, ValidateOptions };
+export type { GatewayErrorKind } from './llm.js';
 export { loadPersona } from './persona.js';
 export { buildSystemPrompt } from './prompt.js';
 

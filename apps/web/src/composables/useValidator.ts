@@ -1,7 +1,10 @@
 import { ref } from 'vue';
 // Import only types from @echomind/engine — types are erased at build time,
 // so this avoids bundling Node.js-only code (fs/promises, path) into the browser bundle.
-import type { ValidationResult, PersonaYaml } from '@echomind/engine';
+import type { ValidationResult, PersonaYaml, GatewayErrorKind } from '@echomind/engine';
+// Note: GatewayError is a class (value) from Node.js-only engine code.
+// Cannot import as a value in the browser — detect by duck-typing err.name === 'GatewayError'
+// and reading err.kind property with a type assertion.
 
 // GM persona hardcoded for Phase 1 (D-14)
 // Inlined field-for-field from personas/general-manager.yaml.
@@ -73,12 +76,14 @@ export function useValidator() {
   const step = ref(0);          // 0=idle, 1-4=stepper steps
   const results = ref<ValidationResult | null>(null);
   const error = ref<string | null>(null);
+  const errorKind = ref<GatewayErrorKind | null>(null);
 
   async function runValidation() {
     if (isValidating.value) return;
     isValidating.value = true;
     results.value = null;
     error.value = null;
+    errorKind.value = null;
 
     try {
       // Steps 1 and 2 complete instantly (persona + PRD are pre-loaded)
@@ -97,7 +102,7 @@ export function useValidator() {
         // Engine's FixtureClient uses Node.js readFile — not available in browser.
         // VITE_REPLAY_MODE=true is the demo-day reliability path (D-08).
         await new Promise(r => setTimeout(r, 400)); // simulate brief processing delay
-        result = fixtureData as ValidationResult;
+        result = fixtureData as unknown as ValidationResult;
       } else {
         // Live mode: Phase 2 will wire a server-side API endpoint here.
         // The engine package uses Node.js APIs and cannot run directly in the browser.
@@ -113,7 +118,16 @@ export function useValidator() {
       await new Promise(r => setTimeout(r, 200));
       results.value = result;
     } catch (err) {
-      error.value = err instanceof Error ? err.message : String(err);
+      if (err instanceof Error && err.name === 'GatewayError') {
+        // err is a GatewayError from the engine — read kind via type assertion.
+        // Cannot use instanceof (class not importable in browser — Node.js only).
+        const gatewayErr = err as Error & { kind: GatewayErrorKind };
+        errorKind.value = gatewayErr.kind;
+        error.value = err.message;
+      } else {
+        errorKind.value = 'unknown';
+        error.value = err instanceof Error ? err.message : String(err);
+      }
     } finally {
       isValidating.value = false;
       // Reset step to 0 after results are shown so stepper hides
@@ -122,7 +136,7 @@ export function useValidator() {
     }
   }
 
-  return { isValidating, step, results, error, runValidation };
+  return { isValidating, step, results, error, errorKind, runValidation };
 }
 
 // fetchPrdText removed in Plan 01 revision: PRD is loaded via ?raw import above.

@@ -43,7 +43,7 @@ export class GatewayClient implements LlmClient {
         max_tokens: 4096,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }],
-        tools: [submitValidationTool as Parameters<typeof this.client.messages.create>[0]['tools'][number]],
+        tools: [submitValidationTool as unknown as Parameters<typeof this.client.messages.create>[0] extends { tools?: (infer T)[] } ? T : never],
         tool_choice: { type: 'tool', name: 'submit_validation' },
       });
 

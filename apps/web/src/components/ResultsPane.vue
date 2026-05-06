@@ -3,7 +3,7 @@
 
     <!-- Empty state -->
     <div
-      v-if="!isValidating && !results"
+      v-if="!isValidating && !results && !error"
       class="d-flex flex-column align-center justify-center h-100 text-center empty-state"
       style="min-height: 300px"
     >
@@ -77,6 +77,37 @@
       </v-card>
     </div>
 
+    <!-- Error state -->
+    <div
+      v-else-if="error"
+      class="d-flex align-center justify-center h-100 empty-state"
+      style="min-height: 300px"
+    >
+      <v-alert
+        type="error"
+        variant="tonal"
+        rounded="lg"
+        class="w-100"
+        :icon="errorIcon"
+        style="max-width: 680px;"
+      >
+        <template #title>
+          <span class="text-subtitle-1 font-weight-bold">{{ errorHeading }}</span>
+        </template>
+        {{ errorBody }}
+        <template #append>
+          <v-btn
+            variant="text"
+            color="error"
+            size="small"
+            @click="$emit('retry')"
+          >
+            Try again
+          </v-btn>
+        </template>
+      </v-alert>
+    </div>
+
     <!-- Results: vertical report feed, sections stagger in -->
     <TransitionGroup
       v-else-if="results"
@@ -99,14 +130,46 @@
 </template>
 
 <script setup lang="ts">
-import type { ValidationResult } from '@echomind/engine';
+import { computed } from 'vue';
+import type { ValidationResult, GatewayErrorKind } from '@echomind/engine';
 import SectionCard from './SectionCard.vue';
 
-defineProps<{
+const props = defineProps<{
   isValidating: boolean;
   step: number;
   results: ValidationResult | null;
+  error: string | null;
+  errorKind: GatewayErrorKind | null;
 }>();
+
+defineEmits<{ retry: [] }>();
+
+const errorHeading = computed(() => {
+  switch (props.errorKind) {
+    case 'timeout':    return 'The gateway took too long';
+    case 'auth':       return 'Access denied';
+    case 'rate_limit': return 'Too many requests';
+    default:           return 'Something went wrong';
+  }
+});
+
+const errorBody = computed(() => {
+  switch (props.errorKind) {
+    case 'timeout':    return 'The validator didn\'t get a response in time. Check your connection and try again.';
+    case 'auth':       return 'Your gateway credentials may have expired. Contact your ACV admin if this continues.';
+    case 'rate_limit': return 'The gateway is rate-limited right now. Wait a moment and try again.';
+    default:           return 'The validator hit an unexpected error. Try again — if it keeps happening, check the engine logs.';
+  }
+});
+
+const errorIcon = computed(() => {
+  switch (props.errorKind) {
+    case 'timeout':    return 'mdi-timer-off-outline';
+    case 'auth':       return 'mdi-lock-outline';
+    case 'rate_limit': return 'mdi-speedometer-slow';
+    default:           return 'mdi-alert-circle-outline';
+  }
+});
 
 const loadingSteps = [
   'Reading GM\'s profile',
