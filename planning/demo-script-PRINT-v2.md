@@ -34,25 +34,23 @@
 ## STEP 2 — THE PROBLEM `[0:45 – 1:45]`
 
 **JAKE:**
-"Meet Alex. New product owner at ACV. First big idea. Fired up. Convinced this is going to land."
+"Meet Alex. He's new to ACV. First big idea. Fired up. Convinced this is going to change everything."
 
-"Alex writes the requirements doc, slides it to the designer. Designer opens it — 'wait, who is this actually for?' Two days gone."
+"Alex works through it — but in isolation. Dealer insights aren't easy to come by. So the idea moves forward on gut feel and good intentions."
 
-"It gets to the researcher. The researcher does their job — pushes back, asks the right questions, needs more clarity before they can test anything. Timeline slips. Nobody's fault. Just misalignment catching up."
-
-"Engineer gets it next. The build ships anyway."
-
-"Six weeks later — it launches. Crickets. Alex is in a meeting. Big screen. Lots of faces."
+"Six weeks later — it launches. It misses the mark. Dealers don't use it."
 
 *(beat)*
 
-"What if that never happened? What if Alex had a dealer in the room from day one — before the designer, before the researcher, before the engineer, before the launch?"
+"What if your idea always hit a bullseye?"
 
-"The designer is clear. The researcher has exactly what they need. The engineer builds the right thing. The launch hits."
+"What if Alex had a dealer in the room from day one — before the major investment?"
+
+"The product owner gets an idea out quickly — perfectly aligned to what dealers actually need. The designer produces high quality work, faster. The researcher walks in with sharper, more impactful questions. The engineer deploys something they're proud of — without the stress — in a fraction of the time."
 
 *(bigger beat)*
 
-"Alex gets a bonus. The whole team gets a bonus. Alex gets promoted. Alex buys a boat. Alex's dog gets a dog. Alex is on the boat. In the Mediterranean. Sipping something expensive. All because a dealer was in the room from day one."
+"The whole team gets a bonus. Everyone gets promoted. Alex buys a boat. Alex's dog gets a dog. Alex is on the boat. In the Mediterranean. Sipping something expensive. All because a dealer was in the room from day one."
 
 ---
 
