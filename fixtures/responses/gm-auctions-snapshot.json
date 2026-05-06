@@ -1,30 +1,22 @@
 {
   "fit": [
-    { "text": "The problem statement nails it — we absolutely make disposition decisions too late. By the time we're looking at a **45-day unit**, the market's already moved and we're chasing our tail on **floor plan cost**.", "sources": [] },
-    { "text": "Surfacing the **book-to-trade spread** right on the detail card is useful. That spread tells me a lot about whether a unit has any retail upside left or if it's just going to **sit and bleed**.", "sources": [] },
-    { "text": "The **'Auction Ready' badge** concept is smart — I don't want to dig through a report, I want the lot to tell me what needs to move. That's the right instinct.", "sources": [] },
-    { "text": "Running scores **nightly** so I see fresh data in the morning fits how I actually start my day. That timing works.", "sources": [] },
-    { "text": "**One-click consignment scheduling** is the right direction. Fewer steps between 'this needs to go' and 'it's going' means less **profit leakage** from hesitation and delay.", "sources": [] }
+    { "text": "The **Recommended Max Bid** is the number I'm already trying to calculate in my head while the auctioneer is calling — surfacing it directly removes the **mental load at the worst moment**.", "sources": [] },
+    { "text": "Pre-fetching comps before I walk in fits my workflow: I review the lot first thing, so updated data is there when I need it.", "sources": [] },
+    { "text": "**One-tap ceiling lock** is exactly right — I set my number and stop second-guessing.", "sources": [] }
   ],
   "friction": [
-    { "text": "**Nightly refresh isn't enough.** If I'm walking the lot at 2pm and a regional demand spike happened this morning, I'm making a call on **stale data**. That's the same problem I have today.", "sources": [] },
-    { "text": "The flow sends me into a detail card to act on each unit individually. If I've got **12 aged units** that all score **7+**, I'm clicking into 12 cards and hitting 'Schedule for Consignment' 12 times. That's not saving clicks, **that's adding them**.", "sources": [] },
-    { "text": "**No mention of mobile-first layout.** The PRD says 'desktop or mobile' but GMs are on the lot, not at a desk. If the badge is tiny or the detail card requires horizontal scrolling, my team won't use it.", "sources": [] },
-    { "text": "Open Question 3 on DMS write-back is listed as open but it shouldn't be. If consigning a unit doesn't update **CDK or Reynolds** automatically, my used-car manager is still doing **double entry**. That's a workflow break that will **kill adoption**.", "sources": [] },
-    { "text": "The disposition score inputs shown — days-on-lot, regional demand index, book-to-trade spread — don't include reconditioning cost or pack. A unit might score **8/10** but if it's got **$3,200 in recon**, the auction math looks completely different. I need to see **true cost-to-market** before I pull the trigger.", "sources": [] }
+    { "text": "**Four data tiles competing for attention in a 60-second window is too much.** I can't read MMR, market range, recon, AND make a bid decision while the auctioneer is calling. The ceiling is the feature — everything else is **noise in the lane**.", "sources": [] },
+    { "text": "The **'Going Live' button** adds a tap I have to remember under pressure. If I forget to tap it before the car comes up, I've **lost time**.", "sources": [] },
+    { "text": "No mention of whether the Recommended Max Bid is **net of my pack and recon**. I need to know if the number is already my cost or if I'm doing that math myself.", "sources": [] }
   ],
   "questions": [
-    { "text": "What's the refresh cadence on the regional demand signals feeding the score? If lane velocity data is **24 hours old**, the score is **misleading me**.", "sources": [] },
-    { "text": "Can I set the **Auction Ready threshold** at the rooftop level? A 7 might be right for a high-volume store running lean, but I might want a 9 on a low-turnover store where I can afford to wait for retail.", "sources": [] },
-    { "text": "Does the score account for units I've already run **price reductions** on? A unit that's been dropped $1,500 and still hasn't moved is a different story than a fresh aged unit.", "sources": [] },
-    { "text": "What happens if I badge a unit as consigned-pending but then a retail customer comes in for it before it ships? Is there a **hold or conflict alert**, or does my salesperson find out the hard way?", "sources": [] },
-    { "text": "Is there a **bulk action** available, or is every consignment decision a **one-unit-at-a-time flow**?", "sources": [] }
+    { "text": "Is the **Recommended Max Bid** already net of pack and estimated recon, or is it a **gross number** I need to adjust?", "sources": [] },
+    { "text": "What happens if the **Recommendations API is unavailable mid-lane** — does Bid Mode degrade gracefully or show nothing?", "sources": [] },
+    { "text": "Can I see a **history of what I bid versus the ceiling**? I want to know if I'm learning to trust the number over time.", "sources": [] }
   ],
   "refinements": [
-    { "text": "Add **intraday score refresh** — at minimum a **manual 'refresh now' button** on the inventory list so I can pull current data before making a batch decision mid-afternoon.", "sources": [] },
-    { "text": "Build a **bulk consignment action**: let me check multiple Auction Ready units from the list view and schedule them all in one confirmation step. The one-click-per-unit flow won't scale.", "sources": [] },
-    { "text": "Add **true cost-to-market** (recon + pack + floor plan accrual) as a visible input on the detail card alongside the disposition score. Without it, the score is incomplete.", "sources": [] },
-    { "text": "**Resolve the DMS write-back question before launch** — not as a post-ship enhancement. Auto write-back to CDK and Reynolds has to be in v1 or the workflow breaks at the used-car manager level.", "sources": [] },
-    { "text": "Design and test the **mobile layout** specifically for **lot-walk conditions**: large badge visibility, thumb-friendly action buttons, no horizontal scroll on the detail card. Call out mobile specs explicitly in the PRD.", "sources": [] }
+    { "text": "Lead with **one hero number** — the ceiling — and collapse MMR, market range, and recon behind a **'Why?' tap**. Don't make me read four tiles to make a 60-second decision.", "sources": [] },
+    { "text": "Show the **confidence band** prominently — that's what determines whether I act or pass, not the supporting data.", "sources": [] },
+    { "text": "Consider **auto-activating Bid Mode** when I navigate to a vehicle already on the run list — so I don't have to remember to tap 'Going Live.'", "sources": [] }
   ]
 }
