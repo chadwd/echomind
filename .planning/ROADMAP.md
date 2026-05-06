@@ -13,7 +13,7 @@ EchoMind ships in three coarse phases. Phase 1 is a 2-day sprint delivering an e
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Demo Sliver** - End-to-end demo on both surfaces against the hardcoded ACV MAX Auctions PRD + GM persona
-- [ ] **Phase 1.1: UI Polish** (INSERTED) - Material 3 brand theme, logo header, component styling for recording
+- [x] **Phase 1.1: UI Polish** (INSERTED) - Material 3 brand theme, logo header, component styling for recording (completed 2026-05-05)
 - [x] **Phase 2: Engine Hardening** - Provenance tracing, anti-gaming guardrail, gateway error handling (completed 2026-05-06)
 - [ ] **Phase 3: Full v1 Surfaces** - Confluence/Notion link input, persona picker, copy/export, error states, skill file output
 
@@ -98,6 +98,6 @@ Phases execute in numeric order: 1 → 1.1 → 2 → 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Demo Sliver | 7/7 | Complete | 2026-05-05 |
-| 1.1. UI Polish | 1/4 | In Progress|  |
+| 1.1. UI Polish | 4/4 | Complete   | 2026-05-05 |
 | 2. Engine Hardening | 7/7 | Complete   | 2026-05-06 |
 | 3. Full v1 Surfaces | 0/? | Not started | - |
