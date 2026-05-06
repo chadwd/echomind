@@ -14,7 +14,11 @@ A Product Owner can validate a PRD against a trusted, governed ACV persona in un
 
 <!-- Shipped and confirmed valuable. -->
 
-(None yet — ship to validate)
+**Validated in Phase 02: engine-hardening (2026-05-06)**
+- All persona output is provenance-traceable to specific persona fields (Finding.sources[] end-to-end — web + CLI) — VALD-03, VALD-04
+- No confidential data logged in engine prompts or composables — VALD-05
+- POs cannot edit persona fields in the UI (InputPane is fully read-only) — PERS-04
+- LLM calls use typed gateway error classification with user-facing error state — LLM-03
 
 ### Active
 
@@ -102,4 +106,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-04 after initialization*
+*Last updated: 2026-05-06 — Phase 02 engine-hardening complete*
