@@ -1,0 +1,25 @@
+{
+  "fit": [
+    "The disposition score surfaces the exact inventory intelligence I already want but can't get quickly — days-on-lot, demand signals, and book-to-trade spread in one number.",
+    "Running nightly and refreshing each morning fits my workflow: I review the lot first thing, so updated scores are there when I need them.",
+    "The one-click consignment scheduling removes the manual back-and-forth with the used-car manager — that saves real time."
+  ],
+  "friction": [
+    "A fixed 7/10 threshold doesn't account for my margin targets or risk tolerance — a unit I'd retail at a premium might get flagged and a slow-mover I know won't clear the lane might not.",
+    "The flow only covers auction consignment. Half my wholesale moves are dealer-to-dealer, and those don't show up here at all. I'd be making channel decisions blind.",
+    "No DMS write-back means my used-car manager is still doing a manual step in CDK after I click 'Schedule.' I've broken workflows before by having two systems out of sync.",
+    "If the score refreshes nightly, what happens when a unit's market window closes intraday? I've lost money waiting on stale appraisal data before."
+  ],
+  "questions": [
+    "Can the threshold be set per-rooftop or per-unit-type? My gross targets for trucks versus sedans are different.",
+    "Does the disposition score differentiate 'run it through the lane' from 'wholesale to a dealer in my 20 group'? Those are different economics.",
+    "What's the DMS write-back plan — is CDK integration on the roadmap, or is this always a manual handoff?",
+    "How do I override a score when I have context the model doesn't — a unit I know has a wholesale buyer lined up already?"
+  ],
+  "refinements": [
+    "Make the threshold configurable per rooftop with a sensible default — let me set it in my account settings, not call support.",
+    "Add a 'Wholesale to dealer' channel option alongside the auction lane so the disposition score covers both paths.",
+    "Show a 'score freshness' timestamp on each unit so I know how stale the data is before I make a decision.",
+    "Add a manual override flag with a short reason field — when I override, I want that logged so I can revisit whether my judgment or the model was right."
+  ]
+}

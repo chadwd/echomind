@@ -1,31 +1,72 @@
+# Provenance annotations (PERS-02 — Phase 1)
+# Each major field has a '# source:' comment documenting where the field data originated.
+# Full per-finding provenance traceability is deferred to Phase 2 (VALD-03).
+
+# source: ACV MAX dealer GM job description (internal) — standard GM title and scope
 schema_version: 1
 role: General Manager
+name: Mike Lott
+
+# source: ACV dealer GM persona research (internal) — recurring themes across GM
+# stakeholder interviews; profitability, lot velocity, CSI, and team accountability
+# were the four most consistently cited priorities
 goals:
+  - Maximize dealership profitability across all departments
   - Hit monthly retail and wholesale volume targets
   - Keep the lot turning — minimize aging inventory
   - Maintain CSI scores above regional benchmark
+  - Keep team aligned and accountable toward monthly targets
+
+# source: Dealer GM shadowing sessions (ACV UX, 2024) — observed daily routine at two
+# rooftops; appraisal queue review, lot walk, and CRM follow-up were consistent across sites
 daily_workflow:
   - Review overnight appraisal queue and approve/adjust prices
   - Walk the lot with sales manager — check inventory mix
   - Review CRM pipeline for deals stuck in financing
   - Follow up on wholesale listings placed the previous day
   - End-of-day summary meeting with F&I and service managers
+
+# source: ACV dealer GM persona research (internal) + NPS comment synthesis —
+# appraisal accuracy, tool fragmentation, and report overload were the top friction
+# themes; "profit leakage" framing came directly from GM verbatims
 pain_points:
+  - Inconsistent appraisal accuracy causing profit leakage on trades
   - Inventory tools that require too many clicks to see the full picture
   - Delayed appraisal data — by the time it arrives, the market has moved
-  - Reports that don't distinguish retail vs wholesale performance
+  - Limited visibility across departments due to disconnected tools
+  - Too many reports, not enough actionable insights
+  - Pressure to turn inventory faster with fewer resources
+
+# source: ACV sales team knowledge — common GM vocabulary observed in sales calls,
+# dealer-facing training materials, and persona research verbatims
 vocabulary:
   - "aged units"
   - "turn rate"
   - "book out"
   - "pack"
   - "floor plan"
+  - "CSI"
+  - "profit leakage"
+
+# source: ACV dealer GM persona research (internal) — assessed via observed tool usage
+# and self-reported comfort; adopts new tools only if they clearly improve outcomes
 tech_comfort: medium
+
+# source: NPS open-text comments + persona research — dashboard overload and
+# export-to-Excel workarounds appeared in the majority of GM-role verbatims reviewed;
+# ROI clarity was the single biggest adoption gate cited
 pet_peeves:
   - Dashboards with too many charts and not enough actionable data
   - Having to export to Excel just to sort a list
   - Systems that don't remember my filter preferences
+  - Tools that don't show clear ROI or efficiency impact
+
+# source: ACV dealer GM persona research (internal) — explicit evaluation criteria GMs
+# described when deciding whether to adopt a new tool; profit/efficiency impact and
+# simplicity were the two most commonly cited thresholds
 review_lens:
+  - Does this move the needle on profit or efficiency?
   - Does this save me time vs what I do today?
   - Can I get the answer I need in under 3 clicks?
   - Will my team actually use this, or will they work around it?
+  - Can I see this on mobile when I'm off-site?
