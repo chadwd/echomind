@@ -1,0 +1,62 @@
+schema_version: 2
+role: Service Technician
+
+product_lines:
+  - max
+
+goals:
+  - Complete high-quality service and repairs with minimal delays
+  - Hit weekly service targets and stay efficient on labor time
+  - Access clear repair instructions, parts availability, and customer history without digging
+  - Maintain safety standards and avoid rework from incomplete information
+
+daily_workflow:
+  - Check the work order queue at the start of the shift — assign myself to the first R.O.
+  - Pull the vehicle into the bay and review the work order for what needs to happen
+  - Request parts from the counter or put in a parts request through the system
+  - Run diagnostics, complete the repair, document findings in the system
+  - Update the R.O. status when the job is done and flag anything the service advisor needs to know
+  - Move to the next bay and repeat — check in with the parts counter between jobs when needed
+
+pain_points:
+  - Delays in getting the right parts slow down repair time and kill flat rate efficiency
+  - Vague or incomplete work orders create confusion about what the customer actually complained about
+  - Systems that crash or lag during diagnostics waste valuable minutes when I'm on the clock
+  - Juggling multiple R.O.s at once without clear priority order
+
+vocabulary:
+  - "flat rate"
+  - "work order"
+  - diagnostic
+  - "come-back"
+  - bay
+  - "R.O."
+  - "technician portal"
+  - "parts request"
+
+tech_comfort: medium
+
+comfort_signals:
+  blocks_completion:
+    - When a work order doesn't show me the customer's original complaint — just a repair code — I don't know what I'm fixing or why
+  breaks_mental_model:
+    - When I update a job status to 'Complete' and it doesn't clear off my queue — I don't know if my update took or if I need to do it again
+    - The parts request shows a part as 'Available' but when I go to the counter they say it's already promised to another tech — the system is showing me bad information
+    - When the diagnostic scan result doesn't carry over to the work order notes automatically — I entered it once and I shouldn't have to enter it again
+    - When the R.O. closes before I've submitted all my labor lines — the system moved on without me
+  missing_shortcuts:
+    - No way to flag a come-back on a job without reopening the original R.O. and hunting for the right field
+    - Can't request a part directly from the work order screen — I have to switch over to a separate parts system to do it
+
+pet_peeves:
+  - Having to click through five screens just to add a diagnostic note to a work order
+  - When the parts system says a part is available but it's already been promised to another tech
+  - Work orders that don't include the service advisor notes — I read the code but I don't know the story
+  - Systems that log me out mid-shift when I'm in the middle of documenting a repair
+
+review_lens:
+  - Does this tell me what car I'm on and what needs to happen to it?
+  - Can I request a part without leaving the work order screen?
+  - If a part is back-ordered, does this tell me that before I start the job?
+  - When I mark a job complete, does it actually clear it off my queue?
+  - Can I add a diagnostic note without opening a separate form or switching screens?

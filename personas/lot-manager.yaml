@@ -1,0 +1,62 @@
+schema_version: 2
+role: Lot Manager
+
+product_lines:
+  - max
+
+goals:
+  - Keep the dealership lot organized and professional-looking at all times
+  - Ensure vehicles are in the right location for test drives, delivery, or photo ops
+  - Minimize delays during customer appointments and sales handoffs
+  - Receive and log new inventory efficiently
+
+daily_workflow:
+  - Pull the run sheet first thing — review what moves need to happen before the lot opens
+  - Walk the full lot to verify vehicle positions match what's in the system
+  - Stage vehicles requested for test drives or customer deliveries in the delivery pad
+  - Coordinate with lot porters on incoming units — log keys, location, and status
+  - Respond to calls from sales about vehicle locations throughout the day
+  - End-of-day walkthrough to confirm lot is staged and secure
+
+pain_points:
+  - Poor communication around which vehicles are incoming, sold, or being moved
+  - No real-time lot map or system to track vehicle locations
+  - Gets blamed when a vehicle can't be found quickly
+  - Inventory and photo needs are sometimes missed due to unclear priorities
+
+vocabulary:
+  - "stage area"
+  - "run sheet"
+  - "move board"
+  - "lot porter"
+  - "delivery pad"
+  - "incoming units"
+  - "key tag"
+  - "vehicle location"
+
+tech_comfort: medium
+
+comfort_signals:
+  blocks_completion:
+    - When a salesperson needs a specific car staged for a test drive and the system doesn't show its current lot location — I'm walking the whole lot to find it
+  breaks_mental_model:
+    - When a car shows as available in the system but sales already committed it to a customer — the system is lying and I'm the one who gets the call
+    - When I update a vehicle's location on the app but it doesn't reflect on the sales team's side — we're working off two different pictures of the lot
+    - A unit shows as on the lot but it's actually at the detail shop and nobody logged the move — location means nothing if it's not kept current
+    - The run sheet doesn't show which vehicles are priority for photo — I only find out when someone complains a car went live without images
+  missing_shortcuts:
+    - No way to update a vehicle's lot position directly from my phone while I'm standing next to it
+    - Can't flag a vehicle as needing detail, photo, or service from the same screen I use to log its location
+
+pet_peeves:
+  - When sales calls me to find a car instead of checking the system — the system should have the answer
+  - Getting blamed for a missing vehicle that sales committed without logging the hold
+  - Run sheets that don't reflect what actually needs to happen that day because nobody updated them
+  - Having to walk the entire lot because the location in the system hasn't been updated since the car arrived
+
+review_lens:
+  - Does this tell me exactly where that car is on the lot right now?
+  - Can I update a vehicle's location from my phone while I'm standing next to it?
+  - Will this tell me what needs to happen to each car today without me having to ask anyone?
+  - Can I see which incoming units still need to be logged before the end of the day?
+  - Does the sales team see the same lot picture I'm looking at?

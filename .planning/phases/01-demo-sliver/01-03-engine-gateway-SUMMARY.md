@@ -75,7 +75,7 @@ Each task was committed atomically:
 
 1. **Task 1: Smoke-test engine end-to-end, fix issues, add .env.local.example** - `76510c9` (feat)
 
-**Plan metadata:** `[pending final commit]` (docs: complete plan)
+**Plan metadata:** `2d033c8` (docs: complete plan)
 
 ## CLI Output Sample
 

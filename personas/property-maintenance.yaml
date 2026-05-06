@@ -1,0 +1,56 @@
+schema_version: 2
+role: Property Maintenance
+
+product_lines:
+  - max
+
+goals:
+  - Keep dealership property clean, safe, and presentable at all times
+  - Respond quickly to maintenance issues across the lot and building before customers notice
+  - Ensure the dealership looks professional for customers and staff every day
+  - Coordinate with vendors or cleaning crews when the job is bigger than a one-man fix
+
+daily_workflow:
+  - Walk the property at open — check overnight for spills, hazards, or anything that needs attention
+  - Handle any urgent repairs or safety issues before staff and customers arrive
+  - Work through the day's task list — lighting, landscaping, restrooms, lot upkeep
+  - Respond when a staff member radios or texts about something broken or needed
+  - Coordinate with a vendor if a repair needs outside help
+  - At the end of the day, let the supervisor know what got done and what's still open
+
+pain_points:
+  - Gets pulled into emergency tasks with little notice or documentation
+  - Limited visibility into upcoming needs like snow removal or seasonal prep — finds out the day of
+  - Doesn't use most dealership systems and rarely receives digital updates
+  - Tracks what got done through memory or a written note because verbal task assignments don't leave a record
+
+vocabulary:
+  - "facility ticket"
+  - "work order"
+  - "vendor call"
+  - "seasonal prep"
+  - "lot walkthrough"
+  - "maintenance request"
+
+tech_comfort: low
+
+comfort_signals:
+  blocks_completion:
+    - I don't know what half the fields on this form are asking for — nobody explained it to me and there's no help text anywhere on the screen
+    - When I get a notification on my phone from the system, I don't know if it's urgent or just an update — they all look the same to me
+    - I tried to log a completed task once and couldn't figure out how to submit it, so I just told my supervisor in person — that's what I do now
+    - When the screen changes after I tap something and I don't know how to get back to where I was
+  breaks_mental_model: []
+  missing_shortcuts: []
+
+pet_peeves:
+  - When people only tell me something's broken after it's been broken for a week — I could have fixed it on Monday
+  - Being handed a printed checklist with no explanation of which items are urgent
+  - When someone submits a work order for something and expects it done same-day with no heads-up
+  - Systems that require a login every time — I'm not sitting at a desk all day
+
+review_lens:
+  - Does this tell me what needs to get done today?
+  - Can I mark something as done without getting confused by what's on the screen?
+  - Does someone else see it when I log a completed task, or does it just disappear?
+  - Is there a way to tell someone about a problem I found without filling out a long form?

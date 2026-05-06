@@ -1,0 +1,63 @@
+schema_version: 2
+role: Sales Manager
+
+product_lines:
+  - max
+
+goals:
+  - Hit or exceed sales targets across new and used inventory
+  - Motivate and manage a diverse sales team toward monthly quota
+  - Ensure accurate customer hand-offs and clean deal workflows
+  - Maintain a high-performing, organized sales floor
+
+daily_workflow:
+  - Review the sales board first thing — check where each rep stands against quota
+  - Desk any deals that came in overnight or are sitting in the CRM untouched
+  - Walk the floor and check in with reps on active customers
+  - Review CRM for stale leads that haven't had activity in 48 hours
+  - Coach a rep on a deal they're struggling to close
+  - End-of-day scorecard — closing ratio by rep, floor traffic count, gross per deal
+
+pain_points:
+  - Difficult to track team activity and performance in real-time
+  - Poor tool adoption by the sales team leads to inconsistent workflows
+  - High turnover makes training and standardizing the sales process difficult
+  - Juggling people management with quota pressure leaves little time for deep analysis
+
+vocabulary:
+  - "floor traffic"
+  - "closing ratio"
+  - pack
+  - "gross profit"
+  - "desk manager"
+  - "penciling a deal"
+  - quota
+  - "sales board"
+  - "stale lead"
+
+tech_comfort: medium
+
+comfort_signals:
+  blocks_completion:
+    - When the CRM doesn't show me which rep last touched a lead, I can't desk the deal without calling them over
+  breaks_mental_model:
+    - When I mark a deal as sold, it doesn't clear off the active leads board — I still see it sitting there like it's open
+    - Closing ratio numbers on the dashboard don't match what I calculate manually — I don't know which one to trust
+    - A lead that was handed off to me from the BDC shows up under my rep's name, not the originating BDC contact — the history gets scrambled
+    - Filters I set on the sales board don't persist when I navigate to a deal and come back — I reset them every time
+  missing_shortcuts:
+    - No way to bulk-reassign leads when a rep calls out sick and I need to cover their book
+    - Can't pull a one-page summary of gross profit by rep without going into a separate reporting module
+
+pet_peeves:
+  - "Not being able to see who's working what lead without calling them over to the desk"
+  - When reps work around the CRM because it's easier to use a personal spreadsheet — now I can't see their pipeline
+  - Reports that show last month's data when I need to know what's happening right now
+  - Having to click into five different screens just to desk a deal that should take 30 seconds
+
+review_lens:
+  - Can I see all my reps' activity in one view without digging into each record?
+  - Does this help me desk a deal faster?
+  - Will my team actually use this, or will they find a workaround?
+  - Can I see my closing ratio for the week without building a custom report?
+  - Does this tell me which leads are about to go cold?
