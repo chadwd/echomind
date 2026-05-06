@@ -24,13 +24,13 @@ The shared engine both surfaces call. Input = (persona YAML, PRD text). Output =
 - [x] **VALD-02**: Validator renders the persona system prompt from `prompts/persona-system-prompt.md` using the persona's fields (no hardcoded persona content in the engine)
 - [x] **VALD-03**: Each finding in the output references the persona field(s) that drove it (provenance — supports the traceability and anti-gaming guardrails)
 - [x] **VALD-04**: Validator output schema is identical between the web app and the Claude Code skill (single contract)
-- [ ] **VALD-05**: Validator never logs raw persona-context-plus-PRD payloads outside the ACV gateway (no-leak guardrail)
+- [x] **VALD-05**: Validator never logs raw persona-context-plus-PRD payloads outside the ACV gateway (no-leak guardrail)
 
 ### LLM Integration
 
 - [x] **LLM-01**: All LLM calls route through ACV's existing LLM gateway/proxy — no raw Anthropic API keys in this repo
 - [x] **LLM-02**: Default model is Claude Sonnet 4.6; model is configurable via env/config so Opus 4.7 can be swapped in for harder runs
-- [ ] **LLM-03**: Validator handles gateway errors (timeout, auth, rate limit) without crashing the surfaces — surfaces show a structured error state
+- [x] **LLM-03**: Validator handles gateway errors (timeout, auth, rate limit) without crashing the surfaces — surfaces show a structured error state
 
 ### Web Surface
 
@@ -119,10 +119,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VALD-02 | Phase 1 | Complete |
 | VALD-03 | Phase 2 | Complete |
 | VALD-04 | Phase 2 | Complete |
-| VALD-05 | Phase 2 | Pending |
+| VALD-05 | Phase 2 | Complete |
 | LLM-01 | Phase 1 | Complete |
 | LLM-02 | Phase 1 | Complete |
-| LLM-03 | Phase 2 | Pending |
+| LLM-03 | Phase 2 | Complete |
 | WEB-01 | Phase 1 | Complete |
 | WEB-02 | Phase 3 | Pending |
 | WEB-03 | Phase 3 | Pending |
