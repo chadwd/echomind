@@ -109,8 +109,13 @@
     </div>
 
     <!-- Results: vertical report feed, sections stagger in -->
+    <div v-else-if="results" class="d-flex flex-column ga-5 pb-4">
+      <div class="results-header d-flex align-center ga-2 mb-1">
+        <v-icon icon="mdi-account-eye" size="16" color="primary" />
+        <span class="text-caption text-medium-emphasis">GM's perspective on</span>
+        <span class="text-caption font-weight-semibold">ACV MAX Auctions: Mobile Live Bid</span>
+      </div>
     <TransitionGroup
-      v-else-if="results"
       name="card"
       tag="div"
       class="d-flex flex-column ga-5"
@@ -125,6 +130,7 @@
         :style="{ '--stagger': `${index * 120}ms` }"
       />
     </TransitionGroup>
+    </div>
 
   </div>
 </template>
