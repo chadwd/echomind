@@ -22,7 +22,16 @@
 
 ---
 
-### [0:00 – 0:30] STEP 1 — HOOK
+### [0:00 – 0:15] STEP 0 — PRE-WORK DISCLOSURE
+
+**ON SCREEN:** EchoMind web app, initial state.
+
+**JAKE:**
+> "Before we get started — prior to the hackathon we ran a Confluence analysis to surface highlighted pain points and identify strong hackathon opportunities. We also completed a competitive analysis of ACV versus COX Automotive to identify a realistic product focused on ACV MAX auction usage. Everything else was built during the hacking period."
+
+---
+
+### [0:15 – 0:45] STEP 1 — HOOK
 
 **ON SCREEN:** EchoMind web app, initial state. Left pane pre-loaded with "General Manager" and "ACV MAX Auctions Integration." Right pane shows: *"Ready to validate."*
 
